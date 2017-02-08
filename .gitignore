@@ -16,6 +16,7 @@ node_modules/
 *.zip
 .idea
 TEMP*
+old*
 .publish
 ex_files
 Thumbs.db
