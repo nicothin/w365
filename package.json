@@ -45,7 +45,8 @@
     "imagemin-pngquant": "^5.0.0",
     "mkdirp": "^0.5.1",
     "stylelint": "^7.1.0",
-    "stylelint-declaration-use-variable": "^1.5.0"
+    "stylelint-declaration-use-variable": "^1.5.0",
+    "ttf2woff": "^2.0.1"
   },
   "config": {
     "ghPages": "http://nicothin.github.io/w365/index.html",
