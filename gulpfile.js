@@ -280,6 +280,7 @@ gulp.task('serve', gulp.series('build', function() {
   browserSync.init({
     server: dirs.build,
     port: port,
+    notify: false,
     startPath: 'index.html'
   });
   gulp.watch([
