@@ -16,7 +16,7 @@
 
   <noscript>Эта страница требует JavaScript для полноценной работы. Вы выключили Javascript. Вы нас пугаете.</noscript>
 
-  <div id="full-page" class="full-page">
+  <div id="full-page" class="full-page  full-page--home">
     <section class="full-page__section">
 
       <div style="padding: 10px;">
@@ -29,6 +29,15 @@
       </div>
 
     </section>
+
+    <div class="full-page__video-wrap">
+      <video id="full-page-video" class="full-page__video" width="100%" height="auto" autoplay="autoplay" loop="loop" preload="auto">
+        <source src="video/10516883.mp4"></source>
+        <!-- <source src="book.webm" type="video/webm"></source> -->
+      </video>
+      <img class="full-page__video-poster" src="img/video-bg.jpg" alt="">
+    </div>
+
   </div>
 
   @@include('_include/page_bottom.html')

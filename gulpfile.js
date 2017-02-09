@@ -155,6 +155,19 @@ gulp.task('fonts:copy', function () {
     .pipe(gulp.dest(dirs.build + '/fonts'));
 });
 
+// Копирование видео
+gulp.task('video:copy', function () {
+  console.log('---------- Копирование видео');
+  return gulp.src(dirs.source + '/video/*.mp4', {since: gulp.lastRun('video:copy')})
+    .pipe(newer(dirs.build + '/video'))  // оставить в потоке только изменившиеся файлы
+    .pipe(size({
+      title: 'Размер',
+      showFiles: true,
+      showTotal: false,
+    }))
+    .pipe(gulp.dest(dirs.build + '/video'));
+});
+
 // Сборка SVG-спрайта для блока sprite-svg--localstorage
 gulp.task('svgstore', function (callback) {
   let spritePath = dirs.source + '/blocks/sprite-svg--localstorage/svg/';
@@ -258,7 +271,7 @@ gulp.task('clean', function () {
 gulp.task('build', gulp.series(
   'clean',
   'svgstore',
-  gulp.parallel('less', 'copy:css', 'img', 'js', 'js:copy', 'fonts:copy'),
+  gulp.parallel('less', 'copy:css', 'img', 'js', 'js:copy', 'fonts:copy', 'video:copy'),
   'html'
 ));
 
