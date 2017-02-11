@@ -4,6 +4,17 @@
 
 
 .discuss-project-btn {
+  position: absolute;
+  top: e('calc(3.7vh + 11px)');
+  left: e('calc(50% + 444px)');
+  font-size: 16px;
+  min-width: 100px;
+  padding: 0 14px 0 9px;
+  transform: translateX(50vw);
+
+  .fp-enabled & {
+    animation: translate-none 0.2s 0.8s forwards;
+  }
 
   @media (max-width: (@screen-xl - 1)) {
     display: none;
