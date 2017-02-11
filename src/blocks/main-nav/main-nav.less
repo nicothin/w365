@@ -5,9 +5,14 @@
 
 .main-nav {
   position: absolute;
-  z-index: @z-index-menu;
+  z-index: 11;
   top: 0;
   right: 0;
+
+  @media (min-width: @screen-xl) {
+    right: 0;
+    left: 0;
+  }
 
   &__wrapper {
 
@@ -25,6 +30,15 @@
         background-color: #fff;
       }
 
+    }
+
+    @media (min-width: @screen-xl) {
+      position: absolute;
+      top: 3.7vh;
+      right: auto;
+      left: 50%;
+      width: 887px;
+      transform: translateX(-50%);
     }
   }
 
@@ -47,6 +61,13 @@
       margin-bottom: 20px;
     }
 
+    @media (min-width: @screen-xl) {
+
+      .main-nav--home & {
+        display: none;
+      }
+    }
+
   }
 
   &__list {
@@ -60,6 +81,11 @@
       font-size: 25px;
       line-height: 120%;
     }
+
+    @media (min-width: @screen-xl) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -67,20 +93,68 @@
     @media (max-width: (@screen-xl - 1)) {
       margin-bottom: 20px;
     }
+
+    @media (min-width: @screen-xl) {
+      width: 25%;
+      // backface-visibility: hidden;
+      transform: translateY(-100%);
+
+      &:nth-child(1) {
+        display: none;
+      }
+
+      &:nth-child(2) {
+
+        .fp-enabled & {
+          animation: translate-none 0.2s 0s forwards;
+        }
+      }
+
+      &:nth-child(3) {
+
+        .fp-enabled & {
+          animation: translate-none 0.2s 0.2s forwards;
+        }
+      }
+
+      &:nth-child(4) {
+
+        .fp-enabled & {
+          animation: translate-none 0.2s 0.4s forwards;
+        }
+      }
+
+      &:nth-child(5) {
+
+        .fp-enabled & {
+          animation: translate-none 0.2s 0.6s forwards;
+        }
+      }
+    }
   }
 
   &__link {
     position: relative;
     display: inline-block;
+    color: @gray-light;
+    text-transform: uppercase;
 
     @media (max-width: (@screen-xl - 1)) {
-      color: @gray-light;
-      text-transform: uppercase;
 
       &:hover,
       &:focus {
         text-decoration: none;
         color: @gray-light;
+      }
+    }
+
+    @media (min-width: @screen-xl) {
+      padding: 5px 5px 5px 0;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: #fff;
       }
     }
 
@@ -123,6 +197,10 @@
     display: block;
     padding-right: 50px;
     cursor: pointer;
+
+    @media (min-width: @screen-xl) {
+      display: none;
+    }
 
     &:before {
       content: attr(data-text);
@@ -169,6 +247,10 @@
     width: 33px;
     height: 33px;
     cursor: pointer;
+
+    @media (min-width: @screen-xl) {
+      display: none;
+    }
 
     &:before,
     &:after {

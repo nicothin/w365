@@ -1,0 +1,69 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/decor-lines/decor-lines.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.decor-lines {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  height: 0;
+  width: 887px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @screen-xl) {
+    display: block;
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100vh;
+    background-color: #fff;
+    opacity: 0.2;
+    transform: translateY(-100%);
+
+    &:nth-child(1) {
+
+      .fp-enabled & {
+        animation: translate-none 0.2s 0s forwards;
+      }
+    }
+
+    &:nth-child(2) {
+      left: 25%;
+
+      .fp-enabled & {
+        animation: translate-none 0.2s 0.2s forwards;
+      }
+    }
+
+    &:nth-child(3) {
+      left: 50%;
+
+      .fp-enabled & {
+        animation: translate-none 0.2s 0.4s forwards;
+      }
+    }
+
+    &:nth-child(4) {
+      left: 75%;
+
+      .fp-enabled & {
+        animation: translate-none 0.2s 0.6s forwards;
+      }
+    }
+
+    &:nth-child(5) {
+      left: 100%;
+
+      .fp-enabled & {
+        animation: translate-none 0.2s 0.8s forwards;
+      }
+    }
+  }
+}

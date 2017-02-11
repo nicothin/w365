@@ -1,0 +1,68 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/lang-select/lang-select.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.lang-select {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 110px;
+  text-align: right;
+  white-space: nowrap;
+  z-index: 1;
+  margin: 0;
+  padding: 0 5px 0 0;
+  transform: translateX(-100%);
+
+  .fp-enabled & {
+    animation: translate-none 0.4s 1s forwards;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: @color-main--lightest;
+    opacity: .1;
+    z-index: 0;
+  }
+
+  @media (min-width: @screen-xl) {
+    display: block;
+  }
+
+  &__item {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 400;
+
+    a {
+      display: inline-block;
+      padding-left: 8px;
+      padding-right: 8px;
+      color: @gray;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+    &--active {
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}

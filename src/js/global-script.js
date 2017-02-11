@@ -3,6 +3,10 @@
 
 $(document).ready(function() {
 
+  // $(window).on('load', function () {
+  //   console.log('Страница загружена полностью');
+  // });
+
   $('#square-loader').fadeOut(300, function(){
 
     // полноэкранный показ: инициация плагина
