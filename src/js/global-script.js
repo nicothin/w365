@@ -5,9 +5,10 @@ $(document).ready(function() {
 
   $('#square-loader').fadeOut(300, function(){
 
+    // полноэкранный показ: инициация плагина
     $('#full-page').fullpage({
       //Navigation
-      // menu: '#menu',
+      menu: '#main-nav',
       lockAnchors: false,
       anchors:['screen-1', 'screen-2', 'screen-3', 'screen-4'],
       // navigation: false,
@@ -77,6 +78,10 @@ $(document).ready(function() {
       // onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
     });
 
+    // главное меню: показ/сокрытие
+    $('.js-main-menu-toggler').on('click', function(){
+      $('#main-nav').toggleClass('main-nav--open');
+    });
 
   });
 });

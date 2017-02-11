@@ -1,0 +1,92 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/home-page/home-page.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.home-page {
+
+  @media (max-width: (@screen-xl - 1)) {
+    text-align: center;
+    padding: 100px 10px;
+  }
+
+  &__inner {
+
+    @media (max-width: (@screen-xl - 1)) {
+      position: relative;
+    }
+  }
+
+	&__name {
+
+    @media (max-width: (@screen-xl - 1)) {
+      margin: 0 0 25px;
+      padding: 0;
+      font-size: 35px;
+      line-height: 40px;
+      font-weight: 300;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+	}
+
+	&__descr {
+
+    @media (max-width: (@screen-xl - 1)) {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      margin: 0;
+      font-size: 15px;
+      color: #fff;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+	}
+
+	&__logo-w {
+
+    svg {
+      display: block;
+      margin: auto;
+      opacity: 0.85;
+
+      @media (max-width: (@screen-xl - 1)) {
+        width: 201px;
+        height: 129px;
+      }
+    }
+	}
+
+	&__logo-365 {
+
+    svg {
+
+      @media (max-width: (@screen-xl - 1)) {
+        position: absolute;
+        left: 50%;
+        bottom: -6px;
+        transform: translateX(77px);
+        width: 69px;
+        height: 44px;
+        // opacity: 0.7;
+      }
+    }
+	}
+
+	&__connect-btn {
+
+    @media (max-width: (@screen-xl - 1)) {
+      position: absolute;
+      bottom: 34px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+	}
+
+}

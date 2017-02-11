@@ -218,10 +218,6 @@ dt {
 dd {
   margin-left: 0;
 
-  @media (min-width: @screen-sm) {
-    margin-left: 1.8em;
-  }
-
   & + dt {
     margin-top: (@line-height / 2);
   }
@@ -264,33 +260,23 @@ blockquote {
   margin-left: 0;
   margin-right: 0;
   border-left: 1px solid @border-color;
-
-  @media (min-width: @screen-sm) {
-    padding: 0 0 0 1.8em;
-    margin-left: 0;
-    border-left-width: 5px;
-  }
-
-  p,
-  ul,
-  ol {
-
-    &:first-child {
-      margin-top: 0;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+  //
+  // p,
+  // ul,
+  // ol {
+  //
+  //   &:first-child {
+  //     margin-top: 0;
+  //   }
+  //
+  //   &:last-child {
+  //     margin-bottom: 0;
+  //   }
+  // }
 
   footer {
     text-align: right;
     color: @gray;
-
-    // &:before {
-    //   content: '— ';
-    // }
   }
 }
 
