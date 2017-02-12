@@ -12,12 +12,18 @@
 
   @media (min-width: @screen-xl) {
     position: absolute;
-    // left: 16.5vw;
     left: 50%;
     margin-left: 810px / -2;
     top: 24vh;
     height: 235px;
     width: 848px;
+  }
+
+  @media (min-width: @screen-xxl) {
+    top: 29vh;
+    width: 1140px;
+    height: 315px;
+    margin-left: -544px;
   }
 
   &__inner {
@@ -62,6 +68,12 @@
       .fp-enabled & {
         animation: translate-none 0.3s 1.0s forwards;
       }
+    }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 72px;
+      top: 123px;
+      right: 122px;
     }
 
 	}
@@ -110,6 +122,18 @@
         }
       }
     }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 25px;
+      top: 191px;
+      right: 132px;
+
+      &:before {
+        bottom: -9px;
+        width: 292px;
+        height: 3px;
+      }
+    }
 	}
 
 	&__logo-w {
@@ -136,6 +160,13 @@
         .fp-enabled & {
           animation: translate-none 0.3s 1.0s forwards;
         }
+      }
+
+      @media (min-width: @screen-xxl) {
+        width: 494px;
+        height: 315px;
+        left: 0;
+        transform: translateX(-75vw);
       }
     }
 	}
@@ -164,6 +195,12 @@
         .fp-enabled & {
           animation: opacity-none 0.3s 1.3s forwards;
         }
+      }
+
+      @media (min-width: @screen-xxl) {
+        top: 125px;
+        width: 108px;
+        height: 69px;
       }
     }
 	}

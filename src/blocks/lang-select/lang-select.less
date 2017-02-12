@@ -6,7 +6,7 @@
 .lang-select {
   display: none;
   position: fixed;
-  top: 40%;
+  top: e('calc(24vh + 104px)');
   left: 0;
   width: 110px;
   text-align: right;
@@ -34,6 +34,11 @@
 
   @media (min-width: @screen-xl) {
     display: block;
+  }
+
+  @media (min-width: @screen-xxl) {
+    top: e('calc(29vh + 133px)');
+    width: 260px;
   }
 
   &__item {
