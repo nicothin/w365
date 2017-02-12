@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>w365</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
+  <script src="js/script.min.js"></script>
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+
+</head>
+
+<body>
+
+  <span id="square-loader" class="square-loader">
+    <span class="square-loader__load"></span>
+  </span>
+
+  <noscript>Эта страница требует JavaScript для полноценной работы. Вы выключили Javascript. Вы нас пугаете.</noscript>
+
+  <div id="full-page" class="full-page  full-page--home">
+
+    <div class="main-nav  main-nav--home" id="main-nav">
+      <div class="main-nav__burger  js-main-menu-toggler" data-text="Menu"><span class="main-nav__burger-icon"></span></div>
+      <nav class="main-nav__wrapper">
+        <div class="main-nav__inner">
+
+          <span class="main-nav__logo">
+            <svg class="logo-w365" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367 179" width="122" height="60">
+              <path class="logo-w365__365" d="M268.875 131.634h3.278q2.724 0 4.762-.95 2.036-.98 3.093-2.642 1.084-1.693 1.084-3.886 0-3.7-2.09-5.788-2.087-2.087-6.002-2.087-3.703 0-6.083 2.2-2.354 2.17-2.354 5.74h-3.173q0-2.98 1.507-5.44 1.508-2.48 4.18-3.83 2.67-1.34 5.923-1.34 5.236 0 8.25 2.858 3.017 2.856 3.017 7.82 0 2.778-1.772 5.13-1.746 2.326-4.814 3.49 3.61 1.003 5.46 3.46 1.86 2.43 1.86 5.815 0 4.94-3.22 7.954-3.22 3.02-8.62 3.02-3.43 0-6.31-1.365-2.85-1.366-4.44-3.823-1.55-2.48-1.55-5.75h3.17q0 3.674 2.57 6.003 2.57 2.3 6.59 2.3 4.1 0 6.37-2.09 2.305-2.114 2.305-6.1 0-3.86-2.486-5.9-2.47-2.034-7.28-2.034h-3.18v-2.7zm41.68-17.81v2.774h-.37q-6.902 0-10.87 4.07-3.968 4.043-4.39 11.257 1.585-2.194 4.046-3.388 2.46-1.217 5.5-1.217 5.08 0 8.07 3.514 3.02 3.48 3.02 9.14 0 3.745-1.4 6.765-1.4 3-4.02 4.69-2.62 1.66-5.98 1.66-5.52 0-8.99-4-3.46-4.02-3.46-10.36v-3.17q0-10.34 4.71-16 4.71-5.68 13.36-5.79h.79zm-6.586 16.226q-3.02 0-5.64 1.796-2.59 1.77-3.47 4.52v2.694q0 5.022 2.57 8.193 2.59 3.17 6.71 3.17 3.71 0 5.98-2.933 2.31-2.933 2.31-7.4 0-4.544-2.298-7.29-2.277-2.75-6.17-2.75zm20.1 2.827l1.87-18.763h19.26v2.933h-16.53l-1.35 13.003q3.09-2.113 7.24-2.113 5.21 0 8.3 3.38 3.1 3.384 3.1 9.012 0 6.07-3.02 9.43-3.02 3.35-8.49 3.35-5.03 0-8.15-2.81-3.12-2.8-3.57-7.85h3.04q.45 3.94 2.67 5.97 2.22 2.01 6.005 2.01 4.127 0 6.217-2.61 2.113-2.62 2.113-7.458 0-4.225-2.35-6.89-2.356-2.664-6.43-2.664-2.246 0-3.912.59-1.667.56-3.52 2.19l-2.51-.71z" fill="#e9521d"/>
+              <path class="logo-w365__cursor" d="M343.668 155.466l.02 16.38c0 .574.343 1.102.867 1.32.183.08.38.126.57.126.368 0 .724-.137.988-.39l1.78-1.654 3.307 6.88c.16.355.448.63.804.77.173.068.356.102.53.102.194 0 .4-.034.584-.115l1.734-.758c.356-.15.632-.442.77-.804.138-.358.126-.758-.035-1.108l-3.39-6.844 2.554-.23c.57-.05 1.05-.42 1.23-.96.19-.53.04-1.13-.37-1.52-3.99-3.69-11.91-11.15-11.91-11.15z" fill="#353535"/>
+              <path class="logo-w365__frame" d="M252.897 96.29c-6.737 0-12.207 5.475-12.207 12.21v48.524c0 6.736 5.47 12.208 12.207 12.208h87.266v-3.095h-87.266c-5.076 0-9.112-4.038-9.112-9.113V108.5c0-5.075 4.036-9.114 9.11-9.114h101.91c5.075 0 9.106 4.04 9.106 9.114v48.53c0 3.4-1.81 6.34-4.54 7.902v3.41c4.47-1.814 7.64-6.19 7.64-11.31V108.5c.02-6.735-5.46-12.21-12.19-12.21H252.9z" fill="#949595"/>
+              <path class="logo-w365__w" d="M0 .876L54.436 169.29h45.23l31.906-98.478 31.832 98.478h45.23L263.144.876h-45.23L186.056 99.44 154.196.876h-45.25L77.09 99.44 45.23.876z" fill="#e9521d"/>
+              <path class="logo-w365__w-line" d="M81.522 85.725l-4.43 13.7 22.578 69.85 4.436-13.684-22.584-69.86zm108.964.01l-4.43 13.7 22.58 69.848 4.43-13.69-22.585-69.86z" fill="#a93417"/>
+              <path class="logo-w365__w-line" d="M154.166.876l-27.953 86.477 5.36-16.543 4.422 13.682L158.61 14.53 154.197.876h-.03z" fill="#a93417"/>
+            </svg>
+          </span>
+
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner"><a href="" class="main-nav__link">Главная</a></span>
+            </li>
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner">
+                <a href="" class="main-nav__link">Веб-студия</a>
+                <ul class="main-nav__sublist">
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Разработка сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Редизайн сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Адаптация под мобильные</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Поддержка и развитие</a>
+                  </li>
+                </ul>
+              </span>
+            </li>
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner"><a href="" class="main-nav__link">Интернет-маркетинг</a></span>
+            </li>
+            <li class="main-nav__item  main-nav__item--active">
+              <span class="main-nav__item-inner"><a href="" class="main-nav__link">Кейсы</a></span>
+            </li>
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner"><a href="" class="main-nav__link">Контакты</a></span>
+            </li>
+          </ul>
+
+        </div>
+        <div class="main-nav__close-icon  js-main-menu-toggler"></div>
+      </nav>
+      <a href="" class="btn  btn--red-arrow-border  discuss-project-btn">Обсудить проект</a>
+    </div>
+
+    <section class="full-page__section">
+
+      <div class="home-page">
+        <h1 class="home-page__name">Интернет<span class="home-page__name-dash">-</span>агентство</h1>
+        <div class="home-page__inner">
+          <p class="home-page__descr">Cтарательный интернет - маркетинг</p>
+          <div class="home-page__logo-w">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 192" width="300" height="192">
+              <path d="M0 0l62.06 192h51.566L150 79.73 186.29 192h51.565L300 0h-51.565l-36.32 112.367L175.792 0h-51.586l-36.32 112.367L51.564 0z" fill="#e9521d"/>
+              <path d="M92.94 96.732l-5.05 15.62 25.74 79.63 5.057-15.6-25.747-79.65zm124.225.01l-5.05 15.62 25.742 79.63 5.052-15.606-25.75-79.644z" fill="#a93417"/>
+              <path d="M175.758 0L143.89 98.588l6.11-18.86 5.042 15.598 25.783-79.76L175.793 0h-.035z" fill="#a93417"/>
+            </svg>
+          </div>
+          <div class="home-page__logo-365">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="72" viewBox="0 0 110 72">
+              <path d="M24.543 30.776h2.855q2.372 0 4.146-.828 1.773-.852 2.694-2.3.944-1.474.944-3.384 0-3.222-1.82-5.04-1.818-1.817-5.227-1.817-3.224 0-5.297 1.91-2.05 1.887-2.05 4.993h-2.763q0-2.6 1.313-4.74 1.313-2.163 3.64-3.337 2.325-1.173 5.157-1.173 4.56 0 7.185 2.485 2.626 2.485 2.626 6.81 0 2.417-1.543 4.465-1.52 2.025-4.192 3.038 3.14.874 4.75 3.014 1.62 2.117 1.62 5.063 0 4.303-2.81 6.926-2.81 2.63-7.51 2.63-2.99 0-5.5-1.19-2.48-1.19-3.87-3.33-1.35-2.16-1.35-5.01h2.76q0 3.2 2.24 5.228 2.237 2.003 5.737 2.003 3.57 0 5.55-1.82 2.006-1.84 2.006-5.313 0-3.36-2.165-5.137-2.15-1.77-6.34-1.77h-2.77V30.8zm36.294-15.51v2.417h-.322q-6.01 0-9.465 3.544-3.455 3.52-3.823 9.802 1.38-1.91 3.523-2.95 2.142-1.06 4.79-1.06 4.422 0 7.024 3.06 2.626 3.03 2.626 7.96 0 3.26-1.22 5.89-1.22 2.62-3.5 4.09-2.28 1.45-5.206 1.45-4.813 0-7.83-3.48-3.017-3.5-3.017-9.02v-2.76q0-9 4.1-13.93 4.1-4.946 11.63-5.04h.69zm-5.734 14.13q-2.626 0-4.906 1.564-2.256 1.542-3.016 3.935v2.347q0 4.373 2.24 7.134 2.26 2.76 5.85 2.76 3.23 0 5.21-2.553 2.01-2.554 2.01-6.443 0-3.958-2-6.35-1.98-2.394-5.37-2.394zm17.502 2.462L74.24 15.52h16.766v2.554H76.612l-1.174 11.322q2.694-1.84 6.31-1.84 4.537 0 7.23 2.944 2.696 2.946 2.696 7.847 0 5.292-2.626 8.215-2.625 2.922-7.392 2.922-4.376 0-7.093-2.44-2.718-2.438-3.11-6.833h2.65q.39 3.43 2.325 5.2 1.935 1.75 5.228 1.75 3.592 0 5.412-2.27 1.842-2.28 1.842-6.49 0-3.68-2.05-6t-5.596-2.32q-1.957 0-3.408.51-1.45.49-3.063 1.91l-2.188-.62z" fill="#fff"/>
+              <path d="M89.672 51.528l.016 14.263c0 .5.3.96.756 1.15.16.07.33.11.497.11.32 0 .63-.12.86-.34l1.55-1.44 2.88 5.99c.14.31.39.55.7.67.15.06.31.09.46.09.17 0 .35-.03.51-.1l1.51-.66c.31-.132.55-.385.67-.7.12-.312.11-.66-.03-.965l-2.952-5.96 2.224-.2c.49-.044.91-.373 1.07-.84.16-.466.036-.984-.324-1.322C96.59 58.06 89.7 51.56 89.7 51.56z" fill="#fff"/>
+              <path d="M10.63 0C4.763 0 0 4.766 0 10.63v42.255c0 5.865 4.764 10.63 10.63 10.63h75.99V60.82H10.63c-4.42 0-7.935-3.516-7.935-7.935V10.63c0-4.418 3.515-7.935 7.934-7.935h88.74c4.42 0 7.93 3.517 7.93 7.936v42.26c0 2.96-1.58 5.52-3.96 6.88v2.97c3.89-1.58 6.65-5.39 6.65-9.85V10.63C110 4.767 105.23 0 99.37 0H10.63z" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
+        <a href="" class="btn  home-page__connect-btn">Связаться с нами</a>
+        <ul class="lang-select">
+          <li class="lang-select__item  lang-select__item--active"><a href="">Ru</a></li>
+          <li class="lang-select__item"><a href="">Eng</a></li>
+        </ul>
+        <a href="" class="showreel">
+          <span class="showreel__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+              <path d="M32 0C14.327 0 0 14.327 0 32s14.327 32 32 32 32-14.327 32-32S49.673 0 32 0zm0 62C15.432 62 2 48.568 2 32 2 15.433 15.432 2 32 2c16.568 0 30 13.432 30 30 0 16.568-13.432 30-30 30z" fill="#FFF"/>
+              <path d="M41.11 30.34l-12-7.988c-.614-.408-1.403-.447-2.054-.1-.65.347-1.056 1.023-1.056 1.76v15.98c0 .738.406 1.413 1.057 1.762.65.348 1.44.31 2.053-.1l12-7.99c.556-.37.89-.994.89-1.66 0-.67-.334-1.292-.89-1.663zm-2.31 3.082l-9.39 5.786c-.503.335-1.41.35-1.41.35V24.35s.907-.046 1.41.287l9.39 6.193c.457.303.73.688.73 1.234 0 .545-.273 1.057-.73 1.36z" fill="#FFF"/>
+            </svg>
+          </span>
+          <span class="showreel__text">showreel</span>
+        </a>
+      </div>
+
+    </section>
+
+    <div class="full-page__video-wrap">
+      <video id="full-page-video" class="full-page__video" width="100%" height="auto" autoplay="autoplay" loop="loop" preload="auto">
+        <source src="video/10708574.mp4"></source>
+        <!-- <source src="book.webm" type="video/webm"></source> -->
+      </video>
+      <img class="full-page__video-poster" src="img/video-bg.jpg" alt="">
+    </div>
+
+    <div class="decor-lines">
+      <div class="decor-lines__item"></div>
+      <div class="decor-lines__item"></div>
+      <div class="decor-lines__item"></div>
+      <div class="decor-lines__item"></div>
+      <div class="decor-lines__item"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
