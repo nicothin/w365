@@ -38,7 +38,7 @@
       transform: scale3d(1, 0, 1);
       transform-origin: bottom left;
 
-      .fp-enabled & {
+      .loaded & {
         animation: scale3d-normal 0.3s 3s forwards;
       }
     }
@@ -58,7 +58,7 @@
     @media (min-width: @screen-xl) {
       opacity: 0;
 
-      .fp-enabled & {
+      .loaded & {
         animation: opacity-none 0.3s 3.3s forwards;
       }
     }
@@ -76,7 +76,7 @@
       transform: rotate(90deg);
       opacity: 0;
 
-      .fp-enabled & {
+      .loaded & {
         animation: opacity-none 0.3s 3.3s forwards;
       }
     }

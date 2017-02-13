@@ -1,6 +1,4 @@
-<!--DEV Такой комментарий не попадет в собранный HTML
-<meta name="viewport" content="width=1000">
--->
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="css/style.min.css" rel="stylesheet" media="screen">
@@ -9,8 +7,23 @@
 <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
 <script src="js/script.min.js"></script>
 <script>
+
   // Маркер работающего javascript
   document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+  // Ожидаем события загрузки и добавляем класс. Более 5 сек. не ждем
+  window.addEventListener('load', showContent);
+  var loadTimer = setTimeout(function(){
+    showContent();
+    window.removeEventListener('load', showContent);
+  }, 5000);
+  function showContent(){
+    clearTimeout(loadTimer);
+    $('#square-loader').fadeOut(300, function(){
+      document.documentElement.classList.add('loaded');
+    });
+  }
+
 </script>
 
 <!--DEV Такой комментарий не попадет в собранный HTML

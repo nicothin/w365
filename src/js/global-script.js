@@ -1,13 +1,13 @@
 // Сразу после загрузки виден только индикатор загрузки
 // Как только документ готов, показываем документ, скрываем загрузчик
+// Эта функциональность вынесена инлайново в <head>
 
 $(document).ready(function() {
 
-  // $(window).on('load', function () {
-  //   console.log('Страница загружена полностью');
-  // });
-
-  $('#square-loader').fadeOut(300, function(){
+  // главное меню: показ/сокрытие
+  $('.js-main-menu-toggler').on('click', function(){
+    $('#main-nav').toggleClass('main-nav--open');
+  });
 
     // полноэкранный показ: инициация плагина
     $('#full-page').fullpage({
@@ -82,10 +82,4 @@ $(document).ready(function() {
       // onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
     });
 
-    // главное меню: показ/сокрытие
-    $('.js-main-menu-toggler').on('click', function(){
-      $('#main-nav').toggleClass('main-nav--open');
-    });
-
-  });
 });
