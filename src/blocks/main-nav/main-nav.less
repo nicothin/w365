@@ -30,10 +30,6 @@
         background-color: #fff;
       }
 
-      // .main-nav--content & {
-      //   display: block;
-      // }
-
     }
 
     @media (min-width: @screen-xl) {
@@ -106,7 +102,6 @@
     @media (min-width: @screen-xl) {
       position: relative;
       width: 25%;
-      // backface-visibility: hidden;
 
       .main-nav--home & {
         transform: translateY(e('calc(-3.7vh - 100%)'));
@@ -223,7 +218,7 @@
   &__sublist {
     display: none;
 
-    @media (min-width: @screen-xl){
+    @media (min-width: @screen-xl) {
       display: block;
       visibility: hidden;
       height: 0;
@@ -360,6 +355,44 @@
 
     &:after {
       transform: rotate(45deg);
+    }
+  }
+
+
+
+
+
+  &--content {
+
+    @media (max-width: (@screen-xl - 1)) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 55px;
+      background-color: #fff;
+
+      .main-nav__burger {
+        width: 40px;
+        height: 26px;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      .main-nav__logo--inserted-js {
+        position: absolute;
+        top: 11px;
+        left: 9px;
+        width: 76px;
+        height: 37px;
+
+        .logo-w365 {
+          height: 100%;
+          width: 100%;
+        }
+      }
     }
   }
 
