@@ -4,12 +4,20 @@
   //   display: none;
   // }
 
-  .js.loaded & {
+  .js.js-loaded & {
     display: block;
   }
 
   &__section {
     z-index: 10;
+  }
+
+  &__section-inner {
+
+    @media (max-width: (@screen-xl - 1)) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
   }
 
   &__video-wrap {
@@ -71,12 +79,27 @@
     background-color: @color-main;
     color: #fff;
   }
+
+  &--articles {
+
+    @media (max-width: (@screen-xl - 1)) {
+      padding-top: 55px; // Это высота фиксированной во вьюпорте навигации
+      // padding-bottom: 44px; // Это высота прибитой снизу кнопки
+      transform: none !important; // Перебиваем инлайновые стили плагина fullPages
+
+      .fp-section,
+      .fp-tableCell {
+        display: block !important;
+        height: auto !important;
+      }
+    }
+  }
 }
 
 
 
-html.loaded,
-.loaded body {
+html.js-loaded,
+.js-loaded body {
     margin: 0;
     padding: 0;
     overflow:hidden;

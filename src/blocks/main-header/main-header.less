@@ -1,0 +1,48 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/main-header/main-header.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.main-header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-family: @font-family;
+  font-weight: 400;
+
+  @media (max-width: (@screen-xl - 1)) {
+    padding: 30px 10px 48px 30px;
+  }
+
+  &:before {
+    content: attr(data-bg-text);
+    position: absolute;
+    // z-index: -1;
+    top: 16px;
+    left: 0;
+    color: @gray-darkest;
+    white-space: nowrap;
+    font-size: 90px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    opacity: 0.05;
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    padding-right: 0.514em;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      right: 0;
+      bottom: 4px;
+      height: 2px;
+      background-color: @color-second;
+    }
+  }
+}

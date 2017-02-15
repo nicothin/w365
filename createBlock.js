@@ -10,7 +10,7 @@ const dirs = pjson.config.directories;   // отдельно имеем объе
 const mkdirp = require('mkdirp');        // зависимость
 
 let blockName = process.argv[2];          // получим имя блока
-let defaultExtensions = ['less', 'html']; // расширения по умолчанию
+let defaultExtensions = ['less'];         // расширения по умолчанию
 let extensions = uniqueArray(defaultExtensions.concat(process.argv.slice(3)));  // добавим введенные при вызове расширения (если есть)
 
 // Если есть имя блока

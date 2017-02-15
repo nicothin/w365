@@ -1,0 +1,18 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/connect-with-us/connect-with-us.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.connect-with-us {
+  display: none;
+  // position: fixed;
+  // z-index: 10;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  width: 100%;
+
+  @media (max-width: (@screen-xl - 1)) {
+    display: flex;
+  }
+}
