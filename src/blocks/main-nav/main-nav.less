@@ -34,6 +34,7 @@
 
     @media (min-width: @screen-xl) {
       position: absolute;
+      z-index: 5;
       top: 27px;
       right: auto;
       left: 50%;
@@ -70,9 +71,11 @@
     }
 
     &--inserted-js {
+      position: absolute;
 
       @media (min-width: @screen-xl) {
         display: block;
+        z-index: 6;
       }
     }
 
@@ -223,13 +226,16 @@
     display: none;
 
     @media (min-width: @screen-xl) {
+      position: absolute;
+      top: 100%;
+      left: 0;
       display: block;
       visibility: hidden;
       height: 0;
       opacity: 0;
       margin: 0;
       padding: 0;
-      min-width: 280px;
+      width: 0;
       list-style: none;
       background-color: #fff;
       transition: opacity 0.2s;
@@ -239,6 +245,7 @@
         height: auto;
         padding: 20px 10px 20px 30px;
         opacity: 1;
+        min-width: 280px;
       }
     }
   }
@@ -348,9 +355,44 @@
 
   &__arrow {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100px;
+    height: 54px;
+    background-color: @gray-lightest;
+    cursor: pointer;
+  }
 
-    @media (min-width: @screen-xl) {
-      display: block;
+  &__arrow-icon {
+    position: absolute;
+    height: 50px;
+    width: 9px;
+    bottom: -14px;
+    left: e('calc(50% - 4px)');
+    transition: transform 0.3s;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 4px;
+      width: 1px;
+      height: 100%;
+      background-color: @gray-darkest;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 9px;
+      height: 9px;
+      border-right: 1px solid @gray-darkest;
+      border-bottom: 1px solid @gray-darkest;
+      transform: rotate(45deg);
     }
   }
 
@@ -391,10 +433,15 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ff0;
+    opacity: 0;
+    transition: opacity 0.2s;
+    background-color: rgba(0,0,0,0.2);
 
-    .main-nav--open & {
-      height: 100%;
+    @media (min-width: @screen-xl) {
+      .main-nav--open & {
+        height: 100%;
+        opacity: 1;
+      }
     }
 
     .main-nav--home & {
@@ -426,7 +473,6 @@
       }
 
       .main-nav__logo--inserted-js {
-        position: absolute;
         top: 11px;
         left: 9px;
         width: 76px;
@@ -436,6 +482,119 @@
           height: 100%;
           width: 100%;
         }
+      }
+    }
+
+    @media (min-width: @screen-xl) {
+      // font-size: 20px;
+
+      .main-nav__logo--inserted-js {
+        top: 25px;
+        left: 0;
+        width: 128px;
+        height: 56px;
+        text-align: right;
+
+        &:hover,
+        &:focus {
+
+          .logo-w365 {
+            filter: none;
+          }
+        }
+
+        &:before {
+          position: absolute;
+          z-index: -1;
+          top: 100%;
+          left: 0;
+          content: '';
+          height: 1px;
+          width: 100%;
+          background-color: @gray-lighter;
+        }
+
+        .logo-w365 {
+          width: 98px;
+          height: 48px;
+          filter: brightness(1.5) grayscale(1);
+          transition: filter 0.2s;
+        }
+      }
+
+      .main-nav__burger:before {
+        padding-top: 3px;
+      }
+
+      .main-nav__burger-icon {
+
+        &:before,
+        &:after {
+          transform-origin: left center;
+          transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        &:before {
+          transform: scale3d(0.5, 1, 1);
+        }
+
+        &:after {
+          transform: scale3d(2.35, 1, 1);
+        }
+      }
+
+      .main-nav__burger:hover {
+
+        .main-nav__burger-icon {
+
+          &:before,
+          &:after {
+            transform: scale3d(1, 1, 1);
+          }
+        }
+      }
+
+      .main-nav__arrow {
+        display: block;
+      }
+
+      .main-nav__wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: 0;
+        width: auto;
+        height: 150px;
+        transform: translate(0, -150px);
+        background-color: @gray-lightest;
+        transition: transform 0.2s;
+      }
+
+      .main-nav__list {
+        display: flex;
+      }
+
+      .main-nav__item {
+        width: auto;
+      }
+
+      .main-nav__link {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &.main-nav--open {
+
+    @media (min-width: @screen-xl) {
+
+      .main-nav__wrapper {
+        transform: translate(0, 0);
+      }
+
+      .main-nav__arrow-icon {
+        transform: rotate(180deg);
       }
     }
   }

@@ -5,6 +5,7 @@
 
 .discuss-project-btn {
   position: absolute;
+  z-index: 6;
   top: 37px;
   left: e('calc(50% + 444px)');
   font-size: 16px;
@@ -13,6 +14,15 @@
 
   .main-nav--home & {
     transform: translateX(50vw);
+  }
+
+  .main-nav--content & {
+    color: @gray-darkest;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
   }
 
   .js-loaded .main-nav--home & {
