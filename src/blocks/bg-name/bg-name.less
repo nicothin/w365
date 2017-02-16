@@ -1,0 +1,35 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/bg-name/bg-name.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.bg-name {
+  // position: absolute;
+  position: fixed;
+  z-index: 1;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+
+  @media (min-width: @screen-xl) {
+    top: 94px;
+    left: e('calc(50% - 310px)');
+  }
+
+  &:before {
+    content: attr(data-bg-text);
+    color: @gray-darkest;
+    white-space: nowrap;
+    font-size: 90px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    opacity: 0.05;
+
+    @media (min-width: @screen-xl) {
+      font-size: 150px;
+    }
+  }
+}

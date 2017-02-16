@@ -16,18 +16,8 @@
     padding: 30px 10px 48px 30px;
   }
 
-  &:before {
-    content: attr(data-bg-text);
-    position: absolute;
-    // z-index: -1;
-    top: 16px;
-    left: 0;
-    color: @gray-darkest;
-    white-space: nowrap;
-    font-size: 90px;
-    line-height: 1;
-    letter-spacing: 0.1em;
-    opacity: 0.05;
+  @media (min-width: @screen-xl) {
+    font-size: 50px;
   }
 
   &__text {
@@ -40,9 +30,13 @@
       position: absolute;
       left: 2px;
       right: 0;
-      bottom: 4px;
+      bottom: 1px;
       height: 2px;
       background-color: @color-second;
+
+      @media (min-width: @screen-xl) {
+        height: 3px;
+      }
     }
   }
 }
