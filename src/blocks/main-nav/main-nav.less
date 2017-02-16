@@ -43,6 +43,7 @@
     }
 
     @media (min-width: @screen-xxl) {
+      font-size: 20px;
       width: 1192px;
     }
   }
@@ -189,6 +190,10 @@
         text-decoration: none;
         color: #fff;
 
+        .main-nav--content & {
+          color: @gray-dark;
+        }
+
         &:before {
           transform: scale3d(1, 1, 1);
         }
@@ -197,6 +202,10 @@
       .main-nav__item-inner:hover & {
         text-decoration: none;
         color: #fff;
+
+        .main-nav--content & {
+          color: @gray-dark;
+        }
 
         &:before {
           transform: scale3d(1, 1, 1);
@@ -219,6 +228,13 @@
         }
       }
 
+      @media (min-width: @screen-xl) {
+
+        &:before {
+          transform: scale3d(1, 1, 1);
+        }
+      }
+
     }
   }
 
@@ -234,18 +250,33 @@
       height: 0;
       opacity: 0;
       margin: 0;
-      padding: 0;
+      padding: 20px 10px 20px 30px;
       width: 0;
       list-style: none;
       background-color: #fff;
       transition: opacity 0.2s;
 
+      .main-nav__sublist-item {
+        display: none;
+      }
+
       .main-nav__item-inner:hover & {
         visibility: visible;
         height: auto;
-        padding: 20px 10px 20px 30px;
-        opacity: 1;
+        width: auto;
         min-width: 280px;
+        opacity: 1;
+
+        .main-nav__sublist-item {
+          display: block;
+        }
+      }
+    }
+
+    @media (min-width: @screen-xl) {
+
+      .main-nav__item-inner:hover & {
+        min-width: 336px;
       }
     }
   }
@@ -356,7 +387,7 @@
   &__arrow {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 99%;
     left: 50%;
     transform: translate(-50%, 0);
     width: 100px;
@@ -565,11 +596,25 @@
         bottom: auto;
         left: 0;
         width: auto;
-        height: 150px;
-        transform: translate(0, -150px);
+        height: 125px;
+        // padding: 41px 0 0 245px;
+        transform: translate(0, -125px);
         background-color: @gray-lightest;
         transition: transform 0.2s;
       }
+
+      .main-nav__inner {
+        width: 715px;
+        padding-top: 41px;
+        margin: auto;
+      }
+
+      .main-nav__list {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .main-nav__item {}
 
       .main-nav__list {
         display: flex;
@@ -582,6 +627,35 @@
       .main-nav__link {
         white-space: nowrap;
       }
+    }
+
+    @media (min-width: @screen-xxl){
+
+      .main-nav__logo--inserted-js {
+        top: 40px;
+        width: 190px;
+        height: 70px;
+
+        .logo-w365 {
+          width: 122px;
+          height: 61px;
+        }
+      }
+
+      .main-nav__wrapper {
+        height: 150px;
+        // padding: 43px 0 0 440px;
+        transform: translate(0, -150px);
+        background-color: @gray-lightest;
+        transition: transform 0.2s;
+      }
+
+      .main-nav__inner {
+        width: 1040px;
+        padding-top: 43px;
+        padding-right: 80px;
+      }
+
     }
   }
 
