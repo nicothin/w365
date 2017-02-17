@@ -22,8 +22,7 @@ $(document).ready(function() {
     sectionSelector: '.full-page__section',
   });
 
-  // полноэкранный показ: инициация плагина для статей вынесена в разметку,
-  // ибо контроль якорей хочется иметь оттуда
-  // $('#articles-page').fullpage({});
+  // добавление в блок пагинации полноэкранной прокрутки своего контента
+  $('#fp-nav').hide().append('<span class="scroll-me-baby">Скролльте</span>');
 
 });

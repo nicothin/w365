@@ -17,6 +17,11 @@
     left: e('calc(50% - 310px)');
   }
 
+  @media (min-width: @screen-xxl) {
+    top: 94px;
+    left: e('calc(50% - 460px)');
+  }
+
   &:before {
     content: attr(data-bg-text);
     color: @gray-darkest;
@@ -30,6 +35,10 @@
 
     @media (min-width: @screen-xl) {
       font-size: 150px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 178px;
     }
   }
 }

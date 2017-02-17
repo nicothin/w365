@@ -22,25 +22,26 @@
 
     <script>
       $(document).ready(function() {
+        // получим общее кол-во слайдов для использования в пагинаторе полностраничного плагина
+        var slidesLenght = $('.full-page__section').length;
 
-        // полноэкранный показ: инициация плагина для статей вынесена в разметку, ибо якоря и динамика
+        // полноэкранный показ: инициация плагина для статей
         $('#articles-page').fullpage({
           menu: '#main-nav',
           anchors:['articles-page-1', 'articles-page-2', 'articles-page-3'],
           dragAndMove: true,
-          // fixedElements: '#header, .footer',
           sectionSelector: '.full-page__section',
           navigation: true,
           navigationPosition: 'left',
           responsiveWidth: 1200,
-          //events
-          // onLeave: function(index, nextIndex, direction){},
-          // afterLoad: function(anchorLink, index){}, // $('#square-loader')
-          // afterRender: function(){},
-          // afterResize: function(){},
-          // afterResponsive: function(isResponsive){},
-          // afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-          // onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+          afterRender: function(){
+            // добавим к пагинатору плагина счетчик и дизайнерский изыск
+            $('#fp-nav').prepend('<span id="slide-counter" class="full-page__counter">1/'+slidesLenght+'</span>').append('<span class="full-page__scroll-me-baby">Скролльте</span>');
+          },
+          onLeave: function(index, nextIndex, direction){
+            // при уходе со слайда сменим счетчик в пагинаторе
+            $('#slide-counter').text(nextIndex+'/'+slidesLenght);
+          }
         });
       });
 
