@@ -5,19 +5,23 @@
 
 .main-header {
   position: relative;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  text-transform: uppercase;
-  font-family: @font-family;
-  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
 
-  @media (max-width: (@screen-xl - 1)) {
-    padding: 30px 10px 48px 30px;
-  }
+  &__title {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: @font-family;
+    font-weight: 400;
 
-  @media (min-width: @screen-xl) {
-    font-size: 50px;
+    @media (max-width: (@screen-xl - 1)) {
+      padding: 30px 10px 48px 30px;
+    }
+
+    @media (min-width: @screen-xl) {
+      font-size: 50px;
+    }
   }
 
   &__text {
@@ -36,6 +40,61 @@
 
       @media (min-width: @screen-xl) {
         height: 3px;
+      }
+    }
+  }
+
+  &__links-wrap {
+    display: none;
+    position: relative;
+    width: 45%;
+    background-color: @color-main;
+    color: @gray-light;
+    font-family: @font-family--cond;
+    font-size: 16px;
+    line-height: 38px;
+    padding: 20px 5px 10px 70px;
+    margin-top: 16px;
+
+    @media (min-width: @screen-xl) {
+      display: block;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 42px;
+      left: 0;
+      right: 0;
+      top: e('calc(100% - 2px)');
+      background-color: @color-main;
+      z-index: -1;
+    }
+  }
+
+  &__links-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-right: 1em;
+    }
+
+    a {
+      line-height: 1;
+      color: @gray-light;
+      text-decoration: none;
+      border-bottom: 1px dashed currentColor;
+      white-space: nowrap;
+      transition: all 0.2s;
+
+      &:hover,
+      &:focus {
+        color: #fff;
+        text-decoration: none;
+        border-color: transparent;
       }
     }
   }
