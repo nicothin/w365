@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>w365</title>
   <meta name="description" content="">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="css/style.min.css" rel="stylesheet" media="screen">
@@ -13,8 +14,23 @@
   <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
   <script src="js/script.min.js"></script>
   <script>
+
     // Маркер работающего javascript
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+    // Ожидаем события загрузки и добавляем класс. Более 5 сек. не ждем
+    window.addEventListener('load', showContent);
+    var loadTimer = setTimeout(function(){
+      showContent();
+      window.removeEventListener('load', showContent);
+    }, 5000);
+    function showContent(){
+      clearTimeout(loadTimer);
+      $('#square-loader').fadeOut(300, function(){
+        document.documentElement.classList.add('js-loaded');
+      });
+    }
+
   </script>
 
 </head>
@@ -27,7 +43,7 @@
 
   <noscript>Эта страница требует JavaScript для полноценной работы. Вы выключили Javascript. Вы нас пугаете.</noscript>
 
-  <div id="full-page" class="full-page  full-page--home">
+  <div id="one-screen-page" class="full-page  full-page--home">
 
     <div class="main-nav  main-nav--home" id="main-nav">
       <div class="main-nav__burger  js-main-menu-toggler" data-text="Menu"><span class="main-nav__burger-icon"></span></div>
@@ -81,11 +97,13 @@
 
         </div>
         <div class="main-nav__close-icon  js-main-menu-toggler"></div>
+        <div class="main-nav__arrow  js-main-menu-toggler"><span class="main-nav__arrow-icon"></span></div>
       </nav>
       <a href="" class="btn  btn--red-arrow-border  discuss-project-btn">Обсудить проект</a>
+      <div class="main-nav__js-backdrop  js-main-menu-toggler"></div>
     </div>
 
-    <section class="full-page__section">
+    <div class="full-page__section">
 
       <div class="home-page">
         <h1 class="home-page__name">Интернет<span class="home-page__name-dash">-</span>агентство</h1>
@@ -122,7 +140,7 @@
         </a>
       </div>
 
-    </section>
+    </div>
 
     <div class="full-page__video-wrap">
       <video id="full-page-video" class="full-page__video" width="100%" height="auto" autoplay="autoplay" loop="loop" preload="auto">
