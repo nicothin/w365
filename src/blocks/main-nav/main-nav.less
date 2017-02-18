@@ -74,9 +74,28 @@
     &--inserted-js {
       position: absolute;
 
+      @media (max-width: (@screen-xl - 1)) {
+        display: none;
+      }
+
       @media (min-width: @screen-xl) {
         display: block;
         z-index: 6;
+      }
+    }
+
+    &--inserted-js-content {
+
+      @media (max-width: (@screen-xl - 1)) {
+        display: inline-block;
+        width: 76px;
+        height: 37px;
+        margin: 9px 0 0 11px;
+
+        .logo-w365 {
+          height: 100%;
+          width: 100%;
+        }
       }
     }
 
@@ -428,7 +447,7 @@
   }
 
   &__close-icon {
-    position: fixed;
+    position: absolute;
     top: 6px;
     right: 6px;
     width: 33px;
@@ -489,10 +508,8 @@
     @media (max-width: (@screen-xl - 1)) {
       position: fixed;
       top: 0;
-      left: 0;
       right: 0;
       height: 55px;
-      background-color: #fff;
 
       .main-nav__burger {
         width: 40px;
@@ -500,18 +517,6 @@
 
         &:before {
           display: none;
-        }
-      }
-
-      .main-nav__logo--inserted-js {
-        top: 11px;
-        left: 9px;
-        width: 76px;
-        height: 37px;
-
-        .logo-w365 {
-          height: 100%;
-          width: 100%;
         }
       }
     }

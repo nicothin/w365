@@ -85,11 +85,11 @@
     object-fit: cover;
     font-family: 'object-fit: cover;'; // привет, говно-IE!
 
-    .article__footer:hover ~ .article__img-wrapper &,
-    .article__link-wrapper:hover ~ .article__img-wrapper &,
-    .article__link-wrapper:focus ~ .article__img-wrapper &,
-    .article__img-wrapper:hover &,
-    .article__img-wrapper:focus & {
+    .article__footer:hover ~ a.article__img-wrapper &,
+    .article__link-wrapper:hover ~ a.article__img-wrapper &,
+    .article__link-wrapper:focus ~ a.article__img-wrapper &,
+    a.article__img-wrapper:hover &,
+    a.article__img-wrapper:focus & {
       opacity: 1;
       filter: none;
     }
@@ -157,6 +157,33 @@
     @media (min-width: @screen-xxl) {
       font-size: 18px;
       padding-bottom: 35px;
+    }
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+
+    @media (max-width: (@screen-xl - 1)) {
+      padding-top: 10px;
+      padding-bottom: 13px;
+    }
+
+    @media (min-width: @screen-xl) {
+      // padding-bottom: 25px;
+      margin-right: 220px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 18px;
+      // padding-bottom: 35px;
     }
 
     *:first-child {

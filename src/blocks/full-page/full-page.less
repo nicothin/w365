@@ -133,7 +133,7 @@
   &--content-page {
 
     @media (max-width: (@screen-xl - 1)) {
-      padding-top: 55px; // Это высота фиксированной во вьюпорте навигации
+      // padding-top: 55px; // Это высота фиксированной во вьюпорте навигации
       // padding-bottom: 44px; // Это высота прибитой снизу кнопки
       transform: none !important; // Перебиваем инлайновые стили плагина fullPages
 
@@ -166,10 +166,13 @@
 
   &--scroll-normal {
 
-    .full-page__section {
-      padding-top: 80px;
-      height: 100vh;
-      overflow-y: auto;
+    @media (min-width: @screen-xl) {
+
+      .full-page__section {
+        padding-top: 80px;
+        height: 100vh;
+        overflow-y: auto;
+      }
     }
   }
 }
@@ -180,7 +183,7 @@ html.js-loaded,
 .js-loaded body {
     margin: 0;
     padding: 0;
-    overflow:hidden;
+    // overflow:hidden;
 
     /*Avoid flicker on slides transitions for mobile phones #336 */
     -webkit-tap-highlight-color: rgba(0,0,0,0);
