@@ -1,0 +1,91 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/page-404/page-404.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.page-404 {
+  color: @gray-lighter;
+  position: relative;
+
+  @media (max-width: (@screen-xl - 1)) {
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+  }
+
+  @media (min-width: @screen-xl) {
+    width: 887px;
+    margin: auto;
+    opacity: 0;
+
+    .js-loaded & {
+      animation: opacity-none 0.3s 1s forwards;
+    }
+  }
+
+  @media (min-width: @screen-xxl) {
+    width: 1192px;
+  }
+
+  &__text {
+    font-size: 18px;
+
+    @media (min-width: @screen-xl) {
+      max-width: 400px;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__name {
+
+    @media (min-width: @screen-xl) {
+      margin: 0;
+      padding: 0;
+      font-weight: 700;
+      line-height: 1;
+      opacity: 0.2;
+    }
+  }
+
+  &__4-1 {
+
+    @media (min-width: @screen-xl) {
+      font-size: 360px;
+      position: absolute;
+      top: -25px;
+      right: 50%;
+      width: 160px;
+      overflow: hidden;
+      color: @color-main--lightest;
+    }
+  }
+
+  &__0 {
+
+    @media (min-width: @screen-xl) {
+      font-size: 360px;
+      position: absolute;
+      top: -25px;
+      right: 25%;
+      width: 160px;
+      overflow: hidden;
+      color: @color-main--lightest;
+    }
+  }
+
+  &__4-2 {
+
+    @media (min-width: @screen-xl) {
+      font-size: 360px;
+      position: absolute;
+      top: -25px;
+      right: 0;
+      width: 160px;
+      overflow: hidden;
+      color: @color-main--lightest;
+    }
+  }
+}
