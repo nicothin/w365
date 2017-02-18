@@ -25,4 +25,6 @@ $(document).ready(function() {
   // добавление в блок пагинации полноэкранной прокрутки своего контента
   $('#fp-nav').hide().append('<span class="scroll-me-baby">Скролльте</span>');
 
+  objectFitImages();
+
 });

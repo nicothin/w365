@@ -388,11 +388,11 @@ function getComponentsFiles() {
   // }
 
   // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
-  // if(fileExistAndHasContent(dirs.source + '/js/file_name.js')) {
-  //   сomponentsFilesList.js.unshift(dirs.source + '/js/file_name.js'); // добавляем в начало
-  //   или
-  //   сomponentsFilesList.js.push(dirs.source + '/js/file_name.js'); // добавляем в конец
-  // }
+  if(fileExistAndHasContent(dirs.source + '/js/object-fit-polyfill.js')) {
+    сomponentsFilesList.js.unshift(dirs.source + '/js/object-fit-polyfill.js'); // добавляем в начало
+    // или
+    // сomponentsFilesList.js.push(dirs.source + '/js/object-fit-polyfill.js'); // добавляем в конец
+  }
 
   // Добавим глобальный CSS-файл в начало массива с обрабатываемыми CSS-файлами
   if(fileExistAndHasContent(dirs.source + '/css/global-css.css')) {

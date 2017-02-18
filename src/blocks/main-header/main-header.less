@@ -6,6 +6,8 @@
 .main-header {
   position: relative;
   display: flex;
+  align-items: flex-start;
+  width: 100%;
   justify-content: space-between;
 
   &__title {
@@ -21,6 +23,10 @@
 
     @media (min-width: @screen-xl) {
       font-size: 50px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 60px;
     }
   }
 
@@ -60,6 +66,11 @@
       display: block;
     }
 
+    @media (min-width: @screen-xxl) {
+      margin-top: 20px;
+      width: 42.4%;
+    }
+
     &:before {
       content: '';
       position: absolute;
@@ -69,6 +80,10 @@
       top: e('calc(100% - 2px)');
       background-color: @color-main;
       z-index: -1;
+
+      @media (min-width: @screen-xxl) {
+        height: 95px;
+      }
     }
   }
 
@@ -76,6 +91,15 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    max-width: 395px;
+    min-height: 114px;
+    max-height: 152px;
+    overflow: hidden;
+
+    @media (min-width: @screen-xxl) {
+      min-height: 222px;
+      max-height: 260px;
+    }
 
     li {
       display: inline-block;

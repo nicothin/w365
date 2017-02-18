@@ -20,6 +20,15 @@
     }
   }
 
+  @media (min-width: @screen-xl) {
+    width: 1118px;
+    min-height: 335px;
+
+    .full-page__section-inner & + & {
+      margin-top: 100px;
+    }
+  }
+
   &__link-wrapper {
     position: relative;
     z-index: 3;
@@ -39,6 +48,7 @@
     @media (max-width: (@screen-xl - 1)) {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       min-height: 220px;
 
       &:before,
@@ -73,6 +83,7 @@
     filter: grayscale(0.5);
     transition: all 0.3s;
     object-fit: cover;
+    font-family: 'object-fit: cover;'; // привет, говно-IE!
 
     .article__footer:hover ~ .article__img-wrapper &,
     .article__link-wrapper:hover ~ .article__img-wrapper &,
@@ -93,6 +104,11 @@
     @media (min-width: @screen-xl) {
       width: 409px;
       height: 271px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      width: 523px;
+      height: 335px;
     }
   }
 
@@ -117,6 +133,12 @@
       font-weight: 300;
       border-bottom: 1px solid @gray-lighter;
     }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 30px;
+      padding-bottom: 36px;
+      margin-bottom: 40px;
+    }
   }
 
   &__lead {
@@ -130,6 +152,11 @@
     @media (min-width: @screen-xl) {
       padding-bottom: 25px;
       margin-right: 220px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 18px;
+      padding-bottom: 35px;
     }
 
     *:first-child {
@@ -154,6 +181,10 @@
 
     @media (min-width: @screen-xl) {
       transform: translateX(100px);
+    }
+
+    @media (min-width: @screen-xxl) {
+      transform: translateX(257px);
     }
   }
 }
