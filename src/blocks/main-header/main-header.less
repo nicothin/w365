@@ -23,10 +23,18 @@
 
     @media (min-width: @screen-xl) {
       font-size: 50px;
+
+      .main-header--single-page & {
+        font-size: 30px;
+      }
     }
 
     @media (min-width: @screen-xxl) {
       font-size: 60px;
+
+      .main-header--single-page & {
+        font-size: 40px;
+      }
     }
   }
 
@@ -34,6 +42,20 @@
     position: relative;
     display: inline-block;
     padding-right: 0.514em;
+
+    @media (min-width: @screen-xl) {
+
+      .main-header--single-page & {
+        margin-top: 80px;
+      }
+    }
+
+    @media (min-width: @screen-xxl) {
+
+      .main-header--single-page & {
+        // font-size: 40px;
+      }
+    }
 
     &:before {
       content: '';
@@ -54,6 +76,7 @@
     display: none;
     position: relative;
     width: 45%;
+    min-width: 45%;
     background-color: @color-main;
     color: @gray-light;
     font-family: @font-family--cond;
@@ -74,10 +97,11 @@
     &:before {
       content: '';
       position: absolute;
-      height: 42px;
       left: 0;
-      right: 0;
-      top: e('calc(100% - 2px)');
+      width: 100vw;
+      // top: e('calc(100% - 2px)');
+      top: 0;
+      bottom: -40px;
       background-color: @color-main;
       z-index: -1;
 
