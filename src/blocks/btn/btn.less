@@ -84,12 +84,17 @@
 
     &:hover,
     &:focus {
+      border-color: @color-second;
 
       &:before {
         transform: translateX(0);
       }
     }
   }
+
+  // &--red-arrow-fill-white {
+  //   background-image: data-uri('image/svg+xml;charset=UTF-8', './src/blocks/btn/bg/btn-border--bg-white.svg');
+  // }
 
   &--main {
     border-color: @color-main;

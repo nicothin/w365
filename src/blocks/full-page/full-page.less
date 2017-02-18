@@ -1,4 +1,5 @@
 .full-page {
+  position: relative;
   z-index: 2;
 
   .js.js-loaded & {
@@ -14,6 +15,13 @@
     @media (max-width: (@screen-xl - 1)) {
       margin-left: 10px;
       margin-right: 10px;
+    }
+
+    @media (min-width: @screen-xl) {
+
+      .main-header ~ & {
+        margin-bottom: 120px;
+      }
     }
   }
 
@@ -128,8 +136,22 @@
     @media (min-width: @screen-xl) {
 
       .full-page__section {
+        // padding-top: 80px;
         padding-left: 158px;
       }
+
+      .fp-tableCell {
+        padding-top: 80px;
+      }
+    }
+  }
+
+  &--scroll-normal {
+
+    .full-page__section {
+      padding-top: 80px;
+      height: 100vh;
+      overflow-y: auto;
     }
   }
 }
@@ -177,13 +199,17 @@ html.js-loaded,
     transition: all 0.3s ease-out;
 }
 .fp-section.fp-table, .fp-slide.fp-table {
-    display: table;
-    table-layout:fixed;
+    // display: table;
+    // table-layout:fixed;
     width: 100%;
 }
 .fp-tableCell {
-    display: table-cell;
-    vertical-align: middle;
+    // display: table-cell;
+    // vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
     width: 100%;
     height: 100%;
 }

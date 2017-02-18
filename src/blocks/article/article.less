@@ -14,6 +14,10 @@
     width: 850px;
     // padding-right: 220px;
     min-height: 275px;
+
+    .full-page__section-inner & + & {
+      margin-top: 20px;
+    }
   }
 
   &__link-wrapper {
@@ -141,5 +145,15 @@
     display: inline-block;
     position: relative;
     z-index: 1;
+  }
+
+
+
+
+  &--to-right {
+
+    @media (min-width: @screen-xl) {
+      transform: translateX(100px);
+    }
   }
 }
