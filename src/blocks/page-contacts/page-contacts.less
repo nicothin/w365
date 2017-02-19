@@ -1,0 +1,165 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/page-contacts/page-contacts.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.page-contacts {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &__item {
+    padding-bottom: 20px;
+    position: relative;
+
+    .btn {
+      display: none;
+
+      @media (min-width: @screen-xl) {
+        display: flex;
+      }
+    }
+  }
+
+  &__item-icon {
+    position: absolute;
+    top: 50%;
+    display: none;
+    width: 62px;
+    height: 62px;
+    transform: translateY(-50%);
+    opacity: 0.2;
+
+    @media (min-width: @screen-xl) {
+      display: block;
+      left: -100px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      left: -120px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0 !important;
+    padding-left: 20px;
+    font-size: 24px;
+
+    @media (min-width: @screen-xl) {
+      font-size: 18px;
+      padding-left: 0;
+    }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 24px;
+    }
+  }
+
+  &__list {
+
+    @media (min-width: @screen-xl) {
+      padding-top: 20px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      padding-left: 224px;
+    }
+  }
+
+  &__item-text {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  &__call-me-baby {
+    margin-top: 40px;
+
+    @media (min-width: @screen-xl) {
+      display: none;
+    }
+  }
+
+  &__footer {
+    display: none;
+    font-size: 12px;
+    color: @gray-lighten;
+
+    @media (min-width: @screen-xl) {
+      display: block;
+    }
+
+    a {
+      color: @gray-lighten;
+      border-bottom: 1px dashed;
+      text-decoration: none;
+      transition: all 0.3s;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: #fff;
+        border-color: transparent;
+      }
+    }
+
+    .social-links {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+
+      @media (min-width: @screen-xl) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__add-links {
+
+    @media (min-width: @screen-xl) {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    a {
+      color: @gray-lighter;
+      text-decoration: none;
+      border-bottom: 1px dashed;
+      transition: all 0.3s;
+      margin-right: 20px;
+
+      &:hover,
+      &:focus {
+        color: #fff;
+        text-decoration: none;
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__copyright {
+    margin-bottom: 1.5em;
+  }
+
+  &__map {
+    display: none;
+    background-color: @gray-lighter;
+
+    @media (min-width: @screen-xl) {
+      display: block;
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
