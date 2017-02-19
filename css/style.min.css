@@ -990,6 +990,7 @@ html.js-loaded,
   color: #fff;
   background-color: transparent;
   border-color: transparent;
+  border: none;
 }
 .btn:active,
 .btn:focus {
@@ -997,7 +998,6 @@ html.js-loaded,
   box-shadow: none;
   color: #fff;
   background-color: transparent;
-  animation: border-flash 1s infinite alternate;
 }
 .btn:disabled {
   cursor: not-allowed;
@@ -1063,6 +1063,49 @@ a.btn:disabled {
   border-color: #0c1028;
   background-color: #0c1028;
   color: #fff;
+}
+.btn--svg-border {
+  border: none !important;
+}
+.btn--svg-border .btn__border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.btn--svg-border .btn__border line {
+  stroke: currentColor;
+  stroke-width: 1;
+  transition: all 0.4s ease-in-out;
+}
+.btn--svg-border .btn__border-top {
+  stroke-dasharray: 220 1;
+}
+.btn--svg-border .btn__border-right {
+  stroke-dasharray: 44 1;
+}
+.btn--svg-border .btn__border-bottom {
+  stroke-dasharray: 220 1;
+}
+.btn--svg-border .btn__border-left {
+  stroke-dasharray: 44 1;
+}
+.btn--svg-border:hover .btn__border-top,
+.btn--svg-border:focus .btn__border-top {
+  stroke-dasharray: 15 190;
+}
+.btn--svg-border:hover .btn__border-right,
+.btn--svg-border:focus .btn__border-right {
+  stroke-dasharray: 15 12;
+}
+.btn--svg-border:hover .btn__border-bottom,
+.btn--svg-border:focus .btn__border-bottom {
+  stroke-dasharray: 14 190;
+}
+.btn--svg-border:hover .btn__border-left,
+.btn--svg-border:focus .btn__border-left {
+  stroke-dasharray: 15 12;
 }
 .lang-select {
   display: none;
