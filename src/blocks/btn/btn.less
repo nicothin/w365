@@ -25,6 +25,7 @@
   height: 44px;
   min-width: 220px;
   border: 1px solid #fff;
+  // border: none;
   color: #fff;
   background-color: transparent;
   background-image: none;
@@ -35,6 +36,7 @@
     color: #fff;
     background-color: transparent;
     border-color: transparent;
+    border: none;
   }
 
   &:active,
@@ -43,7 +45,7 @@
     box-shadow: none;
     color: #fff;
     background-color: transparent;
-    animation: border-flash 1s infinite alternate;
+    // animation: border-flash 1s infinite alternate;
   }
 
   &:disabled {
@@ -56,6 +58,8 @@
       pointer-events: none;
     }
   }
+
+
 
 
 
@@ -125,6 +129,54 @@
       border-color: @color-main;
       background-color: @color-main;
       color: #fff;
+    }
+  }
+
+  &--svg-border {
+    border: none !important;
+
+    .btn__border {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      line {
+        stroke: currentColor;
+        stroke-width: 1;
+        transition: all .4s ease-in-out;
+      }
+    }
+
+    .btn__border-top {
+      stroke-dasharray: 220 1;
+    }
+    .btn__border-right {
+      stroke-dasharray: 44 1;
+    }
+    .btn__border-bottom {
+      stroke-dasharray: 220 1;
+    }
+    .btn__border-left {
+      stroke-dasharray: 44 1;
+    }
+
+    &:hover,
+    &:focus {
+
+      .btn__border-top {
+        stroke-dasharray: 15 190;
+      }
+      .btn__border-right {
+        stroke-dasharray: 15 12;
+      }
+      .btn__border-bottom {
+        stroke-dasharray: 14 190;
+      }
+      .btn__border-left {
+        stroke-dasharray: 15 12;
+      }
     }
   }
 }
