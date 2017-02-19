@@ -38,6 +38,11 @@
           bottom: 52px;
           left: 95px;
           border: 1px solid @gray-lighter;
+          opacity: 0;
+
+          .js-loaded & {
+            animation: opacity-none 0.3s 1.2s forwards;
+          }
         }
       }
 
@@ -225,6 +230,14 @@
       .full-page__section {
         // padding-top: 80px;
         padding-left: 158px;
+      }
+
+      .full-page__section-inner {
+        opacity: 0;
+
+        .js-loaded & {
+          animation: opacity-none 0.3s 1.2s forwards;
+        }
       }
 
       .fp-tableCell {
@@ -488,6 +501,14 @@ html.js-loaded,
   left: 50%;
   margin-top: 0 !important;
   transform: translate(-600px, -100%);
+
+  @media (min-width: @screen-xl) {
+    opacity: 0;
+
+    .js-loaded & {
+      animation: opacity-none 0.3s 1.2s forwards;
+    }
+  }
 
   @media (min-width: @screen-xxl) {
     transform: translate(-832px, -100%);

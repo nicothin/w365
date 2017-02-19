@@ -15,6 +15,11 @@
   @media (min-width: @screen-xl) {
     top: 94px;
     left: e('calc(50% - 310px)');
+    opacity: 0;
+
+    .js-loaded & {
+      animation: opacity-none 0.3s 0.9s forwards;
+    }
   }
 
   @media (min-width: @screen-xxl) {

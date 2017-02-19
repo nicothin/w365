@@ -21,6 +21,7 @@
     clearTimeout(loadTimer);
     $('#square-loader').fadeOut(300, function(){
       document.documentElement.classList.add('js-loaded');
+      setTimeout(function() { $('.main-nav--content .main-nav__wrapper').addClass('main-nav__wrapper--user-is-not-stupid'); }, 1500);
     });
   }
 
