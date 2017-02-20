@@ -42,6 +42,24 @@ $(document).ready(function() {
   // добавление в блок пагинации полноэкранной прокрутки своего контента
   $('#fp-nav').hide().append('<span class="scroll-me-baby">Скролльте</span>');
 
+  // обеспечим поддержку говнобраузерами свойства object-fit
   objectFitImages();
+
+  // выбор даты
+  // https://github.com/nazar-pc/PickMeUp
+  pickmeup.defaults.locales['ru'] = {
+    days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+    daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
+  };
+  pickmeup('.field-date__calendar', {
+    flat : true,
+    locale: 'ru'
+  });
+  $('.field-date__calendar').on('pickmeup-change', function (e) {
+    $(this).closest('.field-date').find('input').val(e.detail.formatted_date);
+  });
 
 });

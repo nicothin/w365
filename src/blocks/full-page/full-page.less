@@ -67,10 +67,6 @@
 
       @media (min-width: @screen-xl) {
 
-        .fp-tableCell {
-          // padding-top: 0 !important;
-        }
-
         .full-page__section-inner {
           position: relative;
           left: e('calc(50% - 446px)');
@@ -80,6 +76,20 @@
         .main-header {
           position: relative;
           left: e('calc(50% - 446px)');
+        }
+      }
+
+      @media (min-width: @screen-xxl) {
+
+        .full-page__section-inner {
+          position: relative;
+          left: e('calc(50% - 595px)');
+          width: 595px;
+        }
+
+        .main-header {
+          position: relative;
+          left: e('calc(50% - 595px)');
         }
       }
     }
