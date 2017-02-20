@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>w365</title>
+  <meta name="description" content="">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
+  <script src="js/script.min.js"></script>
+  <script>
+
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+    // Ожидаем события загрузки и добавляем класс. Более 5 сек. не ждем
+    window.addEventListener('load', showContent);
+    var loadTimer = setTimeout(function(){
+      showContent();
+      window.removeEventListener('load', showContent);
+    }, 5000);
+    function showContent(){
+      clearTimeout(loadTimer);
+      $('#square-loader').fadeOut(300, function(){
+        document.documentElement.classList.add('js-loaded');
+        setTimeout(function() { $('.main-nav--content .main-nav__wrapper').addClass('main-nav__wrapper--user-is-not-stupid'); }, 1500);
+      });
+    }
+
+  </script>
+
+  <link href="/img/favicon.png" rel="icon">
+
+</head>
+
+<body>
+
+  <span id="square-loader" class="square-loader">
+    <span class="square-loader__load"></span>
+  </span>
+
+  <noscript>Эта страница требует JavaScript для полноценной работы. Вы выключили Javascript. Вы нас пугаете.</noscript>
+
+  <div id="one-screen-page" class="full-page  full-page--content-page  full-page--contacts-page"> <!-- добавить full-page--contacts-page-moskow, если МСК -->
+
+    <span class="bg-name  bg-name--left  bg-name--sup-bg-dark" data-bg-text="Контакты"></span>
+
+    <div class="main-nav  main-nav--content" id="main-nav">
+      <div class="main-nav__burger  js-main-menu-toggler" data-text="Menu"><span class="main-nav__burger-icon"></span></div>
+      <nav class="main-nav__wrapper">
+        <div class="main-nav__inner">
+
+          <a href="/" class="main-nav__logo">
+            <svg class="logo-w365" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367 179" width="122" height="60">
+              <path class="logo-w365__365" d="M268.875 131.634h3.278q2.724 0 4.762-.95 2.036-.98 3.093-2.642 1.084-1.693 1.084-3.886 0-3.7-2.09-5.788-2.087-2.087-6.002-2.087-3.703 0-6.083 2.2-2.354 2.17-2.354 5.74h-3.173q0-2.98 1.507-5.44 1.508-2.48 4.18-3.83 2.67-1.34 5.923-1.34 5.236 0 8.25 2.858 3.017 2.856 3.017 7.82 0 2.778-1.772 5.13-1.746 2.326-4.814 3.49 3.61 1.003 5.46 3.46 1.86 2.43 1.86 5.815 0 4.94-3.22 7.954-3.22 3.02-8.62 3.02-3.43 0-6.31-1.365-2.85-1.366-4.44-3.823-1.55-2.48-1.55-5.75h3.17q0 3.674 2.57 6.003 2.57 2.3 6.59 2.3 4.1 0 6.37-2.09 2.305-2.114 2.305-6.1 0-3.86-2.486-5.9-2.47-2.034-7.28-2.034h-3.18v-2.7zm41.68-17.81v2.774h-.37q-6.902 0-10.87 4.07-3.968 4.043-4.39 11.257 1.585-2.194 4.046-3.388 2.46-1.217 5.5-1.217 5.08 0 8.07 3.514 3.02 3.48 3.02 9.14 0 3.745-1.4 6.765-1.4 3-4.02 4.69-2.62 1.66-5.98 1.66-5.52 0-8.99-4-3.46-4.02-3.46-10.36v-3.17q0-10.34 4.71-16 4.71-5.68 13.36-5.79h.79zm-6.586 16.226q-3.02 0-5.64 1.796-2.59 1.77-3.47 4.52v2.694q0 5.022 2.57 8.193 2.59 3.17 6.71 3.17 3.71 0 5.98-2.933 2.31-2.933 2.31-7.4 0-4.544-2.298-7.29-2.277-2.75-6.17-2.75zm20.1 2.827l1.87-18.763h19.26v2.933h-16.53l-1.35 13.003q3.09-2.113 7.24-2.113 5.21 0 8.3 3.38 3.1 3.384 3.1 9.012 0 6.07-3.02 9.43-3.02 3.35-8.49 3.35-5.03 0-8.15-2.81-3.12-2.8-3.57-7.85h3.04q.45 3.94 2.67 5.97 2.22 2.01 6.005 2.01 4.127 0 6.217-2.61 2.113-2.62 2.113-7.458 0-4.225-2.35-6.89-2.356-2.664-6.43-2.664-2.246 0-3.912.59-1.667.56-3.52 2.19l-2.51-.71z" fill="#e9521d"/>
+              <path class="logo-w365__cursor" d="M343.668 155.466l.02 16.38c0 .574.343 1.102.867 1.32.183.08.38.126.57.126.368 0 .724-.137.988-.39l1.78-1.654 3.307 6.88c.16.355.448.63.804.77.173.068.356.102.53.102.194 0 .4-.034.584-.115l1.734-.758c.356-.15.632-.442.77-.804.138-.358.126-.758-.035-1.108l-3.39-6.844 2.554-.23c.57-.05 1.05-.42 1.23-.96.19-.53.04-1.13-.37-1.52-3.99-3.69-11.91-11.15-11.91-11.15z" fill="#353535"/>
+              <path class="logo-w365__frame" d="M252.897 96.29c-6.737 0-12.207 5.475-12.207 12.21v48.524c0 6.736 5.47 12.208 12.207 12.208h87.266v-3.095h-87.266c-5.076 0-9.112-4.038-9.112-9.113V108.5c0-5.075 4.036-9.114 9.11-9.114h101.91c5.075 0 9.106 4.04 9.106 9.114v48.53c0 3.4-1.81 6.34-4.54 7.902v3.41c4.47-1.814 7.64-6.19 7.64-11.31V108.5c.02-6.735-5.46-12.21-12.19-12.21H252.9z" fill="#949595"/>
+              <path class="logo-w365__w" d="M0 .876L54.436 169.29h45.23l31.906-98.478 31.832 98.478h45.23L263.144.876h-45.23L186.056 99.44 154.196.876h-45.25L77.09 99.44 45.23.876z" fill="#e9521d"/>
+              <path class="logo-w365__w-line" d="M81.522 85.725l-4.43 13.7 22.578 69.85 4.436-13.684-22.584-69.86zm108.964.01l-4.43 13.7 22.58 69.848 4.43-13.69-22.585-69.86z" fill="#a93417"/>
+              <path class="logo-w365__w-line" d="M154.166.876l-27.953 86.477 5.36-16.543 4.422 13.682L158.61 14.53 154.197.876h-.03z" fill="#a93417"/>
+            </svg>
+          </a>
+
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner"><a href="" class="main-nav__link">Главная</a></span>
+            </li>
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner">
+                <a href="" class="main-nav__link">Веб-студия</a>
+                <ul class="main-nav__sublist">
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Разработка сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Редизайн сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Адаптация под мобильные</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Поддержка и развитие</a>
+                  </li>
+                </ul>
+              </span>
+            </li>
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner">
+                <a href="" class="main-nav__link">Интернет-маркетинг</a>
+                <ul class="main-nav__sublist">
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Разработка сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Редизайн сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Адаптация под мобильные</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Поддержка и развитие</a>
+                  </li>
+                </ul>
+              </span>
+            </li>
+            <li class="main-nav__item  main-nav__item--active">
+              <span class="main-nav__item-inner">
+                <a href="" class="main-nav__link">Кейсы</a>
+                <ul class="main-nav__sublist">
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Разработка сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Редизайн сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Адаптация под мобильные</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Поддержка и развитие</a>
+                  </li>
+                </ul>
+              </span>
+            </li>
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner"><a href="" class="main-nav__link">Контакты</a></span>
+            </li>
+          </ul>
+
+        </div>
+        <div class="main-nav__close-icon  close-icon  js-main-menu-toggler"></div>
+        <div class="main-nav__arrow  js-main-menu-toggler"><span class="main-nav__arrow-inner"><span class="main-nav__arrow-icon"></span></span></div>
+
+      </nav>
+      <a href="" class="btn  btn--red-arrow-border  discuss-project-btn">Обсудить проект</a>
+      <div class="main-nav__js-backdrop  js-main-menu-toggler"></div>
+    </div>
+
+    <div class="full-page__section  full-page__section--page-50-50  page-contacts">
+
+      <div class="main-header">
+        <h1 class="main-header__title">
+          <span class="main-header__text">Контакты</span>
+        </h1>
+      </div>
+
+      <div class="full-page__section-inner  page-contacts__text">
+
+        <div class="page-contacts__list">
+          <div class="page-contacts__item">
+            <span class="page-contacts__item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
+                <path d="M64 12.5H0v39h64v-39zm-4.395 2L32 32.31 4.395 14.5h55.21zM2 49.5V15.335L32 34.69l30-19.355V49.5H2z" fill="#fff"/>
+              </svg>
+            </span>
+            <div class="page-contacts__text-wrap">
+              <a href="mailto:Info@web365.ru" class="page-contacts__item-text">Info@web365.ru</a> <br>
+              <a href="#write-to-us" class="btn  btn--svg-border  js-activate-contacts-item">
+                <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                  <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                  <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                  <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                  <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                </svg>
+                Написать нам
+              </a>
+            </div>
+            <form id="write-to-us" class="page-contacts__modal" action="">
+              <div class="page-contacts__close  close-icon  close-icon--sm  js-activate-contacts-item"></div>
+              <p class="page-contacts__modal-msg">Есть вопросы? Пишите, мы всегда онлайн</p>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Введите ваше имя">
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="tel" placeholder="Введите ваш телефон">
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <textarea class="field-text__input" placeholder="Введите ваше сообщение"></textarea>
+                </span>
+              </label>
+              <div class="field-actions">
+                <button class="btn  btn--second  btn--svg-border">
+                  <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                    <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                    <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                    <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                    <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                  </svg>
+                  Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="page-contacts__item">
+            <span class="page-contacts__item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="512" height="512">
+                <path d="M45 0H15c-2.21 0-4 1.79-4 4v52c0 2.21 1.79 4 4 4h30c2.21 0 4-1.79 4-4V4c0-2.21-1.79-4-4-4zm0 58H15c-1.105 0-2-.895-2-2v-6h29c.552 0 1-.448 1-1s-.448-1-1-1H13V4c0-1.105.895-2 2-2h30c1.105 0 2 .895 2 2v6H18c-.552 0-1 .448-1 1s.448 1 1 1h29v44c0 1.105-.895 2-2 2z" fill="#fff"/>
+                <path d="M30 52c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm3-47h-6c-.552 0-1 .448-1 1s.448 1 1 1h6c.552 0 1-.448 1-1s-.448-1-1-1zM18.642 21.715l4.073-4.073c.375-.375.375-.983 0-1.358-.375-.375-.983-.375-1.358 0l-4.073 4.073c-.375.375-.375.983 0 1.358.376.375.983.375 1.358 0zm10.073-5.43c-.375-.375-.983-.375-1.358 0L17.285 26.358c-.375.375-.375.983 0 1.358.375.375.983.375 1.358 0l10.073-10.073c.374-.376.374-.983 0-1.358z" fill="#fff"/>
+              </svg>
+            </span>
+            <div class="page-contacts__text-wrap">
+              <a href="tel:+78127482267" class="page-contacts__item-text">+7 (812) 748-22-67</a> <br>
+              <a href="#request-a-call" class="btn  btn--svg-border  js-activate-contacts-item">
+                <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                  <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                  <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                  <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                  <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                </svg>
+                Заказать звонок
+              </a>
+            </div>
+            <form id="request-a-call" class="page-contacts__modal" action="">
+              <div class="page-contacts__close  close-icon  close-icon--sm  js-activate-contacts-item"></div>
+              <p class="page-contacts__modal-msg">Введите данные и&nbsp;наш специалист свяжется с&nbsp;вами в&nbsp;течение 10&nbsp;минут</p>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Введите ваше имя">
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="tel" placeholder="Введите ваш телефон">
+                </span>
+              </label>
+              <div class="field-actions  field-actions--mt68">
+                <button class="btn  btn--second  btn--svg-border">
+                  <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                    <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                    <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                    <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                    <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                  </svg>
+                  Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="page-contacts__item">
+            <span class="page-contacts__item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.168 61.168" width="512" height="512">
+                <path d="M30.938 26.584c3.86 0 7-3.14 7-7s-3.14-7-7-7-7 3.14-7 7 3.14 7 7 7zm0-12c2.757 0 5 2.243 5 5s-2.243 5-5 5-5-2.243-5-5 2.243-5 5-5z" fill="#fff"/>
+                <path d="M50.216 37.584h-7.16l3.046-4.4c5.755-7.67 4.922-20.28-1.78-26.982C40.7 2.58 35.882.585 30.76.585c-5.123 0-9.94 1.995-13.56 5.617-6.704 6.702-7.537 19.312-1.805 26.952l3.068 4.43H10.95L0 60.584h61.168l-10.952-23zm-33.196-5.6c-5.2-6.933-4.454-18.32 1.596-24.37 3.244-3.243 7.558-5.03 12.146-5.03s8.9 1.787 12.146 5.03c6.05 6.05 6.795 17.438 1.573 24.4L30.76 51.827 20.9 37.584l-3.878-5.6zm-4.804 7.6h7.634L30.76 55.34l10.91-15.756h7.282l9.048 19H3.168l9.048-19z" fill="#fff"/>
+              </svg>
+            </span>
+            <div class="page-contacts__text-wrap">
+              <span class="page-contacts__item-text">Беговая 3, оф.14</span> <br>
+              <a href="#come-to-me-baby" class="btn  btn--svg-border  js-activate-contacts-item">
+                <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                  <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                  <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                  <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                  <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                </svg>
+                Приехать в гости
+              </a>
+            </div>
+            <form id="come-to-me-baby" class="page-contacts__modal" action="">
+              <div class="page-contacts__close  close-icon  close-icon--sm  js-activate-contacts-item"></div>
+              <p class="page-contacts__modal-msg">Будем рады видеть вас в&nbsp;нашем офисе по&nbsp;адресу г.&nbsp;<nobr>Санкт-Петербург</nobr>, Приморский <nobr>р-н</nobr>, ул.&nbsp;Беговая, д.3. Обсудим ваш проект в&nbsp;непренужденной обстановке за&nbsp;чашкой кофе или чая в&nbsp;рабочие дни пн.-пт. с&nbsp;10 до&nbsp;19ти.</p>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Введите ваше имя">
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="tel" placeholder="Введите ваш телефон">
+                </span>
+              </label>
+              <div class="page-contacts__calendar-wrapper">
+                <div class="page-contacts__calendar-inner-left">
+                  <div class="field-date">
+                    <div class="field-date__name">Выберите дату</div>
+                    <input type="text" class="field-date__input">
+                    <div class="field-date__calendar"></div>
+                  </div>
+                </div>
+                <div class="page-contacts__calendar-inner-right">
+                  <label class="field-select">
+                    <div class="field-select__name">Выберите время</div>
+                    <div class="field-select__select-wrap">
+                      <select class="field-select__select">
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>12:00</option>
+                        <option>13:00</option>
+                        <option>14:00</option>
+                        <option>15:00</option>
+                        <option>16:00</option>
+                        <option>17:00</option>
+                        <option>18:00</option>
+                      </select>
+                    </div>
+                  </label>
+                  <div class="field-actions">
+                    <button class="btn  btn--second  btn--svg-border">
+                      <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                        <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                        <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                        <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                        <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                      </svg>
+                      Отправить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <a href="tel:+78127482267" class="btn  page-contacts__call-me-baby">
+          Позвонить
+        </a>
+
+        <div class="page-contacts__footer">
+          <p class="page-contacts__copyright">
+            <a href="" class="page-contacts__requisites-link">Реквизиты компании</a> <br>
+            Старательное интернет-агентство WEB365. © 2016. Все права защищены
+          </p>
+          <div class="social-links">
+            <a href="" class="social-links__item">
+              <span class="social-links__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="28" viewBox="0 0 31 28">
+                  <path d="M29.953 8.125c.234.64-.5 2.14-2.344 4.594-3.04 4.03-3.36 3.65-.86 5.98 2.4 2.23 2.9 3.31 2.98 3.45 0 0 1 1.75-1.11 1.76l-4 .063c-.86.172-2-.61-2-.61-1.5-1.03-2.91-3.7-4-3.358 0 0-1.13.36-1.1 2.765.015.516-.235.797-.235.797s-.28.295-.828.342h-1.8c-3.954.25-7.44-3.39-7.44-3.39S3.42 16.59.075 8.73c-.22-.514.02-.764.02-.764s.234-.3.89-.3l4.28-.03c.408.06.69.28.69.28s.25.17.375.5c.7 1.75 1.6 3.343 1.6 3.343 1.56 3.22 2.623 3.77 3.232 3.44 0 0 .797-.48.625-4.37-.063-1.408-.453-2.05-.453-2.05-.36-.485-1.03-.626-1.33-.673-.233-.03.157-.594.673-.844.768-.373 2.127-.39 3.736-.373 1.268.015 1.627.093 2.11.2 1.485.36.985 1.734.985 5.047 0 1.063-.2 2.548.563 3.032.33.22 1.14.03 3.14-3.38 0 0 .94-1.624 1.676-3.515.124-.343.39-.483.39-.483s.25-.14.594-.094l4.5-.03c1.36-.173 1.58.452 1.58.452z"/>
+                </svg>
+              </span>
+              <span class="social-links__text">Мы Вконтакте</span>
+            </a>
+            <a href="" class="social-links__item">
+              <span class="social-links__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+                  <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm2.156 0c0 3.406-2.75 6.156-6.156 6.156S5.844 17.406 5.844 14 8.594 7.844 12 7.844s6.156 2.75 6.156 6.156zm1.688-6.406c0 .797-.64 1.437-1.437 1.437S16.97 8.39 16.97 7.6s.64-1.437 1.437-1.437 1.437.64 1.437 1.437zM12 4.156c-1.75 0-5.5-.14-7.078.484-.547.22-.953.484-1.375.906s-.688.828-.906 1.375c-.62 1.58-.48 5.33-.48 7.08s-.14 5.5.49 7.08c.22.55.486.958.908 1.38s.83.688 1.376.906c1.578.623 5.328.48 7.078.48s5.5.14 7.08-.482c.547-.22.953-.484 1.375-.906s.69-.826.908-1.373c.625-1.577.484-5.327.484-7.077s.14-5.5-.484-7.08c-.22-.547-.485-.953-.907-1.375s-.83-.687-1.377-.905c-1.58-.623-5.33-.482-7.08-.482zM24 14c0 1.656.016 3.297-.078 4.953-.094 1.922-.53 3.625-1.937 5.03s-3.11 1.845-5.03 1.938c-1.657.1-3.298.08-4.954.08s-3.29.02-4.95-.08c-1.92-.09-3.62-.53-5.03-1.93S.17 20.88.08 18.96c-.09-1.66-.075-3.3-.075-4.957S-.013 10.705.08 9.05c.095-1.922.53-3.625 1.938-5.03s3.11-1.845 5.03-1.938c1.658-.097 3.3-.08 4.955-.08s3.298-.016 4.954.08c1.922.092 3.625.53 5.03 1.935s1.845 3.11 1.938 5.03c.092 1.658.076 3.3.076 4.954z"/>
+                </svg>
+              </span>
+              <span class="social-links__text">Мы в инстаграме</span>
+            </a>
+            <a href="" class="social-links__item">
+              <span class="social-links__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+                  <path d="M14.984.187v4.125H12.53c-1.92 0-2.28.922-2.28 2.25v2.953h4.578l-.61 4.625H10.25V26H5.47V14.14H1.484V9.515H5.47V6.11C5.47 2.155 7.89 0 11.42 0c1.687 0 3.14.125 3.563.187z"/>
+                </svg>
+              </span>
+              <span class="social-links__text">Мы на фейсбуке</span>
+            </a>
+          </div>
+          <div class="page-contacts__add-links">
+            <a href="">Статьи</a>
+            <a href="">Вакансии</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="contacts-map" class="page-contacts__map"></div>
+      <script>
+        // Запилим карту
+        var styleArray = [{
+          featureType: 'all',
+          stylers: [{ saturation: -100 }]
+        }];
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('contacts-map'), {
+            center: {lat: 59.986133, lng: 30.205546},
+            zoom: 14,
+            disableDefaultUI: true,
+            styles: styleArray
+          });
+          var image = {
+            url: '/img/location.svg',
+            size: new google.maps.Size(48, 48),
+            anchor: new google.maps.Point(24, 42)
+          };
+          var marker = new google.maps.Marker({
+            position: {lat: 59.986133, lng: 30.205546},
+            map: map,
+            icon: image,
+          });
+        }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChZnQQNim7gLfThC55HVl2-A-yNo80Cj8&callback=initMap"></script>
+
+    </div>
+
+    <div class="decor-lines">
+      <div class="decor-lines__item"></div>
+      <div class="decor-lines__item"></div>
+      <div class="decor-lines__item"></div>
+      <div class="decor-lines__item"></div>
+      <div class="decor-lines__item"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
