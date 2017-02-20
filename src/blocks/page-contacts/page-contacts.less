@@ -8,35 +8,38 @@
   width: 100%;
   height: 100%;
 
+  &__list {
+    position: relative;
+  }
+
   &__item {
     padding-bottom: 20px;
-    position: relative;
+    display: flex;
+    align-items: flex-end;
 
     .btn {
       display: none;
 
       @media (min-width: @screen-xl) {
-        display: flex;
+        display: inline-flex;
       }
     }
   }
 
   &__item-icon {
-    position: absolute;
-    top: 50%;
     display: none;
     width: 62px;
     height: 62px;
-    transform: translateY(-50%);
     opacity: 0.2;
+    transform: translateY(5px);
 
     @media (min-width: @screen-xl) {
       display: block;
-      left: -100px;
+      margin-right: 40px;
     }
 
     @media (min-width: @screen-xxl) {
-      left: -120px;
+      margin-right: 60px;
     }
 
     svg {
@@ -84,6 +87,28 @@
     @media (min-width: @screen-xl) {
       display: none;
     }
+  }
+
+  &__modal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 596px;
+    top: 0;
+    left: 0;
+    padding: 58px;
+    background-color: #fff;
+    color: @text-color;
+
+    @media (min-width: @screen-xl) {
+      // display: block;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
   }
 
   &__footer {
@@ -150,12 +175,14 @@
   &__map {
     display: none;
     background-color: @gray-lighter;
+    background-image: url(../img/map-bg.jpg);
+    background-position: center;
 
     @media (min-width: @screen-xl) {
       display: block;
       height: 100%;
       width: 50%;
-      position: absolute;
+      position: absolute !important; // привет гугл-картам!
       z-index: 1;
       top: 0;
       bottom: 0;

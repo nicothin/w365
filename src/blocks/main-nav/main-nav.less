@@ -500,31 +500,9 @@
     position: absolute;
     top: 6px;
     right: 6px;
-    width: 33px;
-    height: 33px;
-    cursor: pointer;
 
     @media (min-width: @screen-xl) {
       display: none;
-    }
-
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 33px;
-      height: 2px;
-      background-color: @color-second;
-    }
-
-    &:before {
-      transform: rotate(-45deg);
-    }
-
-    &:after {
-      transform: rotate(45deg);
     }
   }
 

@@ -1,0 +1,45 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/field-text/field-text.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.field-text {
+  display: block;
+  margin-bottom: 28px;
+
+  &__input {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    padding: 0 20px;
+    line-height: @line-height;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    background-color: #fff;
+    border: none;
+    border-bottom: 2px solid @color-main;
+    transition: all 0.3s;
+    appearance: textfield;
+
+    &:focus {
+      outline: 0;
+      border-color: @color-second;
+    }
+
+    &::placeholder {
+      color: @gray-light;
+      opacity: 1;
+    }
+
+    textarea& {
+      height: auto;
+      min-height: 130px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin: 20px 0;
+      border: 1px solid @color-main;
+      resize: none;
+    }
+  }
+}

@@ -10,6 +10,12 @@ $(document).ready(function() {
     $('html').toggleClass('js-main-nav-open');
   });
 
+  // контакты: показ/сокрытие псевдомодальных окон
+  $('.js-activate-contacts-item').on('click', function(e){
+    e.preventDefault();
+    $(this).closest('.page-contacts__item').toggleClass('page-contacts__item--js-active');
+  });
+
   // логотип для контентных страниц
   var logo = $('#main-nav.main-nav--content .main-nav__logo');
   // для контентных страниц продублируем логотип, чтобы не извращаться со вставкой второго такого же в разметку
@@ -26,6 +32,11 @@ $(document).ready(function() {
     lockAnchors: false,
     normalScrollElements: '#square-loader',
     sectionSelector: '.full-page__section',
+    afterResize: function(){
+      if(map){
+        google.maps.event.trigger(map, 'resize');
+      }
+    }
   });
 
   // добавление в блок пагинации полноэкранной прокрутки своего контента

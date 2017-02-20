@@ -281,6 +281,7 @@ gulp.task('serve', gulp.series('build', function() {
     server: dirs.build,
     port: port,
     notify: false,
+    open: false,
     startPath: 'index.html'
   });
   gulp.watch([

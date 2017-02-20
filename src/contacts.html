@@ -24,8 +24,6 @@
       <div class="main-nav__burger  js-main-menu-toggler" data-text="Menu"><span class="main-nav__burger-icon"></span></div>
       <nav class="main-nav__wrapper">
         @@include('_include/page_nav-inner.html')
-        <div class="main-nav__close-icon  js-main-menu-toggler"></div>
-        <div class="main-nav__arrow  js-main-menu-toggler"><span class="main-nav__arrow-inner"><span class="main-nav__arrow-icon"></span></span></div>
       </nav>
       <a href="" class="btn  btn--red-arrow-border  discuss-project-btn">Обсудить проект</a>
       <div class="main-nav__js-backdrop  js-main-menu-toggler"></div>
@@ -48,16 +46,48 @@
                 <path d="M64 12.5H0v39h64v-39zm-4.395 2L32 32.31 4.395 14.5h55.21zM2 49.5V15.335L32 34.69l30-19.355V49.5H2z" fill="#fff"/>
               </svg>
             </span>
-            <a href="mailto:Info@web365.ru" class="page-contacts__item-text">Info@web365.ru</a> <br>
-            <a href="#" class="btn  btn--svg-border">
-              <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
-                <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
-                <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
-                <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
-                <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
-              </svg>
-              Написать нам
-            </a>
+            <div class="page-contacts__text-wrap">
+              <a href="mailto:Info@web365.ru" class="page-contacts__item-text">Info@web365.ru</a> <br>
+              <a href="#write-to-us" class="btn  btn--svg-border  js-activate-contacts-item">
+                <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                  <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                  <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                  <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                  <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                </svg>
+                Написать нам
+              </a>
+            </div>
+            <form id="write-to-us" class="page-contacts__modal" action="">
+              <div class="page-contacts__close  close-icon  close-icon--sm"></div>
+              <p>Есть вопросы? Пишите, мы всегда онлайн</p>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Введите ваше имя">
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="tel" placeholder="Введите ваш телефон">
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <textarea class="field-text__input" placeholder="Введите ваше сообщение"></textarea>
+                </span>
+              </label>
+              <div class="field-actions">
+                <button class="btn  btn--second  btn--svg-border">
+                  <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                    <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                    <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                    <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                    <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                  </svg>
+                  Отправить
+                </button>
+              </div>
+            </form>
           </div>
           <div class="page-contacts__item">
             <span class="page-contacts__item-icon">
@@ -66,16 +96,43 @@
                 <path d="M30 52c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm3-47h-6c-.552 0-1 .448-1 1s.448 1 1 1h6c.552 0 1-.448 1-1s-.448-1-1-1zM18.642 21.715l4.073-4.073c.375-.375.375-.983 0-1.358-.375-.375-.983-.375-1.358 0l-4.073 4.073c-.375.375-.375.983 0 1.358.376.375.983.375 1.358 0zm10.073-5.43c-.375-.375-.983-.375-1.358 0L17.285 26.358c-.375.375-.375.983 0 1.358.375.375.983.375 1.358 0l10.073-10.073c.374-.376.374-.983 0-1.358z" fill="#fff"/>
               </svg>
             </span>
-            <a href="tel:+78127482267" class="page-contacts__item-text">+7 (812) 748-22-67</a> <br>
-            <a href="#" class="btn  btn--svg-border">
-              <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
-                <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
-                <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
-                <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
-                <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
-              </svg>
-              Заказать звонок
-            </a>
+            <div class="page-contacts__text-wrap">
+              <a href="tel:+78127482267" class="page-contacts__item-text">+7 (812) 748-22-67</a> <br>
+              <a href="#request-a-call" class="btn  btn--svg-border  js-activate-contacts-item">
+                <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                  <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                  <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                  <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                  <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                </svg>
+                Заказать звонок
+              </a>
+            </div>
+            <form id="request-a-call" class="page-contacts__modal" action="">
+              <div class="page-contacts__close  close-icon  close-icon--sm"></div>
+              <p>Введите данные и&nbsp;наш специалист свяжется с&nbsp;вами в&nbsp;течение 10&nbsp;минут</p>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Введите ваше имя">
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="tel" placeholder="Введите ваш телефон">
+                </span>
+              </label>
+              <div class="field-actions">
+                <button class="btn  btn--second  btn--svg-border">
+                  <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                    <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                    <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                    <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                    <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                  </svg>
+                  Отправить
+                </button>
+              </div>
+            </form>
           </div>
           <div class="page-contacts__item">
             <span class="page-contacts__item-icon">
@@ -84,16 +141,44 @@
                 <path d="M50.216 37.584h-7.16l3.046-4.4c5.755-7.67 4.922-20.28-1.78-26.982C40.7 2.58 35.882.585 30.76.585c-5.123 0-9.94 1.995-13.56 5.617-6.704 6.702-7.537 19.312-1.805 26.952l3.068 4.43H10.95L0 60.584h61.168l-10.952-23zm-33.196-5.6c-5.2-6.933-4.454-18.32 1.596-24.37 3.244-3.243 7.558-5.03 12.146-5.03s8.9 1.787 12.146 5.03c6.05 6.05 6.795 17.438 1.573 24.4L30.76 51.827 20.9 37.584l-3.878-5.6zm-4.804 7.6h7.634L30.76 55.34l10.91-15.756h7.282l9.048 19H3.168l9.048-19z" fill="#fff"/>
               </svg>
             </span>
-            <span class="page-contacts__item-text">Беговая 3, оф.14</span> <br>
-            <a href="#" class="btn  btn--svg-border">
-              <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
-                <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
-                <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
-                <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
-                <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
-              </svg>
-              Приехать в гости
-            </a>
+            <div class="page-contacts__text-wrap">
+              <span class="page-contacts__item-text">Беговая 3, оф.14</span> <br>
+              <a href="#come-to-me-baby" class="btn  btn--svg-border  js-activate-contacts-item">
+                <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                  <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                  <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                  <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                  <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                </svg>
+                Приехать в гости
+              </a>
+            </div>
+            <form id="come-to-me-baby" class="page-contacts__modal" action="">
+              <div class="page-contacts__close  close-icon  close-icon--sm"></div>
+              <p>Будем рады видеть вас в&nbsp;нашем офисе по&nbsp;адресу г.&nbsp;<nobr>Санкт-Петербург</nobr>, Приморский <nobr>р-н</nobr>, ул.&nbsp;Беговая, д.3. Обсудим ваш проект в&nbsp;непренужденной обстановке за&nbsp;чашкой кофе или чая в&nbsp;рабочие дни пн.-пт. с&nbsp;10 до&nbsp;19ти.</p>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Введите ваше имя">
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="tel" placeholder="Введите ваш телефон">
+                </span>
+              </label>
+              календарь
+              <div class="field-actions">
+                <button class="btn  btn--second  btn--svg-border">
+                  <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                    <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                    <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                    <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                    <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                  </svg>
+                  Отправить
+                </button>
+              </div>
+            </form>
           </div>
         </div>
 
@@ -147,8 +232,9 @@
           featureType: 'all',
           stylers: [{ saturation: -100 }]
         }];
+        var map;
         function initMap() {
-          var map = new google.maps.Map(document.getElementById('contacts-map'), {
+          map = new google.maps.Map(document.getElementById('contacts-map'), {
             center: {lat: 59.986133, lng: 30.205546},
             zoom: 14,
             disableDefaultUI: true,
@@ -163,18 +249,6 @@
             position: {lat: 59.986133, lng: 30.205546},
             map: map,
             icon: image,
-          });
-          // На любе изменение размеров вьюпорта будем подправлять карту
-          var t0;
-          $('#contacts-map').on('resize', function(){
-            clearTimeout(t0);
-            t0 = setTimeout(function () {
-              console.log('ресайз');
-              google.maps.event.trigger(map, 'resize');
-              google.maps.event.addListener(map, 'zoom_changed', function(){
-                map.setCenter( marker.getPosition() );
-              });
-            }, 100);
           });
         }
       </script>
