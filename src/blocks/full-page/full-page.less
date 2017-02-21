@@ -241,11 +241,6 @@
 
 
 
-  &--home {
-    background-color: @color-main;
-    color: #fff;
-  }
-
   &--content-page {
 
     @media (max-width: (@screen-xl - 1)) {
@@ -298,49 +293,6 @@
         // overflow-y: auto;
       }
     }
-  }
-
-  &--contacts-page {
-    position: relative;
-    color: #fff;
-    background-color: @color-main;
-    background-image: url(../img/contacts-bg--spb.jpg);
-    background-position: center;
-    background-size: cover;
-
-    .fp-tableCell {
-      width: 320px;
-      margin: auto;
-
-      @media (min-width: @screen-xl) {
-        width: auto;
-      }
-    }
-
-    a {
-      color: #fff;
-
-      &:hover,
-      &:focus {
-        color: #fff;
-      }
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: @color-main;
-      opacity: 0.85;
-    }
-  }
-
-  &--contacts-page-moskow {
-    background-image: url(../img/contacts-bg--moskow.jpg);
   }
 }
 

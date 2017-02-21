@@ -4,9 +4,44 @@
 
 
 .page-contacts {
-  position: relative;
   width: 100%;
   height: 100%;
+  position: relative;
+  color: #fff;
+  background-color: @color-main;
+  background-image: url(../img/contacts-bg--spb.jpg);
+  background-position: center;
+  background-size: cover;
+
+  .fp-tableCell {
+    width: 320px;
+    margin: auto;
+
+    @media (min-width: @screen-xl) {
+      width: auto;
+    }
+  }
+
+  a {
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: @color-main;
+    opacity: 0.85;
+  }
 
   &__list {
     position: relative;
@@ -277,5 +312,9 @@
       bottom: 0;
       right: 0;
     }
+  }
+
+  &--moscow {
+    background-image: url(../img/contacts-bg--moskow.jpg);
   }
 }

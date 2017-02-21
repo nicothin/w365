@@ -5,19 +5,22 @@
 
 .page-web-studio {
 
-  @media (max-width: (@screen-xl - 1)) {
-    margin-bottom: 44px;
-  }
+  .full-page__section {
 
-  @media (min-width: @screen-xl) {
-    height: 100vh;
-    padding-top: 124px;
-    display: flex;
-    flex-direction: column;
-  }
+    @media (max-width: (@screen-xl - 1)) {
+      margin-bottom: 44px;
+    }
 
-  @media (min-width: @screen-xxl) {
-    padding-top: 220px;
+    @media (min-width: @screen-xl) {
+      height: 100vh;
+      padding-top: 124px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: @screen-xxl) {
+      padding-top: 220px;
+    }
   }
 
   .main-header {

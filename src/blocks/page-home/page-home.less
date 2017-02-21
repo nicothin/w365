@@ -4,27 +4,32 @@
 
 
 .page-home {
+  background-color: @color-main;
+  color: #fff;
 
-  @media (max-width: (@screen-xl - 1)) {
-    text-align: center;
-    margin: auto;
-    padding: 100px 10px;
-  }
+  &__content {
 
-  @media (min-width: @screen-xl) {
-    position: absolute;
-    left: 50%;
-    margin-left: 810px / -2;
-    top: 24vh;
-    height: 235px;
-    width: 848px;
-  }
+    @media (max-width: (@screen-xl - 1)) {
+      text-align: center;
+      margin: auto;
+      padding: 100px 10px;
+    }
 
-  @media (min-width: @screen-xxl) {
-    top: 29vh;
-    width: 1140px;
-    height: 315px;
-    margin-left: -544px;
+    @media (min-width: @screen-xl) {
+      position: absolute;
+      left: 50%;
+      margin-left: 810px / -2;
+      top: 24vh;
+      height: 235px;
+      width: 848px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      top: 29vh;
+      width: 1140px;
+      height: 315px;
+      margin-left: -544px;
+    }
   }
 
   &__inner {
