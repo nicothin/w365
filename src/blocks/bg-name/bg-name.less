@@ -66,4 +66,16 @@
       color: @color-main--lightest;
     }
   }
+
+  &--vertical {
+
+    @media (min-width: @screen-xl) {
+      top: 0;
+      left: auto;
+      right: e('calc(50% - 317px)');
+      width: auto;
+      transform-origin: top right;
+      transform: rotate(-90deg);
+    }
+  }
 }
