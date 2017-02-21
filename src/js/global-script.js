@@ -33,7 +33,7 @@ $(document).ready(function() {
     normalScrollElements: '#square-loader',
     sectionSelector: '.full-page__section',
     afterResize: function(){
-      if(map){
+      if(window.map !== undefined){
         google.maps.event.trigger(map, 'resize');
       }
     }
