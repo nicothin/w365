@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>w365</title>
+  <meta name="description" content="">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
+  <script src="js/script.min.js"></script>
+  <script>
+
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+    // Ожидаем события загрузки и добавляем класс. Более 5 сек. не ждем
+    window.addEventListener('load', showContent);
+    var loadTimer = setTimeout(function(){
+      showContent();
+      window.removeEventListener('load', showContent);
+    }, 5000);
+    function showContent(){
+      clearTimeout(loadTimer);
+      $('#square-loader').fadeOut(300, function(){
+        document.documentElement.classList.add('js-loaded');
+        setTimeout(function() { $('.main-nav--content .main-nav__wrapper').addClass('main-nav__wrapper--user-is-not-stupid'); }, 1500);
+      });
+    }
+
+  </script>
+
+  <link href="img/favicon.png" rel="icon" sizes="30x30">
+
+</head>
+
+<body>
+
+  <span id="square-loader" class="square-loader">
+    <span class="square-loader__load"></span>
+  </span>
+
+  <noscript>Эта страница требует JavaScript для полноценной работы. Вы выключили Javascript. Вы нас пугаете.</noscript>
+
+  <div id="column-page" class="full-page  full-page--content-page">
+
+    <span class="bg-name  bg-name--left" data-bg-text="Веб-студия"></span>
+
+    <div class="main-nav  main-nav--content" id="main-nav">
+      <div class="main-nav__burger  js-main-menu-toggler" data-text="Menu"><span class="main-nav__burger-icon"></span></div>
+      <nav class="main-nav__wrapper">
+        <div class="main-nav__inner">
+
+          <a href="/" class="main-nav__logo">
+            <svg class="logo-w365" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367 179" width="122" height="60">
+              <path class="logo-w365__365" d="M268.875 131.634h3.278q2.724 0 4.762-.95 2.036-.98 3.093-2.642 1.084-1.693 1.084-3.886 0-3.7-2.09-5.788-2.087-2.087-6.002-2.087-3.703 0-6.083 2.2-2.354 2.17-2.354 5.74h-3.173q0-2.98 1.507-5.44 1.508-2.48 4.18-3.83 2.67-1.34 5.923-1.34 5.236 0 8.25 2.858 3.017 2.856 3.017 7.82 0 2.778-1.772 5.13-1.746 2.326-4.814 3.49 3.61 1.003 5.46 3.46 1.86 2.43 1.86 5.815 0 4.94-3.22 7.954-3.22 3.02-8.62 3.02-3.43 0-6.31-1.365-2.85-1.366-4.44-3.823-1.55-2.48-1.55-5.75h3.17q0 3.674 2.57 6.003 2.57 2.3 6.59 2.3 4.1 0 6.37-2.09 2.305-2.114 2.305-6.1 0-3.86-2.486-5.9-2.47-2.034-7.28-2.034h-3.18v-2.7zm41.68-17.81v2.774h-.37q-6.902 0-10.87 4.07-3.968 4.043-4.39 11.257 1.585-2.194 4.046-3.388 2.46-1.217 5.5-1.217 5.08 0 8.07 3.514 3.02 3.48 3.02 9.14 0 3.745-1.4 6.765-1.4 3-4.02 4.69-2.62 1.66-5.98 1.66-5.52 0-8.99-4-3.46-4.02-3.46-10.36v-3.17q0-10.34 4.71-16 4.71-5.68 13.36-5.79h.79zm-6.586 16.226q-3.02 0-5.64 1.796-2.59 1.77-3.47 4.52v2.694q0 5.022 2.57 8.193 2.59 3.17 6.71 3.17 3.71 0 5.98-2.933 2.31-2.933 2.31-7.4 0-4.544-2.298-7.29-2.277-2.75-6.17-2.75zm20.1 2.827l1.87-18.763h19.26v2.933h-16.53l-1.35 13.003q3.09-2.113 7.24-2.113 5.21 0 8.3 3.38 3.1 3.384 3.1 9.012 0 6.07-3.02 9.43-3.02 3.35-8.49 3.35-5.03 0-8.15-2.81-3.12-2.8-3.57-7.85h3.04q.45 3.94 2.67 5.97 2.22 2.01 6.005 2.01 4.127 0 6.217-2.61 2.113-2.62 2.113-7.458 0-4.225-2.35-6.89-2.356-2.664-6.43-2.664-2.246 0-3.912.59-1.667.56-3.52 2.19l-2.51-.71z" fill="#e9521d"/>
+              <path class="logo-w365__cursor" d="M343.668 155.466l.02 16.38c0 .574.343 1.102.867 1.32.183.08.38.126.57.126.368 0 .724-.137.988-.39l1.78-1.654 3.307 6.88c.16.355.448.63.804.77.173.068.356.102.53.102.194 0 .4-.034.584-.115l1.734-.758c.356-.15.632-.442.77-.804.138-.358.126-.758-.035-1.108l-3.39-6.844 2.554-.23c.57-.05 1.05-.42 1.23-.96.19-.53.04-1.13-.37-1.52-3.99-3.69-11.91-11.15-11.91-11.15z" fill="#353535"/>
+              <path class="logo-w365__frame" d="M252.897 96.29c-6.737 0-12.207 5.475-12.207 12.21v48.524c0 6.736 5.47 12.208 12.207 12.208h87.266v-3.095h-87.266c-5.076 0-9.112-4.038-9.112-9.113V108.5c0-5.075 4.036-9.114 9.11-9.114h101.91c5.075 0 9.106 4.04 9.106 9.114v48.53c0 3.4-1.81 6.34-4.54 7.902v3.41c4.47-1.814 7.64-6.19 7.64-11.31V108.5c.02-6.735-5.46-12.21-12.19-12.21H252.9z" fill="#949595"/>
+              <path class="logo-w365__w" d="M0 .876L54.436 169.29h45.23l31.906-98.478 31.832 98.478h45.23L263.144.876h-45.23L186.056 99.44 154.196.876h-45.25L77.09 99.44 45.23.876z" fill="#e9521d"/>
+              <path class="logo-w365__w-line" d="M81.522 85.725l-4.43 13.7 22.578 69.85 4.436-13.684-22.584-69.86zm108.964.01l-4.43 13.7 22.58 69.848 4.43-13.69-22.585-69.86z" fill="#a93417"/>
+              <path class="logo-w365__w-line" d="M154.166.876l-27.953 86.477 5.36-16.543 4.422 13.682L158.61 14.53 154.197.876h-.03z" fill="#a93417"/>
+            </svg>
+          </a>
+
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner"><a href="" class="main-nav__link">Главная</a></span>
+            </li>
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner">
+                <a href="" class="main-nav__link">Веб-студия</a>
+                <ul class="main-nav__sublist">
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Разработка сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Редизайн сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Адаптация под мобильные</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Поддержка и развитие</a>
+                  </li>
+                </ul>
+              </span>
+            </li>
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner">
+                <a href="" class="main-nav__link">Интернет-маркетинг</a>
+                <ul class="main-nav__sublist">
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Разработка сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Редизайн сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Адаптация под мобильные</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Поддержка и развитие</a>
+                  </li>
+                </ul>
+              </span>
+            </li>
+            <li class="main-nav__item  main-nav__item--active">
+              <span class="main-nav__item-inner">
+                <a href="" class="main-nav__link">Кейсы</a>
+                <ul class="main-nav__sublist">
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Разработка сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Редизайн сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Адаптация под мобильные</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="" class="main-nav__sublist-link">Поддержка и развитие</a>
+                  </li>
+                </ul>
+              </span>
+            </li>
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner"><a href="contacts.html" class="main-nav__link">Контакты</a></span>
+            </li>
+          </ul>
+
+        </div>
+        <div class="main-nav__close-icon  close-icon  js-main-menu-toggler"></div>
+        <div class="main-nav__arrow  js-main-menu-toggler"><span class="main-nav__arrow-inner"><span class="main-nav__arrow-icon"></span></span></div>
+
+      </nav>
+      <a href="" class="btn  btn--red-arrow-border  discuss-project-btn">Обсудить проект</a>
+      <div class="main-nav__js-backdrop  js-main-menu-toggler"></div>
+    </div>
+
+    <div class="full-page__section  page-web-studio">
+
+      <div class="main-header">
+        <h1 class="main-header__title">
+          <span class="main-header__text">Веб-студия</span>
+        </h1>
+      </div>
+
+      <div class="full-page__section-inner">
+
+        <ul class="page-web-studio__main-list">
+          <li class="page-web-studio__main-item">
+            <div class="page-web-studio__icon-text">
+              <div class="page-web-studio__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294.843 294.843" width="32" height="32">
+                  <path d="M288.842 0H6C2.687 0 0 2.687 0 6v282.843c0 3.313 2.687 6 6 6s6-2.687 6-6V63.993h241.42c3.314 0 6-2.687 6-6s-2.686-6-6-6H12V12h270.842v270.843H66.422c-3.314 0-6 2.687-6 6s2.686 6 6 6h222.42c3.313 0 6-2.687 6-6V6c0-3.313-2.686-6-6-6z" fill="#262626"/>
+                  <path d="M27.68 27.75c-1.11 1.12-1.75 2.67-1.75 4.25s.64 3.12 1.75 4.24c1.12 1.11 2.66 1.75 4.24 1.75s3.13-.64 4.25-1.75c1.11-1.12 1.75-2.66 1.75-4.24s-.64-3.13-1.75-4.25C35.05 26.64 33.5 26 31.92 26c-1.57 0-3.12.64-4.24 1.75zm20 0c-1.12 1.12-1.76 2.67-1.76 4.25 0 1.57.64 3.12 1.76 4.24 1.11 1.11 2.66 1.75 4.24 1.75s3.13-.64 4.24-1.75c1.12-1.12 1.76-2.66 1.76-4.24s-.64-3.13-1.76-4.25C55.05 26.64 53.5 26 51.92 26s-3.128.64-4.24 1.75zm19.99 0c-1.11 1.12-1.75 2.67-1.75 4.25 0 1.57.64 3.12 1.75 4.24 1.12 1.11 2.66 1.76 4.24 1.76s3.13-.65 4.25-1.76c1.12-1.12 1.76-2.67 1.76-4.24 0-1.58-.64-3.13-1.76-4.25-1.12-1.11-2.67-1.76-4.25-1.76-1.578 0-3.118.65-4.24 1.76z" fill="#262626"/>
+                </svg>
+              </div>
+              Разработка сайтов
+            </div>
+            <div class="page-web-studio__hover-text">
+              <div class="page-web-studio__hover-text-inner">
+                <p>Сюда входит:</p>
+                <ul>
+                  <li>адаптация сайта под&nbsp;мобильные устройства</li>
+                  <li>разработка мобильной версии сайта</li>
+                  <li>RESS</li>
+                </ul>
+                <p>Все зависит от&nbsp;ваших целей и&nbsp;потребностей</p>
+                <a href="" class="btn  btn--svg-border">
+                  <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                    <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                    <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                    <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                    <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                  </svg>
+
+                  Подробнее об этом
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="page-web-studio__main-item">
+            <div class="page-web-studio__icon-text">
+              <div class="page-web-studio__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 470" width="32" height="32">
+                  <path d="M462.5 22.5H7.5C3.358 22.5 0 25.858 0 30v410c0 4.142 3.358 7.5 7.5 7.5h455c4.143 0 7.5-3.358 7.5-7.5v-80c0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v72.5H15v-335h440V330c0 4.142 3.357 7.5 7.5 7.5s7.5-3.358 7.5-7.5V30c0-4.142-3.357-7.5-7.5-7.5zM15 37.5h277.5v45H15v-45zm292.5 45v-45H455v45H307.5z" fill="#262626"/>
+                  <path d="M381.5 52c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm-41 0c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm82 0c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm-271.15 95.764l60.393 60.392c2.93 2.93 7.678 2.93 10.606 0s2.92-7.678 0-10.606l-65.68-65.677c-2.92-2.922-7.66-2.93-10.59-.018l-44.27 43.97c-1.42 1.404-2.21 3.314-2.22 5.308s.78 3.906 2.19 5.316l29.01 29 36.82 36.82c1.46 1.46 3.38 2.19 5.3 2.19s3.83-.73 5.3-2.2c2.93-2.93 2.93-7.68 0-10.61l-2.5-2.5L192.88 222c2.93-2.927 2.93-7.676 0-10.604-2.93-2.93-7.68-2.93-10.61 0l-17.16 17.162-18.41-18.41 17.17-17.16c2.93-2.93 2.93-7.68 0-10.607-2.93-2.93-7.68-2.93-10.605 0L136.1 199.55l-18.39-18.39 33.624-33.4zM255.5 340.15l57.977 57.978c1.407 1.407 3.314 2.197 5.304 2.197s3.9-.79 5.31-2.197l44.12-44.12c2.93-2.928 2.93-7.677 0-10.605l-65.76-65.753c-2.93-2.928-7.67-2.928-10.6 0-2.93 2.93-2.93 7.68 0 10.607l60.45 60.45-33.51 33.51-18.38-18.38 17.17-17.165c2.93-2.93 2.93-7.678 0-10.606-2.93-2.93-7.67-2.93-10.6 0L289.8 353.23l-18.382-18.39 17.165-17.163c2.93-2.93 2.93-7.678 0-10.606-2.93-2.93-7.68-2.93-10.61 0l-17.16 17.17-2.473-2.47c-2.93-2.93-7.678-2.93-10.607 0-2.93 2.93-2.93 7.68 0 10.61l7.774 7.78zm-147.84 59.692c.992 0 1.994-.197 2.943-.603l65.622-28.03.133-.06c.064-.03.125-.07.188-.09.142-.07.284-.13.422-.21.082-.05.16-.1.24-.15.127-.08.254-.15.377-.23.104-.07.202-.15.303-.22.093-.07.19-.14.28-.21.19-.16.373-.32.547-.5l162.06-162.05 19.08-19.086c6.44-6.44 9.987-15.013 9.987-24.14s-3.546-17.7-9.986-24.14c-6.44-6.44-15.014-9.988-24.14-9.988-9.13 0-17.702 3.545-24.143 9.985l-19.075 19.08-162.064 162.07c-.175.18-.34.36-.495.55-.08.1-.15.19-.22.29-.08.1-.15.197-.22.3-.09.123-.16.253-.24.383-.05.078-.1.15-.14.23-.08.14-.15.288-.21.43l-.09.18-.05.1-28.038 65.657c-1.205 2.817-.574 6.083 1.592 8.25 1.433 1.436 3.35 2.197 5.303 2.197zm190.136-224.706l27.068 27.068-151.452 151.452-27.068-27.068 151.452-151.452zm24.385-24.385c3.61-3.6 8.42-5.59 13.54-5.59 5.12 0 9.93 1.99 13.54 5.6 3.61 3.61 5.6 8.42 5.6 13.54 0 5.12-1.98 9.93-5.59 13.54l-13.79 13.77-27.06-27.07 13.778-13.77zm-183.9 188.99l21.99 21.99-38.37 16.39 16.39-38.37z" fill="#262626"/>
+                </svg>
+              </div>
+              Редизайн сайтов
+            </div>
+            <div class="page-web-studio__hover-text">
+              <div class="page-web-studio__hover-text-inner">
+                <p>Сюда входит:</p>
+                <ul>
+                  <li>адаптация сайта под&nbsp;мобильные устройства</li>
+                  <li>разработка мобильной <a href="">версии сайта</a></li>
+                  <li>разработка мобильной версии сайта</li>
+                  <li>разработка мобильной версии сайта</li>
+                  <li>RESS</li>
+                </ul>
+                <p>Все зависит от&nbsp;ваших целей и&nbsp;потребностей</p>
+                <p>Все зависит от&nbsp;ваших целей и&nbsp;потребностей</p>
+                <a href="" class="btn  btn--svg-border">
+                  <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                    <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                    <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                    <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                    <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                  </svg>
+
+                  Подробнее об этом
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="page-web-studio__main-item">
+            <div class="page-web-studio__icon-text">
+              <div class="page-web-studio__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 472.811 472.811" width="32" height="32">
+                  <path d="M358.75 0H114.06C97.556 0 84.13 13.428 84.13 29.934v412.944c0 16.505 13.428 29.934 29.934 29.934H358.75c16.506 0 29.934-13.428 29.934-29.934V29.934C388.684 13.428 375.256 0 358.75 0zM99.128 75.236h274.556v312.687H99.128V75.236zM114.06 15h244.69c8.234 0 14.934 6.7 14.934 14.934v35.302H99.128V29.934c0-8.235 6.7-14.934 14.933-14.934zm244.69 442.81H114.06c-8.233 0-14.933-6.698-14.933-14.933v-44.955h274.556v44.955c0 8.235-6.7 14.934-14.933 14.934z" fill="#262626"/>
+                  <path d="M236.406 404.552c-13.545 0-24.564 11.02-24.564 24.565s11.02 24.564 24.564 24.564 24.564-11.02 24.564-24.56-11.02-24.565-24.564-24.565zm0 39.13c-8.03 0-14.564-6.535-14.564-14.565s6.533-14.565 14.564-14.565 14.564 6.534 14.564 14.565c0 8.03-6.533 14.564-14.564 14.564zm-34-396.037h68c2.762 0 5-2.24 5-5s-2.238-5-5-5h-68c-2.762 0-5 2.24-5 5s2.238 5 5 5zm-17.996 0c1.31 0 2.6-.53 3.53-1.46.93-.94 1.47-2.22 1.47-3.54s-.54-2.6-1.47-3.54c-.932-.93-2.222-1.46-3.53-1.46-1.32 0-2.602.53-3.54 1.46-.93.93-1.46 2.22-1.46 3.54s.53 2.6 1.46 3.54c.93.93 2.22 1.46 3.54 1.46z" fill="#262626"/>
+                </svg>
+              </div>
+              Адаптация сайтов
+            </div>
+            <div class="page-web-studio__hover-text">
+              <div class="page-web-studio__hover-text-inner">
+                <p>Сюда входит:</p>
+                <ul>
+                  <li>адаптация сайта под&nbsp;мобильные устройства</li>
+                  <li>разработка мобильной версии сайта</li>
+                  <li>RESS</li>
+                </ul>
+                <p>Все зависит от&nbsp;ваших целей и&nbsp;потребностей</p>
+                <a href="" class="btn  btn--svg-border">
+                  <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                    <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                    <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                    <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                    <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                  </svg>
+
+                  Подробнее об этом
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="page-web-studio__main-item">
+            <div class="page-web-studio__icon-text">
+              <div class="page-web-studio__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
+                  <path d="M12.5 12.5v487h487v-487h-487zm466.3 466.3H33.2V127.5h445.6v351.3zm-445.6-372V33.2h445.6v73.6H33.2z" fill="#262626"/>
+                  <path d="M409.4 59.1h22.8v20.7h-22.8zm-57 0h22.8v20.7h-22.8zm-57 0h22.8v20.7h-22.8zM256 387.6c56 0 108.8-30.1 136.8-78.8 2.1-3.1 2.1-7.3 0-10.4-28-48.7-80.8-78.8-136.8-78.8s-108.8 30.1-136.8 78.8c-2.1 3.1-2.1 7.3 0 10.4 28 48.8 80.8 78.8 136.8 78.8zm0-148.2c47.7 0 91.2 23.8 116.1 63.2-25.9 39.4-68.4 63.2-116.1 63.2s-91.2-23.8-116.1-63.2c25.9-38.3 68.4-63.2 116.1-63.2z" fill="#262626"/>
+                  <path d="M256 347.2c24.9 0 44.6-19.7 44.6-44.6S280.9 258 256 258v20.7c13.5 0 23.8 10.4 23.8 23.8s-10.4 23.8-23.8 23.8-23.8-10.4-23.8-23.8h-20.7c-.1 25 19.6 44.7 44.5 44.7z" fill="#262626"/>
+                </svg>
+              </div>
+              Поддержка и развитие
+            </div>
+            <div class="page-web-studio__hover-text">
+              <div class="page-web-studio__hover-text-inner">
+                <p>Сюда входит:</p>
+                <ul>
+                  <li>RESS</li>
+                </ul>
+                <a href="" class="btn  btn--svg-border">
+                  <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                    <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                    <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                    <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                    <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                  </svg>
+
+                  Подробнее об этом
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <a href="" class="connect-with-us  btn  btn--bg-dark-blue">Связаться с нами</a>
+
+    <div class="decor-lines  decor-lines--dark  decor-lines--bg-web-studio">
+      <div class="decor-lines__item"></div>
+      <div class="decor-lines__item"></div>
+      <div class="decor-lines__item"></div>
+      <div class="decor-lines__item"></div>
+      <div class="decor-lines__item"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
