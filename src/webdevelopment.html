@@ -28,7 +28,7 @@
         // полноэкранный показ: инициация плагина для статей
         $('#web-dev-page').fullpage({
           menu: '#main-nav',
-          // anchors:['articles-page-1', 'articles-page-2', 'articles-page-3'],
+          anchors:['website-development', 'stages-of-creating-a-website', 'other-services'],
           dragAndMove: true,
           sectionSelector: '.full-page__section',
           navigation: true,
@@ -58,15 +58,88 @@
 
     <div class="full-page__section">
 
-      <div class="main-header">
+      <div class="main-header  main-header--compact">
         <h1 class="main-header__title">
           <span class="main-header__text">Разработка сайтов</span>
         </h1>
       </div>
 
-      <div class="full-page__section-inner">
+      <div class="full-page__section-inner  page-web-dev__item">
 
-        111111
+        <div class="page-web-dev__item-descr">
+          <p>Небольшой интро-текст про услугу. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
+        </div>
+
+        <article class="page-web-dev__item">
+          <h2 class="page-web-dev__title">Решения</h2>
+          <ul class="collapsing-list  page-web-dev__collapsing-list">
+            <li class="collapsing-list__item">
+              <strong class="collapsing-list__name">Быстрый старт</strong>
+              <div class="collapsing-list__content">
+                <p>Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
+                <p>
+                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                </p>
+                <a href="" class="btn  btn--main  btn--svg-border">
+                  @@include('_include/btn-border.svg')
+                  Задать вопрос
+                </a>
+              </div>
+            </li>
+            <li class="collapsing-list__item">
+              <strong class="collapsing-list__name">Интернет-магазин</strong>
+              <div class="collapsing-list__content">
+                <p>Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
+                <p>
+                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                </p>
+                <a href="" class="btn  btn--main  btn--svg-border">
+                  @@include('_include/btn-border.svg')
+                  Задать вопрос
+                </a>
+              </div>
+            </li>
+            <li class="collapsing-list__item">
+              <strong class="collapsing-list__name">Сайт по аналогии</strong>
+              <div class="collapsing-list__content">
+                <p>Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
+                <p>
+                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                </p>
+                <a href="" class="btn  btn--main  btn--svg-border">
+                  @@include('_include/btn-border.svg')
+                  Задать вопрос
+                </a>
+              </div>
+            </li>
+            <li class="collapsing-list__item">
+              <strong class="collapsing-list__name">Индивидуальный сайт</strong>
+              <div class="collapsing-list__content">
+                <p>Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
+                <p>
+                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                </p>
+                <a href="" class="btn  btn--main  btn--svg-border">
+                  @@include('_include/btn-border.svg')
+                  Задать вопрос
+                </a>
+              </div>
+            </li>
+            <li class="collapsing-list__item">
+              <strong class="collapsing-list__name">Под мобильные устройства</strong>
+              <div class="collapsing-list__content">
+                <p>Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
+                <p>
+                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                </p>
+                <a href="" class="btn  btn--main  btn--svg-border">
+                  @@include('_include/btn-border.svg')
+                  Задать вопрос
+                </a>
+              </div>
+            </li>
+          </ul>
+        </article>
 
       </div>
 
