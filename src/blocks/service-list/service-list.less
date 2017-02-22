@@ -1,0 +1,72 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/service-list/service-list.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.service-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: (@screen-xl - 1)) {
+    border-top: 1px solid @gray-lighter;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 55px;
+  }
+
+  &__item {
+
+    @media (max-width: (@screen-xl - 1)) {
+      border-bottom: 1px solid @gray-lighter;
+      padding-left: 30px;
+      padding-right: 10px;
+    }
+
+    &--show-content {
+
+      @media (max-width: (@screen-xl - 1)) {
+
+        .collapsing-list__content {
+          max-height: 200vh;
+          transition: all 0.9s;
+        }
+
+        .collapsing-list__name:before {
+          transform: translateY(-50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__name {
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    @media (max-width: (@screen-xl - 1)) {
+      display: block;
+      position: relative;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 64px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding-right: 48px;
+    }
+  }
+
+  &__name-icon {
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 13px;
+    }
+  }
+}
