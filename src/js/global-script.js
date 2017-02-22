@@ -62,4 +62,9 @@ $(document).ready(function() {
     $(this).closest('.field-date').find('input').val(e.detail.formatted_date);
   });
 
+  // переключалка видимости для коллапсируемого списка
+  $('.js-collapsing-list-toggler').on('click', function(){
+    $(this).closest('.collapsing-list__item').toggleClass('collapsing-list__item--show-content');
+  });
+
 });

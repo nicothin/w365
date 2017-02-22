@@ -78,6 +78,11 @@
     color: @gray-darkest;
     text-transform: uppercase;
 
+    &:hover,
+    &:focus {
+      text-decoration: none !important;
+    }
+
     @media (max-width: (@screen-xl - 1)) {
       display: flex;
       align-items: center;
@@ -95,7 +100,6 @@
 
       &:hover,
       &:focus {
-        text-decoration: none !important;
         cursor: default;
       }
     }
