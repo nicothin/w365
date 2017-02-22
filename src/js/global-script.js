@@ -64,7 +64,8 @@ $(document).ready(function() {
 
   // переключалка видимости для коллапсируемого списка
   $('.js-collapsing-list-toggler').on('click', function(){
-    $(this).closest('.collapsing-list__item').toggleClass('collapsing-list__item--show-content');
+    $(this).closest('.collapsing-list').find('.collapsing-list__item--show-1200').removeClass('collapsing-list__item--show-1200');
+    $(this).closest('.collapsing-list__item').toggleClass('collapsing-list__item--show-content collapsing-list__item--show-1200');
   });
 
 });

@@ -5,12 +5,37 @@
 
 .page-web-dev {
 
-  &__title {
+  .fp-tableCell {
+    overflow: hidden;
+  }
+
+  &__article {
+
+    @media (min-width: @screen-xl) {
+      display: flex;
+    }
+  }
+
+  &__article-title {
     font-size: 30px;
     text-transform: uppercase;
     margin: 0 0 8px;
     font-weight: 300;
     text-align: center;
+
+    @media (min-width: @screen-xl) {
+      width: 221px;
+      min-width: 221px;
+      margin-top: 7px;
+    }
+  }
+
+  &__collapsing-list {
+
+    @media (min-width: @screen-xl) {
+      width: 221px;
+      min-width: 221px;
+    }
   }
 
   &__item-descr {
@@ -20,4 +45,6 @@
       margin-top: 0;
     }
   }
+
+  &__collapsing-list {}
 }

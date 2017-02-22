@@ -4,6 +4,7 @@
 
 
 .collapsing-list {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -15,12 +16,33 @@
     margin-bottom: 55px;
   }
 
+  @media (min-width: @screen-xl) {
+    position: relative;
+    background-color: @color-main;
+    padding: 20px 20px 20px 10px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 100vh;
+      background-color: @color-main;
+    }
+  }
+
   &__item {
 
     @media (max-width: (@screen-xl - 1)) {
       border-bottom: 1px solid @gray-lighter;
       padding-left: 10px;
       padding-right: 10px;
+    }
+
+    @media (min-width: @screen-xl) {
+      margin-bottom: 10px;
     }
 
     &--show-content {
@@ -37,36 +59,81 @@
         }
       }
     }
+
+    &--show-1200 {
+
+      @media (min-width: @screen-xl) {
+
+        .collapsing-list__name {
+          color: #fff;
+
+          &:before {
+            transform: scale3D(1, 1, 1);
+          }
+        }
+
+        .collapsing-list__content {
+          width: 577px;
+          height: auto;
+          opacity: 1;
+          padding: 0 0 0 70px;
+        }
+      }
+    }
   }
 
   &__name {
     display: block;
-    position: relative;
-    font-weight: 400;
     font-size: 16px;
-    line-height: 64px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-weight: 400;
     text-transform: uppercase;
     cursor: pointer;
-    padding-right: 48px;
+    transition: all 0.3s;
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      width: 12px;
-      height: 12px;
-      border-top: 2px solid @color-second;
-      border-right: 2px solid @color-second;
-      transform: translateY(-50%) rotate(135deg);
-      transition: all 0.2s;
+    @media (max-width: (@screen-xl - 1)) {
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 64px;
+      padding-right: 48px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid @color-second;
+        border-right: 2px solid @color-second;
+        transform: translateY(-50%) rotate(135deg);
+        transition: all 0.2s;
+      }
     }
 
     @media (min-width: @screen-xl) {
-      // display: none;
+      position: relative;
+      color: @gray-light;
+      text-align: right;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 62%;
+        right: -70px;
+        width: 60px;
+        height: 1px;
+        background-color: @color-second;
+        transform-origin: left center;
+        transform: scale3d(0, 1, 1);
+        transition: all 0.2s;
+      }
+
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
     }
   }
 
@@ -77,6 +144,16 @@
       display: inline-block;
       vertical-align: middle;
       margin-right: 13px;
+    }
+  }
+
+  &__name-text {
+
+    @media (min-width: @screen-xl) {
+      display: block;
+      text-transform: none;
+      max-height: 20px;
+      overflow: hidden;
     }
   }
 
@@ -101,7 +178,15 @@
     }
 
     @media (min-width: @screen-xl) {
-      display: block;
+      max-height: none;
+      transition: opacity 0.3s;
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 7px;
+      left: 221px;
+      overflow: hidden;
+      opacity: 0;
     }
   }
 
