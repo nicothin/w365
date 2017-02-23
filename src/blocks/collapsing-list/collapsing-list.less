@@ -33,6 +33,12 @@
     }
   }
 
+  @media (min-width: @screen-xxl) {
+    position: relative;
+    background-color: @color-main;
+    padding: 60px 50px 20px 20px;
+  }
+
   &__item {
 
     @media (max-width: (@screen-xl - 1)) {
@@ -43,6 +49,10 @@
 
     @media (min-width: @screen-xl) {
       margin-bottom: 10px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      margin-bottom: 24px;
     }
 
     &--show-content {
@@ -77,6 +87,22 @@
           height: auto;
           opacity: 1;
           padding: 0 0 0 70px;
+        }
+      }
+
+      @media (min-width: @screen-xxl) {
+
+        .collapsing-list__name {
+          color: #fff;
+          transform: translateX(10px);
+
+          &:before {
+            // transform: scale3D(1, 1, 1);
+          }
+        }
+
+        .collapsing-list__content {
+          width: 595px;
         }
       }
     }
@@ -135,6 +161,15 @@
         color: #fff;
       }
     }
+
+    @media (min-width: @screen-xxl) {
+
+      &:before {
+        top: 46%;
+        right: -78px;
+        transition: all 0.2s 0.2s;
+      }
+    }
   }
 
   &__name-icon {
@@ -154,6 +189,11 @@
       text-transform: none;
       max-height: 20px;
       overflow: hidden;
+    }
+
+    @media (min-width: @screen-xxl) {
+      text-transform: uppercase;
+      max-height: 26px;
     }
   }
 
@@ -187,6 +227,20 @@
       left: 221px;
       overflow: hidden;
       opacity: 0;
+    }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 18px;
+      transition: opacity 0.3s 0.3s;
+      top: 44px;
+      left: 300px;
+    }
+  }
+
+  &__content-accent {
+
+    @media (min-width: @screen-xxl) {
+      margin: 35px 0;
     }
   }
 
