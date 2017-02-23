@@ -12,6 +12,10 @@
   &:focus {
     color: #fff;
     text-decoration: none;
+
+    .showreel__icon {
+      transform: scale(1.15);
+    }
   }
 
   @media (max-width: (@screen-xl - 1)) {
@@ -54,6 +58,12 @@
   }
 
   &__icon {
+    display: block;
+    transition: all 0.2s;
+
+    svg {
+      display: block;
+    }
 
     @media (min-width: @screen-xl) {
       opacity: 0;
