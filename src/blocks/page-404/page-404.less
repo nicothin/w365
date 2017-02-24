@@ -4,27 +4,70 @@
 
 
 .page-404 {
-  color: @gray-lighter;
-  position: relative;
 
-  @media (max-width: (@screen-xl - 1)) {
-    padding: 20px;
-    text-align: center;
-    margin: auto;
-  }
+  .full-page__section-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  @media (min-width: @screen-xl) {
-    width: 887px;
-    margin: auto;
-    opacity: 0;
+    @media (min-width: @screen-xl) {
+      display: block;
+      top: 25px;
+      left: 0;
+      width: 128px;
+      height: 56px;
+      text-align: right;
 
-    .js-loaded & {
-      animation: opacity-none 0.3s 1s forwards;
+      .js & {
+        transform: translateX(-100%);
+      }
+
+      .js-loaded & {
+        animation: translate-none 0.3s 0.8s forwards;
+      }
+
+      svg {
+        width: 98px;
+        height: 48px;
+      }
+    }
+
+    @media (min-width: @screen-xxl) {
+      top: 40px;
+      width: 190px;
+      height: 70px;
+
+      svg {
+        width: 122px;
+        height: 61px;
+      }
     }
   }
 
-  @media (min-width: @screen-xxl) {
-    width: 1192px;
+  &__inner {
+    color: @gray-lighter;
+    position: relative;
+
+    @media (max-width: (@screen-xl - 1)) {
+      padding: 20px;
+      text-align: center;
+      margin: auto;
+    }
+
+    @media (min-width: @screen-xl) {
+      width: 887px;
+      margin: auto;
+      opacity: 0;
+      min-height: 280px;
+
+      .js-loaded & {
+        animation: opacity-none 0.3s 1s forwards;
+      }
+    }
+
+    @media (min-width: @screen-xxl) {
+      width: 1192px;
+    }
   }
 
   &__text {

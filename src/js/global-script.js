@@ -16,16 +16,6 @@ $(document).ready(function() {
     $(this).closest('.page-contacts__item').toggleClass('page-contacts__item--js-active');
   });
 
-  // логотип для контентных страниц
-  var logo = $('#main-nav.main-nav--content .main-nav__logo');
-  // для контентных страниц продублируем логотип, чтобы не извращаться со вставкой второго такого же в разметку
-  logo.clone().addClass('main-nav__logo--inserted-js').prependTo('#main-nav');
-  // для контентных страниц продублируем логотип еще раз, чтобы на мобильных ширинах он мог скроллиться
-  logo.clone().addClass('main-nav__logo--inserted-js-content').prependTo('.full-page');
-
-  // лого для 404
-  $('#main-nav.main-nav--404 .main-nav__logo').clone().addClass('main-nav__logo--inserted-js-404').prependTo('.full-page--404');
-
   // полноэкранный показ: инициация плагина для одноблочных страниц
   $('#one-screen-page').fullpage({
     menu: '#main-nav',
@@ -42,7 +32,7 @@ $(document).ready(function() {
   // добавление в блок пагинации полноэкранной прокрутки своего контента
   $('#fp-nav').hide().append('<span class="scroll-me-baby">Скролльте</span>');
 
-  // обеспечим поддержку говнобраузерами свойства object-fit
+  // обеспечение поддержки говнобраузерами свойства object-fit
   objectFitImages();
 
   // выбор даты

@@ -71,7 +71,7 @@
       display: none;
     }
 
-    &--inserted-js {
+    &--supnav {
       position: absolute;
 
       @media (max-width: (@screen-xl - 1)) {
@@ -81,62 +81,12 @@
       @media (min-width: @screen-xl) {
         display: block;
         z-index: 6;
-      }
-    }
 
-    &--inserted-js-content {
-
-      @media (max-width: (@screen-xl - 1)) {
-        display: inline-block;
-        width: 76px;
-        height: 37px;
-        margin: 9px 0 0 11px;
-
-        .logo-w365 {
-          height: 100%;
-          width: 100%;
+        .main-nav--home & {
+          display: none;
         }
       }
     }
-
-    &--inserted-js-404 {
-
-      @media (max-width: (@screen-xl - 1)) {
-        display: block;
-        position: absolute;
-        z-index: 20;
-        top: 9px;
-        left: 11px;
-        width: 76px;
-        height: 37px;
-
-        .logo-w365 {
-          height: 100%;
-          width: 100%;
-        }
-      }
-
-      @media (min-width: @screen-xl) {
-        display: block;
-        position: absolute;
-        z-index: 20;
-        top: 38px;
-        left: 11px;
-        width: 98px;
-        height: 48px;
-
-        .logo-w365 {
-          height: 100%;
-          width: 100%;
-        }
-      }
-
-      @media (min-width: @screen-xl) {
-        top: 36px;
-        left: 48px;
-      }
-    }
-
   }
 
   &__list {
@@ -562,7 +512,7 @@
         }
       }
 
-      .main-nav__logo--inserted-js {
+      .main-nav__logo--supnav {
         top: 25px;
         left: 0;
         width: 128px;
@@ -696,7 +646,7 @@
 
     @media (min-width: @screen-xxl){
 
-      .main-nav__logo--inserted-js {
+      .main-nav__logo--supnav {
         top: 40px;
         width: 190px;
         height: 70px;

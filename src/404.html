@@ -16,20 +16,21 @@
 
   <noscript>Эта страница требует JavaScript для полноценной работы. Вы выключили Javascript. Вы нас пугаете.</noscript>
 
-  <div id="one-screen-page" class="full-page  full-page--404">
+  <div id="one-screen-page" class="full-page  page-404">
 
-    <div class="main-nav  main-nav--home  main-nav--404" id="main-nav">
-      <div class="main-nav__burger  js-main-menu-toggler" data-text="Menu"><span class="main-nav__burger-icon"></span></div>
-      <nav class="main-nav__wrapper">
-        @@include('_include/page_nav-inner.html')
-      </nav>
+    <div class="main-nav  main-nav--home" id="main-nav">
+      @@include('_include/page_nav-inner.html')
       <a href="" class="btn  btn--red-arrow-border  discuss-project-btn">Обсудить проект</a>
       <div class="main-nav__js-backdrop  js-main-menu-toggler"></div>
     </div>
 
     <article class="full-page__section">
 
-      <div class="page-404">
+      <a href="/" class="full-page__section-logo">
+        @@include('_include/logo-w365.svg')
+      </a>
+
+      <div class="page-404__inner">
         <h1 class="page-404__name">
           <span class="page-404__4-1">4</span><span class="page-404__0">0</span><span class="page-404__4-2">4</span>
         </h1>

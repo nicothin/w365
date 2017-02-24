@@ -1,10 +1,28 @@
 .full-page {
   position: relative;
   z-index: 2;
-  // overflow-y: hidden;
 
-  .js.js-loaded & {
-    display: block;
+  // .js.js-loaded & {
+  //   display: block;
+  // }
+
+  &__section-logo {
+
+    @media (max-width: (@screen-xl - 1)) {
+      display: inline-block;
+      width: 76px;
+      height: 37px;
+      margin: 9px 0 0 11px;
+
+      .logo-w365 {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    @media (min-width: @screen-xl) {
+      display: none;
+    }
   }
 
   &__section {

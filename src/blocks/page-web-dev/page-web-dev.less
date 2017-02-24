@@ -10,9 +10,28 @@
   }
 
   &__article {
+    position: relative;
 
     @media (min-width: @screen-xl) {
       display: flex;
+    }
+
+    &--stages {
+
+      @media (min-width: @screen-xl) {
+
+        .page-web-dev__article-title {
+          position: absolute;
+          top: 0;
+          left: 221px;
+        }
+
+        .collapsing-list__name-icon {
+          position: fixed;
+          top: 0;
+          right: 0;
+        }
+      }
     }
   }
 
