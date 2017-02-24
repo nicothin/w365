@@ -56,7 +56,7 @@
     <div class="full-page__section">
 
       <a href="/" class="full-page__section-logo">
-        @@include('_include/logo-w365.svg')
+        <img src="img/w365-logo.svg" width="122" height="60" alt="W365 logo">
       </a>
 
       <div class="main-header  main-header--compact">
@@ -170,31 +170,36 @@
 
         <article class="page-web-dev__article  page-web-dev__article--stages">
           <h2 class="page-web-dev__article-title">Этапы создания сайта</h2>
-          <ul class="collapsing-list  page-web-dev__collapsing-list">
+          <ul class="collapsing-list  collapsing-list--from-top  page-web-dev__collapsing-list">
             <li class="collapsing-list__item  collapsing-list__item--show-1200">
               <strong class="collapsing-list__name  js-collapsing-list-toggler">
                 <span class="collapsing-list__name-icon">
-                  @@include('blocks/page-web-dev/icons/analytic.svg')
+                  <img src="img/page-web-dev__icon-analytic.svg" width="34" height="34" alt="">
                 </span>
                 <span class="collapsing-list__name-text">Аналитика</span>
               </strong>
-              <div class="collapsing-list__content">
+              <div class="collapsing-list__content  collapsing-list__content--w790">
+                <span class="collapsing-list__content-icon">
+                  <img src="img/page-web-dev__icon-analytic.svg" width="34" height="34" alt="">
+                </span>
                 <p>Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
                 <p class="collapsing-list__content-accent">
-                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                  <b>Срок выполнения этапа: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
                 </p>
                 <div class="collapsing-list__btns">
                   <a href="" class="btn  btn--main  btn--svg-border">
                     @@include('_include/btn-border.svg')
                     Подробнее
                   </a>
-                  <a href="" class="btn  btn--main  btn--svg-border  collapsing-list__btn-video">
+                  <a href="video/10516883.mp4" data-video-link class="btn  btn--gray  btn--svg-border  collapsing-list__btn-video">
                     @@include('_include/btn-border.svg')
-                    <span class="btn__icon-video"></span>
+                    <span class="btn__icon-video">
+                      <img src="img/icon-video.svg" width="14" height="14" alt="">
+                    </span>
                     Видеообзор
                   </a>
-                  <div class="collapsing-list__video">
-                    VIDEO
+                  <div class="collapsing-list__video-wrapper">
+                    <img class="collapsing-list__video-poster" src="img/video-bg-1.jpg" data-mfp-src="video/10516883.mp4" data-video-link alt="">
                   </div>
                 </div>
               </div>
@@ -202,27 +207,32 @@
             <li class="collapsing-list__item">
               <strong class="collapsing-list__name  js-collapsing-list-toggler">
                 <span class="collapsing-list__name-icon">
-                  @@include('blocks/page-web-dev/icons/content.svg')
+                  <img src="img/page-web-dev__icon-content.svg" width="34" height="34" alt="">
                 </span>
                 <span class="collapsing-list__name-text">Контент</span>
               </strong>
-              <div class="collapsing-list__content">
-                <p>222Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
+              <div class="collapsing-list__content  collapsing-list__content--w790">
+                <span class="collapsing-list__content-icon">
+                  <img src="img/page-web-dev__icon-content.svg" width="34" height="34" alt="">
+                </span>
+                <p>222Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
                 <p class="collapsing-list__content-accent">
-                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                  <b>Срок выполнения этапа: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
                 </p>
                 <div class="collapsing-list__btns">
                   <a href="" class="btn  btn--main  btn--svg-border">
                     @@include('_include/btn-border.svg')
                     Подробнее
                   </a>
-                  <a href="" class="btn  btn--main  btn--svg-border  collapsing-list__btn-video">
+                  <a href="video/10516883.mp4" data-video-link class="btn  btn--gray  btn--svg-border  collapsing-list__btn-video">
                     @@include('_include/btn-border.svg')
-                    <span class="btn__icon-video"></span>
+                    <span class="btn__icon-video">
+                      <img src="img/icon-video.svg" width="14" height="14" alt="">
+                    </span>
                     Видеообзор
                   </a>
-                  <div class="collapsing-list__video">
-                    VIDEO
+                  <div class="collapsing-list__video-wrapper">
+                    <img class="collapsing-list__video-poster" src="img/video-bg-1.jpg" data-mfp-src="video/10516883.mp4" data-video-link alt="">
                   </div>
                 </div>
               </div>
@@ -230,27 +240,32 @@
             <li class="collapsing-list__item">
               <strong class="collapsing-list__name  js-collapsing-list-toggler">
                 <span class="collapsing-list__name-icon">
-                  @@include('blocks/page-web-dev/icons/projecting.svg')
+                  <img src="img/page-web-dev__icon-projecting.svg" width="34" height="34" alt="">
                 </span>
                 <span class="collapsing-list__name-text">Проектирование</span>
               </strong>
-              <div class="collapsing-list__content">
+              <div class="collapsing-list__content  collapsing-list__content--w790">
+                <span class="collapsing-list__content-icon">
+                  <img src="img/page-web-dev__icon-projecting.svg" width="34" height="34" alt="">
+                </span>
                 <p>333Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
                 <p class="collapsing-list__content-accent">
-                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                  <b>Срок выполнения этапа: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
                 </p>
                 <div class="collapsing-list__btns">
                   <a href="" class="btn  btn--main  btn--svg-border">
                     @@include('_include/btn-border.svg')
                     Подробнее
                   </a>
-                  <a href="" class="btn  btn--main  btn--svg-border  collapsing-list__btn-video">
+                  <a href="video/10516883.mp4" data-video-link class="btn  btn--gray  btn--svg-border  collapsing-list__btn-video">
                     @@include('_include/btn-border.svg')
-                    <span class="btn__icon-video"></span>
+                    <span class="btn__icon-video">
+                      <img src="img/icon-video.svg" width="14" height="14" alt="">
+                    </span>
                     Видеообзор
                   </a>
-                  <div class="collapsing-list__video">
-                    VIDEO
+                  <div class="collapsing-list__video-wrapper">
+                    <img class="collapsing-list__video-poster" src="img/video-bg-1.jpg" data-mfp-src="video/10516883.mp4" data-video-link alt="">
                   </div>
                 </div>
               </div>
@@ -258,27 +273,32 @@
             <li class="collapsing-list__item">
               <strong class="collapsing-list__name  js-collapsing-list-toggler">
                 <span class="collapsing-list__name-icon">
-                  @@include('blocks/page-web-dev/icons/design.svg')
+                  <img src="img/page-web-dev__icon-design.svg" width="34" height="34" alt="">
                 </span>
                 <span class="collapsing-list__name-text">Дизайн</span>
               </strong>
-              <div class="collapsing-list__content">
+              <div class="collapsing-list__content  collapsing-list__content--w790">
+                <span class="collapsing-list__content-icon">
+                  <img src="img/page-web-dev__icon-design.svg" width="34" height="34" alt="">
+                </span>
                 <p>444Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
                 <p class="collapsing-list__content-accent">
-                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                  <b>Срок выполнения этапа: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
                 </p>
                 <div class="collapsing-list__btns">
                   <a href="" class="btn  btn--main  btn--svg-border">
                     @@include('_include/btn-border.svg')
                     Подробнее
                   </a>
-                  <a href="" class="btn  btn--main  btn--svg-border  collapsing-list__btn-video">
+                  <a href="video/10516883.mp4" data-video-link class="btn  btn--gray  btn--svg-border  collapsing-list__btn-video">
                     @@include('_include/btn-border.svg')
-                    <span class="btn__icon-video"></span>
+                    <span class="btn__icon-video">
+                      <img src="img/icon-video.svg" width="14" height="14" alt="">
+                    </span>
                     Видеообзор
                   </a>
-                  <div class="collapsing-list__video">
-                    VIDEO
+                  <div class="collapsing-list__video-wrapper">
+                    <img class="collapsing-list__video-poster" src="img/video-bg-1.jpg" data-mfp-src="video/10516883.mp4" data-video-link alt="">
                   </div>
                 </div>
               </div>
@@ -286,27 +306,32 @@
             <li class="collapsing-list__item">
               <strong class="collapsing-list__name  js-collapsing-list-toggler">
                 <span class="collapsing-list__name-icon">
-                  @@include('blocks/page-web-dev/icons/adaptive.svg')
+                  <img src="img/page-web-dev__icon-adaptive.svg" width="34" height="34" alt="">
                 </span>
                 <span class="collapsing-list__name-text">Адаптивная верстка</span>
               </strong>
-              <div class="collapsing-list__content">
+              <div class="collapsing-list__content  collapsing-list__content--w790">
+                <span class="collapsing-list__content-icon">
+                  <img src="img/page-web-dev__icon-adaptive.svg" width="34" height="34" alt="">
+                </span>
                 <p>Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
                 <p class="collapsing-list__content-accent">
-                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                  <b>Срок выполнения этапа: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
                 </p>
                 <div class="collapsing-list__btns">
                   <a href="" class="btn  btn--main  btn--svg-border">
                     @@include('_include/btn-border.svg')
                     Подробнее
                   </a>
-                  <a href="" class="btn  btn--main  btn--svg-border  collapsing-list__btn-video">
+                  <a href="video/10516883.mp4" data-video-link class="btn  btn--gray  btn--svg-border  collapsing-list__btn-video">
                     @@include('_include/btn-border.svg')
-                    <span class="btn__icon-video"></span>
+                    <span class="btn__icon-video">
+                      <img src="img/icon-video.svg" width="14" height="14" alt="">
+                    </span>
                     Видеообзор
                   </a>
-                  <div class="collapsing-list__video">
-                    VIDEO
+                  <div class="collapsing-list__video-wrapper">
+                    <img class="collapsing-list__video-poster" src="img/video-bg-1.jpg" data-mfp-src="video/10516883.mp4" data-video-link alt="">
                   </div>
                 </div>
               </div>
@@ -314,27 +339,32 @@
             <li class="collapsing-list__item">
               <strong class="collapsing-list__name  js-collapsing-list-toggler">
                 <span class="collapsing-list__name-icon">
-                  @@include('blocks/page-web-dev/icons/programming.svg')
+                  <img src="img/page-web-dev__icon-programming.svg" width="34" height="34" alt="">
                 </span>
                 <span class="collapsing-list__name-text">Программирование</span>
               </strong>
-              <div class="collapsing-list__content">
+              <div class="collapsing-list__content  collapsing-list__content--w790">
+                <span class="collapsing-list__content-icon">
+                  <img src="img/page-web-dev__icon-programming.svg" width="34" height="34" alt="">
+                </span>
                 <p>Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
                 <p class="collapsing-list__content-accent">
-                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                  <b>Срок выполнения этапа: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
                 </p>
                 <div class="collapsing-list__btns">
                   <a href="" class="btn  btn--main  btn--svg-border">
                     @@include('_include/btn-border.svg')
                     Подробнее
                   </a>
-                  <a href="" class="btn  btn--main  btn--svg-border  collapsing-list__btn-video">
+                  <a href="video/10516883.mp4" data-video-link class="btn  btn--gray  btn--svg-border  collapsing-list__btn-video">
                     @@include('_include/btn-border.svg')
-                    <span class="btn__icon-video"></span>
+                    <span class="btn__icon-video">
+                      <img src="img/icon-video.svg" width="14" height="14" alt="">
+                    </span>
                     Видеообзор
                   </a>
-                  <div class="collapsing-list__video">
-                    VIDEO
+                  <div class="collapsing-list__video-wrapper">
+                    <img class="collapsing-list__video-poster" src="img/video-bg-1.jpg" data-mfp-src="video/10516883.mp4" data-video-link alt="">
                   </div>
                 </div>
               </div>
@@ -342,27 +372,32 @@
             <li class="collapsing-list__item">
               <strong class="collapsing-list__name  js-collapsing-list-toggler">
                 <span class="collapsing-list__name-icon">
-                  @@include('blocks/page-web-dev/icons/quality.svg')
+                  <img src="img/page-web-dev__icon-quality.svg" width="34" height="34" alt="">
                 </span>
                 <span class="collapsing-list__name-text">Контроль качества</span>
               </strong>
-              <div class="collapsing-list__content">
+              <div class="collapsing-list__content  collapsing-list__content--w790">
+                <span class="collapsing-list__content-icon">
+                  <img src="img/page-web-dev__icon-quality.svg" width="34" height="34" alt="">
+                </span>
                 <p>Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
                 <p class="collapsing-list__content-accent">
-                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                  <b>Срок выполнения этапа: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
                 </p>
                 <div class="collapsing-list__btns">
                   <a href="" class="btn  btn--main  btn--svg-border">
                     @@include('_include/btn-border.svg')
                     Подробнее
                   </a>
-                  <a href="" class="btn  btn--main  btn--svg-border  collapsing-list__btn-video">
+                  <a href="video/10516883.mp4" data-video-link class="btn  btn--gray  btn--svg-border  collapsing-list__btn-video">
                     @@include('_include/btn-border.svg')
-                    <span class="btn__icon-video"></span>
+                    <span class="btn__icon-video">
+                      <img src="img/icon-video.svg" width="14" height="14" alt="">
+                    </span>
                     Видеообзор
                   </a>
-                  <div class="collapsing-list__video">
-                    VIDEO
+                  <div class="collapsing-list__video-wrapper">
+                    <img class="collapsing-list__video-poster" src="img/video-bg-1.jpg" data-mfp-src="video/10516883.mp4" data-video-link alt="">
                   </div>
                 </div>
               </div>
@@ -370,27 +405,32 @@
             <li class="collapsing-list__item">
               <strong class="collapsing-list__name  js-collapsing-list-toggler">
                 <span class="collapsing-list__name-icon">
-                  @@include('blocks/page-web-dev/icons/seo.svg')
+                  <img src="img/page-web-dev__icon-seo.svg" width="34" height="34" alt="">
                 </span>
                 <span class="collapsing-list__name-text">Поисковая оптимизация</span>
               </strong>
-              <div class="collapsing-list__content">
+              <div class="collapsing-list__content  collapsing-list__content--w790">
+                <span class="collapsing-list__content-icon">
+                  <img src="img/page-web-dev__icon-seo.svg" width="34" height="34" alt="">
+                </span>
                 <p>Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
                 <p class="collapsing-list__content-accent">
-                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                  <b>Срок выполнения этапа: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
                 </p>
                 <div class="collapsing-list__btns">
                   <a href="" class="btn  btn--main  btn--svg-border">
                     @@include('_include/btn-border.svg')
                     Подробнее
                   </a>
-                  <a href="" class="btn  btn--main  btn--svg-border  collapsing-list__btn-video">
+                  <a href="video/10516883.mp4" data-video-link class="btn  btn--gray  btn--svg-border  collapsing-list__btn-video">
                     @@include('_include/btn-border.svg')
-                    <span class="btn__icon-video"></span>
+                    <span class="btn__icon-video">
+                      <img src="img/icon-video.svg" width="14" height="14" alt="">
+                    </span>
                     Видеообзор
                   </a>
-                  <div class="collapsing-list__video">
-                    VIDEO
+                  <div class="collapsing-list__video-wrapper">
+                    <img class="collapsing-list__video-poster" src="img/video-bg-1.jpg" data-mfp-src="video/10516883.mp4" data-video-link alt="">
                   </div>
                 </div>
               </div>
@@ -398,27 +438,30 @@
             <li class="collapsing-list__item">
               <strong class="collapsing-list__name  js-collapsing-list-toggler">
                 <span class="collapsing-list__name-icon">
-                  @@include('blocks/page-web-dev/icons/docs.svg')
+                  <img src="img/page-web-dev__icon-docs.svg" width="34" height="34" alt="">
                 </span>
-                <span class="collapsing-list__name-text">Обучение и документация</span>
+                <span class="collapsing-list__name-text">Обучение и&nbsp;документация</span>
               </strong>
-              <div class="collapsing-list__content">
+              <div class="collapsing-list__content  collapsing-list__content--w790">
+                <span class="collapsing-list__content-icon">
+                  <img src="img/page-web-dev__icon-docs.svg" width="34" height="34" alt="">
+                </span>
                 <p>Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
                 <p class="collapsing-list__content-accent">
-                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                  <b>Срок выполнения этапа: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
                 </p>
                 <div class="collapsing-list__btns">
                   <a href="" class="btn  btn--main  btn--svg-border">
                     @@include('_include/btn-border.svg')
                     Подробнее
                   </a>
-                  <a href="" class="btn  btn--main  btn--svg-border  collapsing-list__btn-video">
+                  <a href="video/10516883.mp4" data-video-link class="btn  btn--gray  btn--svg-border  collapsing-list__btn-video">
                     @@include('_include/btn-border.svg')
                     <span class="btn__icon-video"></span>
                     Видеообзор
                   </a>
-                  <div class="collapsing-list__video">
-                    VIDEO
+                  <div class="collapsing-list__video-wrapper">
+                    <img class="collapsing-list__video-poster" src="img/video-bg-1.jpg" data-mfp-src="video/10516883.mp4" data-video-link alt="">
                   </div>
                 </div>
               </div>
@@ -426,27 +469,30 @@
             <li class="collapsing-list__item">
               <strong class="collapsing-list__name  js-collapsing-list-toggler">
                 <span class="collapsing-list__name-icon">
-                  @@include('blocks/page-web-dev/icons/support.svg')
+                  <img src="img/page-web-dev__icon-support.svg" width="34" height="34" alt="">
                 </span>
-                <span class="collapsing-list__name-text">Поддержка и развитие</span>
+                <span class="collapsing-list__name-text">Поддержка и&nbsp;развитие</span>
               </strong>
-              <div class="collapsing-list__content">
+              <div class="collapsing-list__content  collapsing-list__content--w790">
+                <span class="collapsing-list__content-icon">
+                  <img src="img/page-web-dev__icon-support.svg" width="34" height="34" alt="">
+                </span>
                 <p>Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
                 <p class="collapsing-list__content-accent">
-                  <b>Срок разработки: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
+                  <b>Срок выполнения этапа: в среднем 2 месяца <br>Цена: от 1 500 000 руб.</b>
                 </p>
                 <div class="collapsing-list__btns">
                   <a href="" class="btn  btn--main  btn--svg-border">
                     @@include('_include/btn-border.svg')
                     Подробнее
                   </a>
-                  <a href="" class="btn  btn--main  btn--svg-border  collapsing-list__btn-video">
+                  <a href="video/10516883.mp4" data-video-link class="btn  btn--gray  btn--svg-border  collapsing-list__btn-video">
                     @@include('_include/btn-border.svg')
                     <span class="btn__icon-video"></span>
                     Видеообзор
                   </a>
-                  <div class="collapsing-list__video">
-                    VIDEO
+                  <div class="collapsing-list__video-wrapper">
+                    <img class="collapsing-list__video-poster" src="img/video-bg-1.jpg" data-mfp-src="video/10516883.mp4" data-video-link alt="">
                   </div>
                 </div>
               </div>
@@ -471,12 +517,12 @@
       <div class="full-page__section-inner">
 
         <article class="page-web-dev__article  page-web-dev__article--other">
-          <h2 class="page-web-dev__article-title">Другие услуги</h2>
+          <h2 class="page-web-dev__article-title  main-header-pseudo">Другие услуги</h2>
           <ul class="service-list  page-web-dev__service-list">
             <li class="service-list__item">
               <a class="service-list__name" href="">
                 <span class="service-list__name-icon">
-                  @@include('blocks/page-web-dev/icons/redesign.svg')
+                  @@include('blocks/page-web-dev/img/page-web-dev__icon-redesign.svg')
                 </span>
                 <span class="service-list__name-text">Редизайн сайтов</span>
               </a>
@@ -484,7 +530,7 @@
             <li class="service-list__item">
               <a class="service-list__name" href="">
                 <span class="service-list__name-icon">
-                  @@include('blocks/page-web-dev/icons/smartphone.svg')
+                  @@include('blocks/page-web-dev/img/page-web-dev__icon-smartphone.svg')
                 </span>
                 <span class="service-list__name-text">Адаптация сайтов</span>
               </a>
@@ -492,7 +538,7 @@
             <li class="service-list__item">
               <a class="service-list__name" href="">
                 <span class="service-list__name-icon">
-                  @@include('blocks/page-web-dev/icons/support2.svg')
+                  @@include('blocks/page-web-dev/img/page-web-dev__icon-support2.svg')
                 </span>
                 <span class="service-list__name-text">Поддежка и развитие</span>
               </a>

@@ -1,0 +1,40 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/main-header-pseudo/main-header-pseudo.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.main-header-pseudo {
+
+  @media (min-width: @screen-xl) {
+    position: absolute;
+    top: -30vh;
+    left: 40px;
+    width: auto;
+    max-height: 70px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    padding-right: 0.514em;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 400;
+    white-space: nowrap;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      right: 0;
+      bottom: 1px;
+      height: 3px;
+      background-color: @color-second;
+    }
+  }
+
+  @media (min-width: @screen-xxl) {
+    width: auto;
+    font-size: 60px;
+    margin: 0;
+    max-height: 84px;
+  }
+}

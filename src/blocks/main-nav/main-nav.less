@@ -530,7 +530,7 @@
         &:hover,
         &:focus {
 
-          .logo-w365 {
+          img {
             filter: none;
           }
         }
@@ -557,7 +557,7 @@
           }
         }
 
-        .logo-w365 {
+        img {
           width: 98px;
           height: 48px;
           filter: brightness(1.5) grayscale(1);
@@ -651,7 +651,7 @@
         width: 190px;
         height: 70px;
 
-        .logo-w365 {
+        img {
           width: 122px;
           height: 61px;
         }
@@ -683,6 +683,10 @@
 
       .main-nav__wrapper {
         transform: translate(0, 0);
+      }
+
+      &.main-nav--home .main-nav__wrapper {
+        transform: translate(-50%, 0);
       }
 
       .main-nav__arrow-icon {

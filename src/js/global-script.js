@@ -58,4 +58,7 @@ $(document).ready(function() {
     $(this).closest('.collapsing-list__item').toggleClass('collapsing-list__item--show-content collapsing-list__item--show-1200');
   });
 
+  // разработка сайтов, этапы: видео
+  $('[data-video-link]').magnificPopup({type:'iframe'});
+
 });
