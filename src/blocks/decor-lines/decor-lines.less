@@ -96,13 +96,32 @@
       }
 
       @media (min-width: @screen-xxl) {
-        content: '';
-        position: fixed;
         top: e('calc(100vh - 501px)');
-        left: 50%;
         width: 960px;
         height: 501px;
-        background: url('../img/web-studio-bg.jpg') 0 0 no-repeat;
+      }
+    }
+  }
+
+  &--bg-marketing {
+
+    &:before {
+
+      @media (min-width: @screen-xl) {
+        content: '';
+        position: fixed;
+        top: e('calc(100vh - 290px)');
+        left: 50%;
+        width: 598px;
+        height: 290px;
+        background: url('../img/marketing-bg.jpg') 0 0 no-repeat;
+        background-size: cover;
+      }
+
+      @media (min-width: @screen-xxl) {
+        top: e('calc(100vh - 501px)');
+        width: 960px;
+        height: 501px;
       }
     }
   }
