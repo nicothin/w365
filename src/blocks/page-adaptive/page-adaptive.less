@@ -1,0 +1,82 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/page-adaptive/page-adaptive.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.page-adaptive {
+
+  .fp-tableCell {
+    overflow: hidden;
+  }
+
+  &__item {
+    position: relative;
+    z-index: 2;
+
+    @media (min-width: @screen-xl) {
+      margin-bottom: 20px !important;
+      width: 1022px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 18px;
+    }
+
+    &--single {
+
+      @media (min-width: @screen-xxl) {
+        margin-bottom: 220px !important;
+
+        .page-adaptive__article-title {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__article {
+    position: relative;
+  }
+
+  &__article-title {
+    margin: 40px 0 20px;
+    padding: 0;
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 400;
+
+    @media (min-width: @screen-xl) {
+      font-weight: 300;
+    }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 30px;
+      margin-top: 11.11vh;
+      margin-bottom: 30px;
+      padding-left: 55px;
+    }
+  }
+
+  &__article-text {
+    color: @gray;
+
+    @media (min-width: @screen-xxl) {
+      padding-left: 55px;
+      width: 860px;
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      .checklist {
+        margin-left: -55px;
+      }
+    }
+  }
+
+  &__article-accent {
+    font-weight: 700;
+    color: @text-color;
+    margin-bottom: 16px !important;
+  }
+}

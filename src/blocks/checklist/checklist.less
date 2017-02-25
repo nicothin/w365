@@ -1,0 +1,58 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/checklist/checklist.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.checklist {
+  position: relative;
+  padding: 10px 15px;
+  list-style: none;
+  background-color: @gray-lightest;
+
+  @media (min-width: @screen-xl) {
+    padding: 20px 30px;
+    width: 446px;
+  }
+
+  @media (min-width: @screen-xxl) {
+    font-size: 20px;
+    padding: 38px 20px 25px 54px;
+    margin-bottom: 35px;
+    width: 596px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 61px;
+      top: -16px;
+      width: 1px;
+      height: 35px;
+      background-color: @gray-light;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 30px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0.3em;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: data-uri('image/svg+xml;charset=UTF-8', './src/blocks/checklist/icons/check.svg');
+
+      @media (min-width: @screen-xl) {
+        top: 0.4em;
+      }
+    }
+
+    @media (min-width: @screen-xxl) {
+      margin-bottom: 3px;
+    }
+  }
+}

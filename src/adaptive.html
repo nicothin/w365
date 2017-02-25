@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>w365</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <span id="square-loader" class="square-loader">
+    <span class="square-loader__load"></span>
+  </span>
+
+  <span class="bg-name" data-bg-text="Адаптация под мобильные"></span>
+
+  <noscript>Эта страница требует JavaScript для полноценной работы. Вы выключили Javascript. Вы нас пугаете.</noscript>
+
+  <div id="web-dev-page" class="full-page  full-page--content-page  page-adaptive">
+
+    <script>
+      $(document).ready(function() {
+        // получим общее кол-во слайдов для использования в пагинаторе полностраничного плагина
+        var slidesLenght = $('.full-page__section').length;
+
+        // полноэкранный показ: инициация плагина для статей
+        $('#web-dev-page').fullpage({
+          menu: '#main-nav',
+          anchors:['adaptive', 'mobile', 'mobile-2', 'mobile-3', 'other'],
+          dragAndMove: true,
+          sectionSelector: '.full-page__section',
+          navigation: true,
+          navigationPosition: 'left',
+          responsiveWidth: 1200,
+          afterRender: function(){
+            // добавим к пагинатору плагина счетчик и дизайнерский изыск
+            $('#fp-nav').prepend('<span id="slide-counter" class="full-page__counter">1/'+slidesLenght+'</span>').append('<span class="full-page__scroll-me-baby">Скролльте</span>');
+          },
+          onLeave: function(index, nextIndex, direction){
+            // при уходе со слайда сменим счетчик в пагинаторе
+            $('#slide-counter').text(nextIndex+'/'+slidesLenght);
+          }
+        });
+      });
+
+    </script>
+
+    <div class="main-nav  main-nav--content" id="main-nav">
+      @@include('_include/page_nav-inner.html')
+      <a href="" class="btn  btn--red-arrow-border  discuss-project-btn">Обсудить проект</a>
+      <div class="main-nav__js-backdrop  js-main-menu-toggler"></div>
+    </div>
+
+    <div class="full-page__section">
+
+      <a href="/" class="full-page__section-logo">
+        <img src="img/w365-logo.svg" width="122" height="60" alt="W365 logo">
+      </a>
+
+      <div class="main-header  main-header--compact">
+        <h1 class="main-header__title">
+          <span class="main-header__text">Адаптация под мобильные</span>
+        </h1>
+      </div>
+
+      <div class="full-page__section-inner  page-adaptive__item">
+
+        <div class="page-adaptive__item-descr">
+          <p>29% всех визитов на веб-сайты совершается с мобильных устройств, и эта цифра продолжает расти</p>
+        </div>
+
+        <article class="page-adaptive__article">
+          <h2 class="page-adaptive__article-title">Адаптивная версия сайта</h2>
+          <div class="page-adaptive__article-text">
+            <p>
+              Данная версия сайта проста и&nbsp;удобна в&nbsp;разработке, легка в&nbsp;поддержке, но&nbsp;ощутимо медленне, имеет низкое юзабилити по&nbsp;сравнению с&nbsp;мобильной версией сайта.
+            </p>
+            <p>Подходит для:</p>
+            <ul class="checklist">
+              <li class="checklist__item">Лендинги</li>
+              <li class="checklist__item">Промо-сайты</li>
+              <li class="checklist__item">Сайты-визитки</li>
+              <li class="checklist__item">Простые инфосайты</li>
+            </ul>
+            <p class="page-adaptive__article-accent">
+              <b>Цена разработки: от 500 000 руб.</b>
+            </p>
+            <a href="" class="btn  btn--main  btn--svg-border">
+              @@include('_include/btn-border.svg')
+              Заказать
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="decor-lines  decor-lines--dark  decor-lines--bg-adaptive-1">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+      </div>
+
+    </div>
+
+    <div class="full-page__section">
+
+      <div class="full-page__section-inner  page-adaptive__item  page-adaptive__item--single">
+
+        <article class="page-adaptive__article">
+          <h2 class="page-adaptive__article-title">Мобильная версия сайта</h2>
+          <div class="page-adaptive__article-text">
+            <p>
+              Данная версия оптимальна для сложных функциональных сайтов. Это отдельная версия сайта, созданная специально для мобильных пользователей. Зайдя на ваш сайт с мобильного устройства, посетитель перейдет на мобильную версию сайта. Она гораздо быстрее грузится и легка в поддержке и развитии.
+            </p>
+            <p>Подходит для:</p>
+            <ul class="checklist">
+              <li class="checklist__item">Интернет-магазины</li>
+              <li class="checklist__item">Крупные порталы, блоги, соц. сети</li>
+              <li class="checklist__item">Корпоративные сайты со сложным функционалом</li>
+            </ul>
+            <p class="page-adaptive__article-accent">
+              <b>Цена разработки: от 1 200 000 руб.</b>
+            </p>
+            <a href="" class="btn  btn--main  btn--svg-border">
+              @@include('_include/btn-border.svg')
+              Заказать
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="decor-lines  decor-lines--dark  decor-lines--bg-adaptive-2">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+      </div>
+
+    </div>
+
+    <div class="full-page__section">
+
+      <div class="full-page__section-inner  page-adaptive__item  page-adaptive__item--single">
+
+        <article class="page-adaptive__article">
+          <h2 class="page-adaptive__article-title">Мобильная версия сайта</h2>
+          <div class="page-adaptive__article-text">
+            <p>
+              Данная версия оптимальна для сложных функциональных сайтов. Это отдельная версия сайта, созданная специально для мобильных пользователей. Зайдя на ваш сайт с мобильного устройства, посетитель перейдет на мобильную версию сайта. Она гораздо быстрее грузится и легка в поддержке и развитии.
+            </p>
+            <p>Подходит для:</p>
+            <ul class="checklist">
+              <li class="checklist__item">Интернет-магазины</li>
+              <li class="checklist__item">Крупные порталы, блоги, соц. сети</li>
+              <li class="checklist__item">Корпоративные сайты со сложным функционалом</li>
+            </ul>
+            <p class="page-adaptive__article-accent">
+              <b>Цена разработки: от 1 200 000 руб.</b>
+            </p>
+            <a href="" class="btn  btn--main  btn--svg-border">
+              @@include('_include/btn-border.svg')
+              Заказать
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="decor-lines  decor-lines--dark  decor-lines--bg-adaptive-3">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+      </div>
+
+    </div>
+
+    <div class="full-page__section">
+
+      <div class="full-page__section-inner  page-adaptive__item  page-adaptive__item--single">
+
+        <article class="page-adaptive__article">
+          <h2 class="page-adaptive__article-title">Мобильная версия сайта</h2>
+          <div class="page-adaptive__article-text">
+            <p>
+              Данная версия оптимальна для сложных функциональных сайтов. Это отдельная версия сайта, созданная специально для мобильных пользователей. Зайдя на ваш сайт с мобильного устройства, посетитель перейдет на мобильную версию сайта. Она гораздо быстрее грузится и легка в поддержке и развитии.
+            </p>
+            <p>Подходит для:</p>
+            <ul class="checklist">
+              <li class="checklist__item">Интернет-магазины</li>
+              <li class="checklist__item">Крупные порталы, блоги, соц. сети</li>
+              <li class="checklist__item">Корпоративные сайты со сложным функционалом</li>
+            </ul>
+            <p class="page-adaptive__article-accent">
+              <b>Цена разработки: от 1 200 000 руб.</b>
+            </p>
+            <a href="" class="btn  btn--main  btn--svg-border">
+              @@include('_include/btn-border.svg')
+              Заказать
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="decor-lines  decor-lines--dark  decor-lines--bg-adaptive-4">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+      </div>
+
+    </div>
+
+    <div class="full-page__section">
+
+      <div class="full-page__section-inner">
+
+        <article class="page-adaptive__article  page-adaptive__article--other">
+          <h2 class="page-adaptive__article-title  main-header-pseudo">Другие услуги</h2>
+          <ul class="service-list">
+            <li class="service-list__item">
+              <a class="service-list__name" href="">
+                <span class="service-list__name-icon">
+                  @@include('blocks/page-web-dev/img/page-web-dev__icon-redesign.svg')
+                </span>
+                <span class="service-list__name-text">Редизайн сайтов</span>
+              </a>
+            </li>
+            <li class="service-list__item">
+              <a class="service-list__name" href="">
+                <span class="service-list__name-icon">
+                  @@include('blocks/page-web-dev/img/page-web-dev__icon-smartphone.svg')
+                </span>
+                <span class="service-list__name-text">Адаптация сайтов</span>
+              </a>
+            </li>
+            <li class="service-list__item">
+              <a class="service-list__name" href="">
+                <span class="service-list__name-icon">
+                  @@include('blocks/page-web-dev/img/page-web-dev__icon-support2.svg')
+                </span>
+                <span class="service-list__name-text">Поддежка и развитие</span>
+              </a>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="decor-lines  decor-lines--dark">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+      </div>
+
+    </div>
+
+    <a href="" class="connect-with-us  btn  btn--bg-dark-blue">Связаться с нами</a>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>
