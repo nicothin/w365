@@ -1,0 +1,71 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/team/team.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.team {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: (@screen-xl - 1)) {
+    border-top: 1px solid @gray-lighter;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 55px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: (@screen-xl - 1)) {
+      border-bottom: 1px solid @gray-lighter;
+      padding: 10px 10px;
+    }
+
+    @media (min-width: @screen-xl) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    margin-left: 5px;
+    display: inline-flex;
+    align-items: center;
+    width: 51px;
+
+    @media (min-width: @screen-xl) {
+      width: 55px;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 13px;
+    }
+  }
+
+  &__text-divider {
+    display: none;
+
+    @media (min-width: @screen-xxl) {
+      display: inline;
+    }
+  }
+
+  &__item-text {
+    font-size: 16px;
+
+    @media (min-width: @screen-xl) {
+      font-size: 18px;
+      color: @gray;
+    }
+  }
+
+  &__text-no-wrap {
+    white-space: nowrap;
+  }
+}

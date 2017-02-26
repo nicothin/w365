@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>w365</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <span id="square-loader" class="square-loader">
+    <span class="square-loader__load"></span>
+  </span>
+
+  <span class="bg-name  bg-name--left" data-bg-text="Поддержка и развитие"></span>
+
+  <noscript>Эта страница требует JavaScript для полноценной работы. Вы выключили Javascript. Вы нас пугаете.</noscript>
+
+  <div id="web-dev-page" class="full-page  full-page--content-page  page-support">
+
+    <script>
+      $(document).ready(function() {
+        // получим общее кол-во слайдов для использования в пагинаторе полностраничного плагина
+        var slidesLenght = $('.full-page__section').length;
+
+        // полноэкранный показ: инициация плагина для статей
+        $('#web-dev-page').fullpage({
+          menu: '#main-nav',
+          anchors:['support', 'professoinals', 'private', 'other-services'],
+          dragAndMove: true,
+          sectionSelector: '.full-page__section',
+          navigation: true,
+          navigationPosition: 'left',
+          responsiveWidth: 1200,
+          afterRender: function(){
+            // добавим к пагинатору плагина счетчик и дизайнерский изыск
+            $('#fp-nav').prepend('<span id="slide-counter" class="full-page__counter">1/'+slidesLenght+'</span>').append('<span class="full-page__scroll-me-baby">Скролльте</span>');
+          },
+          onLeave: function(index, nextIndex, direction){
+            // при уходе со слайда сменим счетчик в пагинаторе
+            $('#slide-counter').text(nextIndex+'/'+slidesLenght);
+          }
+        });
+      });
+
+    </script>
+
+    <div class="main-nav  main-nav--content" id="main-nav">
+      @@include('_include/page_nav-inner.html')
+      <a href="" class="btn  btn--red-arrow-border  discuss-project-btn">Обсудить проект</a>
+      <div class="main-nav__js-backdrop  js-main-menu-toggler"></div>
+    </div>
+
+    <div class="full-page__section">
+
+      <a href="/" class="full-page__section-logo">
+        <img src="img/w365-logo.svg" width="122" height="60" alt="W365 logo">
+      </a>
+
+      <div class="main-header  main-header--compact">
+        <h1 class="main-header__title">
+          <span class="main-header__text">Поддержка и развитие</span>
+        </h1>
+      </div>
+
+      <div class="full-page__section-inner  page-support__item">
+
+        <div class="page-support__item-descr">
+          <p>Поддержка сайтов решает такие распространенные проблемы как обновление информации на сайте, устранение неполадок и багов, его редизайн, увеличение количества заявок и звонков с сайта, а так же многие другие.</p>
+        </div>
+
+        <article class="page-support__article">
+          <h2 class="page-support__article-title">Наша поддержка включает</h2>
+          <ul class="collapsing-list  page-support__collapsing-list">
+            <li class="collapsing-list__item  collapsing-list__item--show-content  collapsing-list__item--show-1200">
+              <strong class="collapsing-list__name  js-collapsing-list-toggler">
+                <span class="collapsing-list__name-text">Устранение ошибок</span>
+              </strong>
+              <div class="collapsing-list__content">
+                <p>Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
+                <p class="collapsing-list__content-accent">
+                  <b>Цена: от 1 500 000 руб.</b>
+                </p>
+                <a href="" class="btn  btn--main  btn--svg-border">
+                  @@include('_include/btn-border.svg')
+                  Задать вопрос
+                </a>
+              </div>
+            </li>
+            <li class="collapsing-list__item">
+              <strong class="collapsing-list__name  js-collapsing-list-toggler">
+                <span class="collapsing-list__name-text">Доработки сайта</span>
+              </strong>
+              <div class="collapsing-list__content">
+                <p>222Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
+                <p class="collapsing-list__content-accent">
+                  <b>Цена: от 1 500 000 руб.</b>
+                </p>
+                <a href="" class="btn  btn--main  btn--svg-border">
+                  @@include('_include/btn-border.svg')
+                  Задать вопрос
+                </a>
+              </div>
+            </li>
+            <li class="collapsing-list__item">
+              <strong class="collapsing-list__name  js-collapsing-list-toggler">
+                <span class="collapsing-list__name-text">Дизайн/Редизайн</span>
+              </strong>
+              <div class="collapsing-list__content">
+                <p>333Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
+                <p class="collapsing-list__content-accent">
+                  <b>Цена: от 1 500 000 руб.</b>
+                </p>
+                <a href="" class="btn  btn--main  btn--svg-border">
+                  @@include('_include/btn-border.svg')
+                  Задать вопрос
+                </a>
+              </div>
+            </li>
+            <li class="collapsing-list__item">
+              <strong class="collapsing-list__name  js-collapsing-list-toggler">
+                <span class="collapsing-list__name-text">Быстродействие сайта</span>
+              </strong>
+              <div class="collapsing-list__content">
+                <p>444Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
+                <p class="collapsing-list__content-accent">
+                  <b>Цена: от 1 500 000 руб.</b>
+                </p>
+                <a href="" class="btn  btn--main  btn--svg-border">
+                  @@include('_include/btn-border.svg')
+                  Задать вопрос
+                </a>
+              </div>
+            </li>
+            <li class="collapsing-list__item">
+              <strong class="collapsing-list__name  js-collapsing-list-toggler">
+                <span class="collapsing-list__name-text">Наполнение сайта</span>
+              </strong>
+              <div class="collapsing-list__content">
+                <p>555Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
+                <p class="collapsing-list__content-accent">
+                  <b>Цена: от 1 500 000 руб.</b>
+                </p>
+                <a href="" class="btn  btn--main  btn--svg-border">
+                  @@include('_include/btn-border.svg')
+                  Задать вопрос
+                </a>
+              </div>
+            </li>
+            <li class="collapsing-list__item">
+              <strong class="collapsing-list__name  js-collapsing-list-toggler">
+                <span class="collapsing-list__name-text">Доступность сайта</span>
+              </strong>
+              <div class="collapsing-list__content">
+                <p>555Здесь небольшой интро-текст об особенностях сайта, для кого подойдет, какие этапы разработки затрагивает. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.</p>
+                <p class="collapsing-list__content-accent">
+                  <b>Цена: от 1 500 000 руб.</b>
+                </p>
+                <a href="" class="btn  btn--main  btn--svg-border">
+                  @@include('_include/btn-border.svg')
+                  Задать вопрос
+                </a>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="decor-lines  decor-lines--dark">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+      </div>
+
+    </div>
+
+    <div class="full-page__section">
+
+      <div class="full-page__section-inner">
+
+        <article class="page-support__article  page-support__article--team">
+          <h2 class="page-support__article-title">В вашем распоряжении команда профессионалов</h2>
+          <div class="page-support__article-text">
+            <img src="img/support-bg-1.jpg" alt="" class="page-support__image">
+            <ul class="team">
+              <li class="team__item">
+                <span class="team__icon">
+                  <img src="img/page-web-dev__icon-programming.svg" width="34" height="34" alt="">
+                </span>
+                <div class="team__item-text">
+                  Программист /
+                  <span class="team__text-no-wrap">1200 руб/час</span>
+                </div>
+              </li>
+              <li class="team__item">
+                <span class="team__icon">
+                  <img src="img/page-web-dev__icon-adaptive.svg" width="34" height="34" alt="">
+                </span>
+                <div class="team__item-text">
+                  Верстальщик /
+                  <span class="team__text-no-wrap">1000 руб/час</span>
+                </div>
+              </li>
+              <li class="team__item">
+                <span class="team__icon">
+                  <img src="img/page-web-dev__icon-docs.svg" width="34" height="34" alt="">
+                </span>
+                <div class="team__item-text">
+                  Редактор контента /
+                  <span class="team__text-no-wrap">800 руб/час</span>
+                </div>
+              </li>
+              <li class="team__item">
+                <span class="team__icon">
+                  <img src="img/page-web-dev__icon-content.svg" width="34" height="34" alt="">
+                </span>
+                <div class="team__item-text">
+                  Копирайтер /
+                  <span class="team__text-no-wrap">600 руб/час</span>
+                </div>
+              </li>
+              <li class="team__item">
+                <span class="team__icon">
+                  <img src="img/page-web-dev__icon-design.svg" width="34" height="34" alt="">
+                </span>
+                <div class="team__item-text">
+                  Дизайнер /
+                  <span class="team__text-no-wrap">900 руб/час</span>
+                </div>
+              </li>
+              <li class="team__item">
+                <span class="team__icon">
+                  <img src="img/page-web-dev__icon-analytic.svg" width="34" height="34" alt="">
+                </span>
+                <div class="team__item-text">
+                  Аналитик /
+                  <span class="team__text-no-wrap">900 руб/час</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="decor-lines  decor-lines--dark">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+      </div>
+
+    </div>
+
+    <div class="full-page__section">
+
+      <div class="full-page__section-inner">
+
+        <article class="article  article--image-left  page-support__article  page-support__article--private">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title  page-support__article-private-title">Выгодные индивидуальные тарифы</h2>
+            </header>
+            <div class="article__lead">
+              <p>Поддержка сайтов от WEB365 включает необходимый именно вам набор и объем услуг. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+            </div>
+          </div>
+          <footer class="article__footer">
+            <a href="" class="btn  btn--gray  btn--svg-border">
+              <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 220 44">
+                <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+              </svg>
+              Заказать услугу
+            </a>
+            <a href="" class="btn  btn--main  btn--svg-border">
+              <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 220 44">
+                <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+              </svg>
+              Задать вопрос
+            </a>
+          </footer>
+          <div class="article__img-wrapper">
+            <img class="article__image" src="img/support-bg-2.jpg" alt="Выгодные индивидуальные тарифы">
+          </div>
+        </article>
+
+      </div>
+
+      <div class="decor-lines  decor-lines--dark">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+      </div>
+
+    </div>
+
+    <div class="full-page__section">
+
+      <div class="full-page__section-inner">
+
+        <article class="page-support__article  page-support__article--other">
+          <h2 class="page-support__article-title  main-header-pseudo">Другие услуги</h2>
+          <ul class="service-list  page-support__service-list">
+            <li class="service-list__item">
+              <a class="service-list__name" href="">
+                <span class="service-list__name-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294.843 294.843" width="32" height="32">
+                    <path d="M288.842 0H6C2.687 0 0 2.687 0 6v282.843c0 3.313 2.687 6 6 6s6-2.687 6-6V63.993h241.42c3.314 0 6-2.687 6-6s-2.686-6-6-6H12V12h270.842v270.843H66.422c-3.314 0-6 2.687-6 6s2.686 6 6 6h222.42c3.313 0 6-2.687 6-6V6c0-3.313-2.686-6-6-6z" fill="#262626"/>
+                    <path d="M27.68 27.75c-1.11 1.12-1.75 2.67-1.75 4.25s.64 3.12 1.75 4.24c1.12 1.11 2.66 1.75 4.24 1.75s3.13-.64 4.25-1.75c1.11-1.12 1.75-2.66 1.75-4.24s-.64-3.13-1.75-4.25C35.05 26.64 33.5 26 31.92 26c-1.57 0-3.12.64-4.24 1.75zm20 0c-1.12 1.12-1.76 2.67-1.76 4.25 0 1.57.64 3.12 1.76 4.24 1.11 1.11 2.66 1.75 4.24 1.75s3.13-.64 4.24-1.75c1.12-1.12 1.76-2.66 1.76-4.24s-.64-3.13-1.76-4.25C55.05 26.64 53.5 26 51.92 26s-3.128.64-4.24 1.75zm19.99 0c-1.11 1.12-1.75 2.67-1.75 4.25 0 1.57.64 3.12 1.75 4.24 1.12 1.11 2.66 1.76 4.24 1.76s3.13-.65 4.25-1.76c1.12-1.12 1.76-2.67 1.76-4.24 0-1.58-.64-3.13-1.76-4.25-1.12-1.11-2.67-1.76-4.25-1.76-1.578 0-3.118.65-4.24 1.76z" fill="#262626"/>
+                  </svg>
+                </span>
+                <span class="service-list__name-text">Разработка сайтов</span>
+              </a>
+            </li>
+            <li class="service-list__item">
+              <a class="service-list__name" href="">
+                <span class="service-list__name-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 470" width="34" height="34">
+                    <path d="M462.5 22.5H7.5C3.358 22.5 0 25.858 0 30v410c0 4.142 3.358 7.5 7.5 7.5h455c4.143 0 7.5-3.358 7.5-7.5v-80c0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v72.5H15v-335h440V330c0 4.142 3.357 7.5 7.5 7.5s7.5-3.358 7.5-7.5V30c0-4.142-3.357-7.5-7.5-7.5zM15 37.5h277.5v45H15v-45zm292.5 45v-45H455v45H307.5z" fill="#262626"/>
+                    <path d="M381.5 52c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm-41 0c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm82 0c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm-271.15 95.764l60.393 60.392c2.93 2.93 7.678 2.93 10.606 0s2.92-7.678 0-10.606l-65.68-65.677c-2.92-2.922-7.66-2.93-10.59-.018l-44.27 43.97c-1.42 1.404-2.21 3.314-2.22 5.308s.78 3.906 2.19 5.316l29.01 29 36.82 36.82c1.46 1.46 3.38 2.19 5.3 2.19s3.83-.73 5.3-2.2c2.93-2.93 2.93-7.68 0-10.61l-2.5-2.5L192.88 222c2.93-2.927 2.93-7.676 0-10.604-2.93-2.93-7.68-2.93-10.61 0l-17.16 17.162-18.41-18.41 17.17-17.16c2.93-2.93 2.93-7.68 0-10.607-2.93-2.93-7.68-2.93-10.605 0L136.1 199.55l-18.39-18.39 33.624-33.4zM255.5 340.15l57.977 57.978c1.407 1.407 3.314 2.197 5.304 2.197s3.9-.79 5.31-2.197l44.12-44.12c2.93-2.928 2.93-7.677 0-10.605l-65.76-65.753c-2.93-2.928-7.67-2.928-10.6 0-2.93 2.93-2.93 7.68 0 10.607l60.45 60.45-33.51 33.51-18.38-18.38 17.17-17.165c2.93-2.93 2.93-7.678 0-10.606-2.93-2.93-7.67-2.93-10.6 0L289.8 353.23l-18.382-18.39 17.165-17.163c2.93-2.93 2.93-7.678 0-10.606-2.93-2.93-7.68-2.93-10.61 0l-17.16 17.17-2.473-2.47c-2.93-2.93-7.678-2.93-10.607 0-2.93 2.93-2.93 7.68 0 10.61l7.774 7.78zm-147.84 59.692c.992 0 1.994-.197 2.943-.603l65.622-28.03.133-.06c.064-.03.125-.07.188-.09.142-.07.284-.13.422-.21.082-.05.16-.1.24-.15.127-.08.254-.15.377-.23.104-.07.202-.15.303-.22.093-.07.19-.14.28-.21.19-.16.373-.32.547-.5l162.06-162.05 19.08-19.086c6.44-6.44 9.987-15.013 9.987-24.14s-3.546-17.7-9.986-24.14c-6.44-6.44-15.014-9.988-24.14-9.988-9.13 0-17.702 3.545-24.143 9.985l-19.075 19.08-162.064 162.07c-.175.18-.34.36-.495.55-.08.1-.15.19-.22.29-.08.1-.15.197-.22.3-.09.123-.16.253-.24.383-.05.078-.1.15-.14.23-.08.14-.15.288-.21.43l-.09.18-.05.1-28.038 65.657c-1.205 2.817-.574 6.083 1.592 8.25 1.433 1.436 3.35 2.197 5.303 2.197zm190.136-224.706l27.068 27.068-151.452 151.452-27.068-27.068 151.452-151.452zm24.385-24.385c3.61-3.6 8.42-5.59 13.54-5.59 5.12 0 9.93 1.99 13.54 5.6 3.61 3.61 5.6 8.42 5.6 13.54 0 5.12-1.98 9.93-5.59 13.54l-13.79 13.77-27.06-27.07 13.778-13.77zm-183.9 188.99l21.99 21.99-38.37 16.39 16.39-38.37z" fill="#262626"/>
+                  </svg>
+                </span>
+                <span class="service-list__name-text">Редизайн сайтов</span>
+              </a>
+            </li>
+            <li class="service-list__item">
+              <a class="service-list__name" href="">
+                <span class="service-list__name-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 472.811 472.811" width="34" height="34">
+                    <path d="M358.75 0H114.06C97.556 0 84.13 13.428 84.13 29.934v412.944c0 16.505 13.428 29.934 29.934 29.934H358.75c16.506 0 29.934-13.428 29.934-29.934V29.934C388.684 13.428 375.256 0 358.75 0zM99.128 75.236h274.556v312.687H99.128V75.236zM114.06 15h244.69c8.234 0 14.934 6.7 14.934 14.934v35.302H99.128V29.934c0-8.235 6.7-14.934 14.933-14.934zm244.69 442.81H114.06c-8.233 0-14.933-6.698-14.933-14.933v-44.955h274.556v44.955c0 8.235-6.7 14.934-14.933 14.934z" fill="#262626"/>
+                    <path d="M236.406 404.552c-13.545 0-24.564 11.02-24.564 24.565s11.02 24.564 24.564 24.564 24.564-11.02 24.564-24.56-11.02-24.565-24.564-24.565zm0 39.13c-8.03 0-14.564-6.535-14.564-14.565s6.533-14.565 14.564-14.565 14.564 6.534 14.564 14.565c0 8.03-6.533 14.564-14.564 14.564zm-34-396.037h68c2.762 0 5-2.24 5-5s-2.238-5-5-5h-68c-2.762 0-5 2.24-5 5s2.238 5 5 5zm-17.996 0c1.31 0 2.6-.53 3.53-1.46.93-.94 1.47-2.22 1.47-3.54s-.54-2.6-1.47-3.54c-.932-.93-2.222-1.46-3.53-1.46-1.32 0-2.602.53-3.54 1.46-.93.93-1.46 2.22-1.46 3.54s.53 2.6 1.46 3.54c.93.93 2.22 1.46 3.54 1.46z" fill="#262626"/>
+                  </svg>
+                </span>
+                <span class="service-list__name-text">Адаптация сайтов</span>
+              </a>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="decor-lines  decor-lines--dark">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+      </div>
+
+    </div>
+
+    <a href="" class="connect-with-us  btn  btn--bg-dark-blue">Связаться с нами</a>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

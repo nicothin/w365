@@ -1,0 +1,152 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/page-support/page-support.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.page-support {
+
+  .fp-tableCell {
+    overflow: hidden;
+  }
+
+  &__article {
+    position: relative;
+
+    @media (min-width: @screen-xl) {
+      display: flex;
+      max-width: 1020px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      max-width: 1370px;
+    }
+
+    &--team {
+
+      @media (min-width: @screen-xl) {
+        display: block;
+
+        .page-support__article-title {
+          width: 100%;
+          margin-bottom: 70px;
+          text-align: left;
+        }
+
+        .page-support__image {
+          display: block;
+          position: absolute;
+          width: 557px;
+          height: auto;
+          top: 0;
+          left: 0;
+        }
+
+        .page-support__article-text {
+          min-height: 360px;
+        }
+
+        .team {
+          padding-left: 603px;
+        }
+      }
+
+      @media (min-width: @screen-xxl) {
+
+        .page-support__article-title {
+          margin-bottom: 136px;
+        }
+
+        .page-support__image {
+          width: 776px;
+        }
+
+        .page-support__article-text {
+          min-height: 500px;
+        }
+
+        .team {
+          padding-left: 833px;
+        }
+      }
+    }
+
+    &--private {
+
+      @media (min-width: @screen-xl) {
+        display: block;
+      }
+    }
+  }
+
+  &__article-title {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+    font-weight: 300;
+    text-align: center;
+
+    @media (min-width: @screen-xl) {
+      width: 221px;
+      min-width: 221px;
+      margin-top: 7px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      width: 300px;
+      min-width: 300px;
+      font-size: 45px;
+      margin-top: 31px;
+    }
+  }
+
+  &__article-private-title {
+
+    @media (min-width: @screen-xl) {
+      font-size: 30px;
+      text-transform: uppercase;
+      margin: 0 0 25px;
+      font-weight: 300;
+    }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 45px;
+      margin-top: 31px;
+    }
+  }
+
+  &__article-text {
+    position: relative;
+  }
+
+  &__image {
+    display: none;
+  }
+
+  &__collapsing-list {
+
+    @media (min-width: @screen-xl) {
+      width: 221px;
+      min-width: 221px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      width: 299px;
+      min-width: 299px;
+    }
+  }
+
+  &__item-descr {
+    margin-bottom: 35px;
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+
+    @media (min-width: @screen-xxl) {
+      width: 1070px;
+      font-size: 18px;
+      margin-top: 15px;
+      min-height: 150px;
+    }
+  }
+}

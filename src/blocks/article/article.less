@@ -294,4 +294,51 @@
       margin-bottom: 70px;
     }
   }
+
+  &--image-left {
+
+    @media (min-width: @screen-xl) {
+      width: 1020px;
+      min-height: 221px;
+      padding-left: 300px;
+
+      .article__img-wrapper {
+        left: 0;
+        top: 52%;
+        transform: translateY(-50%);
+
+        img {
+          height: auto;
+        }
+      }
+
+      .article__title {
+        display: inline-block;
+        padding-bottom: 10px;
+      }
+
+      .article__footer {
+        z-index: 3;
+
+        .btn + .btn {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    @media (min-width: @screen-xxl) {
+      width: 1370px;
+      padding-left: 470px;
+
+      .article__img-wrapper {
+
+        img {
+          width: 646px;
+          height: auto;
+        }
+      }
+
+      .article__title {}
+    }
+  }
 }
