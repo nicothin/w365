@@ -2104,6 +2104,8 @@ textarea.field-text__input {
 }
 .collapsing-list__name-icon {
   margin-left: 5px;
+  display: inline-block;
+  width: 51px;
 }
 .collapsing-list__name-icon img {
   display: inline-block;
@@ -2526,6 +2528,67 @@ img.mfp-img {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%3Cpath%20d%3D%22M12%201q2.242%200%204.277.87t3.508%202.345%202.344%203.508T23%2012t-.87%204.277-2.345%203.508-3.508%202.344T12%2023t-4.277-.87-3.508-2.345-2.344-3.508T1%2012t.87-4.277%202.345-3.508T7.723%201.87%2012%201zm0%202q-1.828%200-3.496.715t-2.87%201.918-1.92%202.87T3%2012t.715%203.496%201.918%202.87%202.87%201.92T12%2021t3.496-.715%202.87-1.918%201.92-2.87T21%2012t-.715-3.496-1.918-2.87-2.87-1.92T12%203zm3.367%205.992q.414%200%20.707.293t.293.707-.297.71l-4.242%204.243q-.29.29-.703.29-.422%200-.71-.29L8.29%2012.828q-.29-.29-.29-.71%200-.415.292-.708T9%2011.117t.71.297l1.415%201.414%203.53-3.54q.298-.296.712-.296z%22%20fill%3D%22%23ff4f00%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+.page-support .fp-tableCell {
+  overflow: hidden;
+}
+.page-support__article {
+  position: relative;
+}
+.page-support__article-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  font-weight: 300;
+  text-align: center;
+}
+.page-support__article-text {
+  position: relative;
+}
+.page-support__image {
+  display: none;
+}
+.page-support__item-descr {
+  margin-bottom: 35px;
+}
+.page-support__item-descr > *:first-child {
+  margin-top: 0;
+}
+.team {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.team__item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.team__icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 5px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 51px;
+}
+.team__icon img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 13px;
+}
+.team__text-divider {
+  display: none;
+}
+.team__item-text {
+  font-size: 16px;
+}
+.team__text-no-wrap {
+  white-space: nowrap;
 }
 @media (min-width: 1200px) {
   .full-page__section-logo {
@@ -3103,6 +3166,29 @@ img.mfp-img {
     padding-top: 25px;
     margin-bottom: 40px;
   }
+  .article--image-left {
+    width: 1020px;
+    min-height: 221px;
+    padding-left: 300px;
+  }
+  .article--image-left .article__img-wrapper {
+    left: 0;
+    top: 52%;
+    transform: translateY(-50%);
+  }
+  .article--image-left .article__img-wrapper img {
+    height: auto;
+  }
+  .article--image-left .article__title {
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  .article--image-left .article__footer {
+    z-index: 3;
+  }
+  .article--image-left .article__footer .btn + .btn {
+    margin-left: 20px;
+  }
   .bg-name {
     top: 94px;
     left: calc(50% - 310px);
@@ -3489,6 +3575,61 @@ img.mfp-img {
   .checklist__item:before {
     top: 0.4em;
   }
+  .page-support__article {
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1020px;
+  }
+  .page-support__article--team {
+    display: block;
+  }
+  .page-support__article--team .page-support__article-title {
+    width: 100%;
+    margin-bottom: 70px;
+    text-align: left;
+  }
+  .page-support__article--team .page-support__image {
+    display: block;
+    position: absolute;
+    width: 557px;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+  .page-support__article--team .page-support__article-text {
+    min-height: 360px;
+  }
+  .page-support__article--team .team {
+    padding-left: 603px;
+  }
+  .page-support__article--private {
+    display: block;
+  }
+  .page-support__article-title {
+    width: 221px;
+    min-width: 221px;
+    margin-top: 7px;
+  }
+  .page-support__article-private-title {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0 0 25px;
+    font-weight: 300;
+  }
+  .page-support__collapsing-list {
+    width: 221px;
+    min-width: 221px;
+  }
+  .team__item {
+    margin-bottom: 24px;
+  }
+  .team__icon {
+    width: 55px;
+  }
+  .team__item-text {
+    font-size: 18px;
+    color: #808080;
+  }
 }
 @media (min-width: 1200px) and (min-width: 1200px) {
   .main-nav--content .main-nav__logo--supnav:before {
@@ -3705,6 +3846,14 @@ img.mfp-img {
   }
   .article--no-title {
     margin-bottom: 70px;
+  }
+  .article--image-left {
+    width: 1370px;
+    padding-left: 470px;
+  }
+  .article--image-left .article__img-wrapper img {
+    width: 646px;
+    height: auto;
   }
   .bg-name {
     top: 174px;
@@ -3949,6 +4098,44 @@ img.mfp-img {
   }
   .checklist__item {
     margin-bottom: 3px;
+  }
+  .page-support__article {
+    max-width: 1370px;
+  }
+  .page-support__article--team .page-support__article-title {
+    margin-bottom: 136px;
+  }
+  .page-support__article--team .page-support__image {
+    width: 776px;
+  }
+  .page-support__article--team .page-support__article-text {
+    min-height: 500px;
+  }
+  .page-support__article--team .team {
+    padding-left: 833px;
+  }
+  .page-support__article-title {
+    width: 300px;
+    min-width: 300px;
+    font-size: 45px;
+    margin-top: 31px;
+  }
+  .page-support__article-private-title {
+    font-size: 45px;
+    margin-top: 31px;
+  }
+  .page-support__collapsing-list {
+    width: 299px;
+    min-width: 299px;
+  }
+  .page-support__item-descr {
+    width: 1070px;
+    font-size: 18px;
+    margin-top: 15px;
+    min-height: 150px;
+  }
+  .team__text-divider {
+    display: inline;
   }
 }
 @media (min-width: 1200px) and (min-width: 1920px) {
@@ -4315,6 +4502,16 @@ img.mfp-img {
     text-overflow: ellipsis;
     cursor: pointer;
     padding-right: 48px;
+  }
+  .team {
+    border-top: 1px solid #d9d9d9;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 55px;
+  }
+  .team__item {
+    border-bottom: 1px solid #d9d9d9;
+    padding: 10px 10px;
   }
 }
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {/**
