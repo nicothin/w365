@@ -52,11 +52,11 @@
     <span class="square-loader__load"></span>
   </span>
 
-  <span class="bg-name" data-bg-text="Статьи"></span>
+  <span class="bg-name" data-bg-text="Аналитика"></span>
 
   <noscript>Эта страница требует JavaScript для полноценной работы. Вы выключили Javascript. Вы нас пугаете.</noscript>
 
-  <div id="articles-page" class="full-page  full-page--content-page">
+  <div id="articles-page" class="full-page  full-page--content-page  page-analytics">
 
     <script>
       $(document).ready(function() {
@@ -66,7 +66,7 @@
         // полноэкранный показ: инициация плагина для статей
         $('#articles-page').fullpage({
           menu: '#main-nav',
-          anchors:['articles-page-1', 'articles-page-2', 'articles-page-3'],
+          anchors:['analytics-page-1', 'analytics-page-2', 'analytics-page-3', 'analytics-page-4'],
           dragAndMove: true,
           sectionSelector: '.full-page__section',
           navigation: true,
@@ -169,7 +169,7 @@
       <div class="main-nav__js-backdrop  js-main-menu-toggler"></div>
     </div>
 
-    <div class="full-page__section">
+    <div class="full-page__section  page-analytics__item">
 
       <a href="/" class="full-page__section-logo">
         <img src="img/w365-logo.svg" width="122" height="60" alt="W365 logo">
@@ -177,143 +177,146 @@
 
       <div class="main-header">
         <h1 class="main-header__title">
-          <span class="main-header__text">Статьи</span>
+          <span class="main-header__icon">
+            <img src="img/page-web-dev__icon-analytic.svg" width="34" height="34" alt="">
+          </span>
+          <span class="main-header__text">Аналитика</span>
         </h1>
-        <div class="main-header__links-wrap">
-          <ul class="main-header__links-list">
-            <li><a href="">Эксклюзивные сайты</a></li>
-            <li><a href="">Верстка</a></li>
-            <li><a href="">Адаптив</a></li>
-            <li><a href="">Эксклюзивная верстка</a></li>
-            <li><a href="">Ещё что-то</a></li>
-            <li><a href="">Разный контент</a></li>
-            <li><a href="">Розовые слоны</a></li>
-            <li><a href="">Атака помидоров-убийц</a></li>
-          </ul>
+      </div>
+
+      <div class="full-page__section-inner  two-items">
+
+        <article class="article  article--simple">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Заполнение брифа</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="article  article--simple  article--to-right">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Детализация требований</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <img src="img/design-bg-1.jpg" class="two-items__img  two-items__img--to-top" alt="">
+
+      </div>
+
+    </div>
+
+    <div class="full-page__section  page-analytics__item">
+
+      <div class="full-page__section-inner  two-items">
+
+        <article class="article  article--simple">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Персонажи</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="article  article--simple  article--to-right">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Пользовательские сценнарии</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <img src="img/design-bg-2.jpg" class="two-items__img" alt="">
+
+      </div>
+
+    </div>
+
+    <div class="full-page__section  page-analytics__item">
+
+      <div class="full-page__section-inner  two-items">
+
+        <article class="article  article--simple">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Анализ конкурентов</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="article  article--simple  article--to-right">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Структура сайта</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <img src="img/design-bg-2.jpg" class="two-items__img" alt="">
+
+      </div>
+
+    </div>
+
+    <div class="full-page__section  page-analytics__item">
+
+      <div class="full-page__section-inner  two-items">
+
+        <article class="article  article--simple">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Информационная архитектура</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="two-items__btns">
+          <a href="" class="btn  btn--main  btn--svg-border">
+            <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+              <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+              <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+              <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+              <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+            </svg>
+
+            Задать вопрос
+          </a>
+          <a href="" class="btn  btn--gray  btn--svg-border">
+            <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+              <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+              <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+              <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+              <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+            </svg>
+
+            Другие этапы
+          </a>
         </div>
-      </div>
 
-      <div class="full-page__section-inner">
-
-        <article class="article">
-          <a href="" class="article__link-wrapper">
-            <header class="article__header">
-              <h2 class="article__title">Создание эксклюзивных сайтов</h2>
-            </header>
-            <div class="article__lead">
-              <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Наш заглавных всеми правилами предложения жизни страна продолжил пустился продолжил напоивший родного они, толку однажды, меня от всех свой города одна.</p>
-            </div>
-          </a>
-          <footer class="article__footer">
-            <a href="" class="btn  btn--main  btn--svg-border">
-              <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
-                <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
-                <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
-                <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
-                <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
-              </svg>
-
-              Читать статью
-            </a>
-          </footer>
-          <a href="" class="article__img-wrapper">
-            <img class="article__image" src="img/TEMP-article-image.jpg" alt="Создание эксклюзивных сайтов">
-          </a>
-        </article>
-
-      </div>
-
-    </div>
-
-    <div class="full-page__section">
-
-      <div class="full-page__section-inner">
-
-        <article class="article">
-          <a href="" class="article__link-wrapper">
-            <header class="article__header">
-              <h2 class="article__title">Создание эксклюзивных сайтов длинный заголовок даже странно какой длинный</h2>
-            </header>
-            <div class="article__lead">
-              <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
-            </div>
-          </a>
-          <footer class="article__footer">
-            <a href="" class="btn  btn--main  btn--svg-border">
-              <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
-                <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
-                <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
-                <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
-                <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
-              </svg>
-
-              Читать статью
-            </a>
-          </footer>
-          <a href="" class="article__img-wrapper">
-            <img class="article__image" src="img/TEMP-article-image-2.jpg" alt="Создание эксклюзивных сайтов длинный заголовок даже странно какой длинный">
-          </a>
-        </article>
-
-        <article class="article  article--to-right">
-          <a href="" class="article__link-wrapper">
-            <header class="article__header">
-              <h2 class="article__title">Негры в городе</h2>
-            </header>
-            <div class="article__lead">
-              <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
-            </div>
-          </a>
-          <footer class="article__footer">
-            <a href="" class="btn  btn--main  btn--svg-border">
-              <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
-                <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
-                <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
-                <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
-                <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
-              </svg>
-
-              Читать статью
-            </a>
-          </footer>
-          <a href="" class="article__img-wrapper">
-            <img class="article__image" src="img/TEMP-article-image.jpg" alt="Создание эксклюзивных сайтов">
-          </a>
-        </article>
-
-      </div>
-
-    </div>
-
-    <div class="full-page__section">
-
-      <div class="full-page__section-inner">
-
-        <article class="article">
-          <a href="" class="article__link-wrapper">
-            <header class="article__header">
-              <h2 class="article__title">Создание эксклюзивных сайтов</h2>
-            </header>
-            <div class="article__lead">
-              <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Наш заглавных всеми правилами предложения жизни страна продолжил пустился продолжил напоивший родного они, толку однажды, меня от всех свой города одна.</p>
-            </div>
-          </a>
-          <footer class="article__footer">
-            <a href="" class="btn  btn--main  btn--svg-border">
-              <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
-                <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
-                <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
-                <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
-                <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
-              </svg>
-
-              Читать статью
-            </a>
-          </footer>
-          <a href="" class="article__img-wrapper">
-            <img class="article__image" src="img/TEMP-article-image-2.jpg" alt="Создание эксклюзивных сайтов длинный заголовок даже странно какой длинный">
-          </a>
-        </article>
+        <img src="img/design-bg-2.jpg" class="two-items__img" alt="">
 
       </div>
 

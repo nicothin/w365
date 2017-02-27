@@ -52,11 +52,11 @@
     <span class="square-loader__load"></span>
   </span>
 
-  <span class="bg-name" data-bg-text="Статьи"></span>
+  <span class="bg-name  bg-name--vertical" data-bg-text="Редизайн"></span>
 
   <noscript>Эта страница требует JavaScript для полноценной работы. Вы выключили Javascript. Вы нас пугаете.</noscript>
 
-  <div id="articles-page" class="full-page  full-page--content-page">
+  <div id="web-dev-page" class="full-page  full-page--content-page  page-redesign">
 
     <script>
       $(document).ready(function() {
@@ -64,9 +64,9 @@
         var slidesLenght = $('.full-page__section').length;
 
         // полноэкранный показ: инициация плагина для статей
-        $('#articles-page').fullpage({
+        $('#web-dev-page').fullpage({
           menu: '#main-nav',
-          anchors:['articles-page-1', 'articles-page-2', 'articles-page-3'],
+          anchors:['redesign', 'redesign-2', 'other'],
           dragAndMove: true,
           sectionSelector: '.full-page__section',
           navigation: true,
@@ -175,37 +175,74 @@
         <img src="img/w365-logo.svg" width="122" height="60" alt="W365 logo">
       </a>
 
-      <div class="main-header">
+      <div class="main-header  main-header--compact">
         <h1 class="main-header__title">
-          <span class="main-header__text">Статьи</span>
+          <span class="main-header__text">Редизайн сайтов</span>
         </h1>
-        <div class="main-header__links-wrap">
-          <ul class="main-header__links-list">
-            <li><a href="">Эксклюзивные сайты</a></li>
-            <li><a href="">Верстка</a></li>
-            <li><a href="">Адаптив</a></li>
-            <li><a href="">Эксклюзивная верстка</a></li>
-            <li><a href="">Ещё что-то</a></li>
-            <li><a href="">Разный контент</a></li>
-            <li><a href="">Розовые слоны</a></li>
-            <li><a href="">Атака помидоров-убийц</a></li>
-          </ul>
+      </div>
+
+      <div class="full-page__section-inner  page-redesign__item">
+
+        <div class="page-redesign__item-descr">
+          <p>Небольшой интро-текст про услугу. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
         </div>
+
+        <article class="page-redesign__article">
+          <h2 class="page-redesign__article-title">Для чего нужен редизайн?</h2>
+          <div class="page-redesign__article-text">
+            <ul class="checklist  checklist--lg  checklist--bullets-cancel">
+              <li class="checklist__item">Мало звонков/заявок с сайта</li>
+              <li class="checklist__item">Бизнес вырос из шаблонного дизайна</li>
+              <li class="checklist__item">Дизайн сайта сделан более 3х лет назад</li>
+              <li class="checklist__item">Сайт не соответствует фирменному стилю</li>
+              <li class="checklist__item">Редкая CMS - никто не берется за поддержку и улучшение Вашего сайта</li>
+              <li class="checklist__item">Нужно превзойти конкурентов</li>
+            </ul>
+          </div>
+        </article>
+
       </div>
 
-      <div class="full-page__section-inner">
+      <div class="decor-lines  decor-lines--dark">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+      </div>
 
-        <article class="article">
-          <a href="" class="article__link-wrapper">
-            <header class="article__header">
-              <h2 class="article__title">Создание эксклюзивных сайтов</h2>
-            </header>
-            <div class="article__lead">
-              <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Наш заглавных всеми правилами предложения жизни страна продолжил пустился продолжил напоивший родного они, толку однажды, меня от всех свой города одна.</p>
-            </div>
-          </a>
-          <footer class="article__footer">
-            <a href="" class="btn  btn--main  btn--svg-border">
+    </div>
+
+    <div class="full-page__section">
+
+      <div class="full-page__section-inner  page-redesign__item  page-redesign__item--single">
+
+        <article class="page-redesign__article">
+          <h2 class="page-redesign__article-title">Какие задачи решает редизайн?</h2>
+          <div class="page-redesign__article-text">
+            <ul class="checklist  checklist--lg">
+              <li class="checklist__item">Увеличение количества заявок с Вашего сайта</li>
+              <li class="checklist__item">Повышение конверсии сайта</li>
+              <li class="checklist__item">Привлечение мобильной аудитории</li>
+              <li class="checklist__item">Расширение функциональности сайта (калькуляторы, формы захвата и др.)</li>
+              <li class="checklist__item">Повышение скорости загрузки и работы сайта</li>
+              <li class="checklist__item">Повышение безопасности (в старых CMS много уязвимостей)</li>
+              <li class="checklist__item">Устранение ошибок</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="page-redesign__article  page-redesign__article--to-right">
+          <h2 class="page-redesign__article-title">Вы ничем не рискуете</h2>
+          <div class="page-redesign__article-text">
+            <ul class="checklist  checklist--lg">
+              <li class="checklist__item">Работаем на резервной копии вашего текущего сайта</li>
+              <li class="checklist__item">Сохраняем и повышаем позиции в поисковой выдаче</li>
+              <li class="checklist__item">Предоставляем рассрочку на редизайн сайта</li>
+              <li class="checklist__item">Проводимые изменения сайта основаны на реальном опыте, а не гипотезах</li>
+              <li class="checklist__item">Улучшаем продающие качества Вашего сайта</li>
+            </ul>
+            <a href="" class="btn  btn--main  btn--svg-border  page-redesign__article-btn">
               <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
                 <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
                 <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
@@ -213,14 +250,19 @@
                 <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
               </svg>
 
-              Читать статью
+              Заказать редизайн
             </a>
-          </footer>
-          <a href="" class="article__img-wrapper">
-            <img class="article__image" src="img/TEMP-article-image.jpg" alt="Создание эксклюзивных сайтов">
-          </a>
+          </div>
         </article>
 
+      </div>
+
+      <div class="decor-lines  decor-lines--dark">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
       </div>
 
     </div>
@@ -229,92 +271,54 @@
 
       <div class="full-page__section-inner">
 
-        <article class="article">
-          <a href="" class="article__link-wrapper">
-            <header class="article__header">
-              <h2 class="article__title">Создание эксклюзивных сайтов длинный заголовок даже странно какой длинный</h2>
-            </header>
-            <div class="article__lead">
-              <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
-            </div>
-          </a>
-          <footer class="article__footer">
-            <a href="" class="btn  btn--main  btn--svg-border">
-              <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
-                <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
-                <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
-                <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
-                <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
-              </svg>
-
-              Читать статью
-            </a>
-          </footer>
-          <a href="" class="article__img-wrapper">
-            <img class="article__image" src="img/TEMP-article-image-2.jpg" alt="Создание эксклюзивных сайтов длинный заголовок даже странно какой длинный">
-          </a>
-        </article>
-
-        <article class="article  article--to-right">
-          <a href="" class="article__link-wrapper">
-            <header class="article__header">
-              <h2 class="article__title">Негры в городе</h2>
-            </header>
-            <div class="article__lead">
-              <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
-            </div>
-          </a>
-          <footer class="article__footer">
-            <a href="" class="btn  btn--main  btn--svg-border">
-              <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
-                <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
-                <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
-                <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
-                <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
-              </svg>
-
-              Читать статью
-            </a>
-          </footer>
-          <a href="" class="article__img-wrapper">
-            <img class="article__image" src="img/TEMP-article-image.jpg" alt="Создание эксклюзивных сайтов">
-          </a>
+        <article class="page-redesign__article  page-redesign__article--other">
+          <h2 class="page-redesign__article-title  main-header-pseudo">Другие услуги</h2>
+          <ul class="service-list">
+            <li class="service-list__item">
+              <a class="service-list__name" href="">
+                <span class="service-list__name-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294.843 294.843" width="32" height="32">
+                    <path d="M288.842 0H6C2.687 0 0 2.687 0 6v282.843c0 3.313 2.687 6 6 6s6-2.687 6-6V63.993h241.42c3.314 0 6-2.687 6-6s-2.686-6-6-6H12V12h270.842v270.843H66.422c-3.314 0-6 2.687-6 6s2.686 6 6 6h222.42c3.313 0 6-2.687 6-6V6c0-3.313-2.686-6-6-6z" fill="#262626"/>
+                    <path d="M27.68 27.75c-1.11 1.12-1.75 2.67-1.75 4.25s.64 3.12 1.75 4.24c1.12 1.11 2.66 1.75 4.24 1.75s3.13-.64 4.25-1.75c1.11-1.12 1.75-2.66 1.75-4.24s-.64-3.13-1.75-4.25C35.05 26.64 33.5 26 31.92 26c-1.57 0-3.12.64-4.24 1.75zm20 0c-1.12 1.12-1.76 2.67-1.76 4.25 0 1.57.64 3.12 1.76 4.24 1.11 1.11 2.66 1.75 4.24 1.75s3.13-.64 4.24-1.75c1.12-1.12 1.76-2.66 1.76-4.24s-.64-3.13-1.76-4.25C55.05 26.64 53.5 26 51.92 26s-3.128.64-4.24 1.75zm19.99 0c-1.11 1.12-1.75 2.67-1.75 4.25 0 1.57.64 3.12 1.75 4.24 1.12 1.11 2.66 1.76 4.24 1.76s3.13-.65 4.25-1.76c1.12-1.12 1.76-2.67 1.76-4.24 0-1.58-.64-3.13-1.76-4.25-1.12-1.11-2.67-1.76-4.25-1.76-1.578 0-3.118.65-4.24 1.76z" fill="#262626"/>
+                  </svg>
+                </span>
+                <span class="service-list__name-text">Разработка сайтов</span>
+              </a>
+            </li>
+            <li class="service-list__item">
+              <a class="service-list__name" href="">
+                <span class="service-list__name-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 472.811 472.811" width="34" height="34">
+                    <path d="M358.75 0H114.06C97.556 0 84.13 13.428 84.13 29.934v412.944c0 16.505 13.428 29.934 29.934 29.934H358.75c16.506 0 29.934-13.428 29.934-29.934V29.934C388.684 13.428 375.256 0 358.75 0zM99.128 75.236h274.556v312.687H99.128V75.236zM114.06 15h244.69c8.234 0 14.934 6.7 14.934 14.934v35.302H99.128V29.934c0-8.235 6.7-14.934 14.933-14.934zm244.69 442.81H114.06c-8.233 0-14.933-6.698-14.933-14.933v-44.955h274.556v44.955c0 8.235-6.7 14.934-14.933 14.934z" fill="#262626"/>
+                    <path d="M236.406 404.552c-13.545 0-24.564 11.02-24.564 24.565s11.02 24.564 24.564 24.564 24.564-11.02 24.564-24.56-11.02-24.565-24.564-24.565zm0 39.13c-8.03 0-14.564-6.535-14.564-14.565s6.533-14.565 14.564-14.565 14.564 6.534 14.564 14.565c0 8.03-6.533 14.564-14.564 14.564zm-34-396.037h68c2.762 0 5-2.24 5-5s-2.238-5-5-5h-68c-2.762 0-5 2.24-5 5s2.238 5 5 5zm-17.996 0c1.31 0 2.6-.53 3.53-1.46.93-.94 1.47-2.22 1.47-3.54s-.54-2.6-1.47-3.54c-.932-.93-2.222-1.46-3.53-1.46-1.32 0-2.602.53-3.54 1.46-.93.93-1.46 2.22-1.46 3.54s.53 2.6 1.46 3.54c.93.93 2.22 1.46 3.54 1.46z" fill="#262626"/>
+                  </svg>
+                </span>
+                <span class="service-list__name-text">Адаптация сайтов</span>
+              </a>
+            </li>
+            <li class="service-list__item">
+              <a class="service-list__name" href="">
+                <span class="service-list__name-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="34" height="34">
+                    <path d="M12.5 12.5v487h487v-487h-487zm466.3 466.3H33.2V127.5h445.6v351.3zm-445.6-372V33.2h445.6v73.6H33.2z" fill="#262626"/>
+                    <path d="M409.4 59.1h22.8v20.7h-22.8zm-57 0h22.8v20.7h-22.8zm-57 0h22.8v20.7h-22.8zM256 387.6c56 0 108.8-30.1 136.8-78.8 2.1-3.1 2.1-7.3 0-10.4-28-48.7-80.8-78.8-136.8-78.8s-108.8 30.1-136.8 78.8c-2.1 3.1-2.1 7.3 0 10.4 28 48.8 80.8 78.8 136.8 78.8zm0-148.2c47.7 0 91.2 23.8 116.1 63.2-25.9 39.4-68.4 63.2-116.1 63.2s-91.2-23.8-116.1-63.2c25.9-38.3 68.4-63.2 116.1-63.2z" fill="#262626"/>
+                    <path d="M256 347.2c24.9 0 44.6-19.7 44.6-44.6S280.9 258 256 258v20.7c13.5 0 23.8 10.4 23.8 23.8s-10.4 23.8-23.8 23.8-23.8-10.4-23.8-23.8h-20.7c-.1 25 19.6 44.7 44.5 44.7z" fill="#262626"/>
+                  </svg>
+                </span>
+                <span class="service-list__name-text">Поддежка и развитие</span>
+              </a>
+            </li>
+          </ul>
         </article>
 
       </div>
 
-    </div>
-
-    <div class="full-page__section">
-
-      <div class="full-page__section-inner">
-
-        <article class="article">
-          <a href="" class="article__link-wrapper">
-            <header class="article__header">
-              <h2 class="article__title">Создание эксклюзивных сайтов</h2>
-            </header>
-            <div class="article__lead">
-              <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Наш заглавных всеми правилами предложения жизни страна продолжил пустился продолжил напоивший родного они, толку однажды, меня от всех свой города одна.</p>
-            </div>
-          </a>
-          <footer class="article__footer">
-            <a href="" class="btn  btn--main  btn--svg-border">
-              <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
-                <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
-                <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
-                <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
-                <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
-              </svg>
-
-              Читать статью
-            </a>
-          </footer>
-          <a href="" class="article__img-wrapper">
-            <img class="article__image" src="img/TEMP-article-image-2.jpg" alt="Создание эксклюзивных сайтов длинный заголовок даже странно какой длинный">
-          </a>
-        </article>
-
+      <div class="decor-lines  decor-lines--dark">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
       </div>
 
     </div>
