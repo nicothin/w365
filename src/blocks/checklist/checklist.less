@@ -46,6 +46,10 @@
       background-repeat: no-repeat;
       background-image: data-uri('image/svg+xml;charset=UTF-8', './src/blocks/checklist/icons/check.svg');
 
+      .checklist--bullets-cancel & {
+        background-image: data-uri('image/svg+xml;charset=UTF-8', './src/blocks/checklist/icons/cross.svg');
+      }
+
       @media (min-width: @screen-xl) {
         top: 0.4em;
       }
@@ -53,6 +57,17 @@
 
     @media (min-width: @screen-xxl) {
       margin-bottom: 3px;
+    }
+  }
+
+  &--lg {
+
+    @media (min-width: @screen-xl) {
+      width: 664px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      width: 820px;
     }
   }
 }
