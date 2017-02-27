@@ -1,0 +1,29 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/page-seo/page-seo.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.page-seo {
+
+  .fp-tableCell {
+    overflow: hidden;
+  }
+
+  &__item {
+    position: relative;
+    z-index: 2;
+
+    @media (min-width: @screen-xl) {
+      margin-bottom: 20px !important;
+      width: 1022px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 18px;
+    }
+  }
+
+  &__article {
+    position: relative;
+  }
+}

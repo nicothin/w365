@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>w365</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <span id="square-loader" class="square-loader">
+    <span class="square-loader__load"></span>
+  </span>
+
+  <span class="bg-name  bg-name--vertical" data-bg-text="Продвижение"></span>
+
+  <noscript>Эта страница требует JavaScript для полноценной работы. Вы выключили Javascript. Вы нас пугаете.</noscript>
+
+  <div id="web-dev-page" class="full-page  full-page--content-page  page-seo">
+
+    <script>
+      $(document).ready(function() {
+        // получим общее кол-во слайдов для использования в пагинаторе полностраничного плагина
+        var slidesLenght = $('.full-page__section').length;
+
+        // полноэкранный показ: инициация плагина для статей
+        $('#web-dev-page').fullpage({
+          menu: '#main-nav',
+          anchors:['seo', 'other'],
+          dragAndMove: true,
+          sectionSelector: '.full-page__section',
+          navigation: true,
+          navigationPosition: 'left',
+          responsiveWidth: 1200,
+          afterRender: function(){
+            // добавим к пагинатору плагина счетчик и дизайнерский изыск
+            $('#fp-nav').prepend('<span id="slide-counter" class="full-page__counter">1/'+slidesLenght+'</span>').append('<span class="full-page__scroll-me-baby">Скролльте</span>');
+          },
+          onLeave: function(index, nextIndex, direction){
+            // при уходе со слайда сменим счетчик в пагинаторе
+            $('#slide-counter').text(nextIndex+'/'+slidesLenght);
+          }
+        });
+      });
+
+    </script>
+
+    <div class="main-nav  main-nav--content" id="main-nav">
+      @@include('_include/page_nav-inner.html')
+      <a href="" class="btn  btn--red-arrow-border  discuss-project-btn">Обсудить проект</a>
+      <div class="main-nav__js-backdrop  js-main-menu-toggler"></div>
+    </div>
+
+    <div class="full-page__section">
+
+      <a href="/" class="full-page__section-logo">
+        <img src="img/w365-logo.svg" width="122" height="60" alt="W365 logo">
+      </a>
+
+      <div class="main-header  main-header--compact">
+        <h1 class="main-header__title">
+          <span class="main-header__text">Поисковое продвижение</span>
+        </h1>
+      </div>
+
+      <div class="full-page__section-inner  page-seo__item">
+
+        <div class="page-seo__item-descr">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+          <a href="" class="btn  btn--main  btn--svg-border">
+            @@include('_include/btn-border.svg')
+            Заказать услугу
+          </a>
+        </div>
+
+      </div>
+
+      <div class="decor-lines  decor-lines--dark">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+      </div>
+
+    </div>
+
+    <div class="full-page__section">
+
+      <div class="full-page__section-inner  page-seo__item">
+
+        <article class="page-redesign__article  page-redesign__article--other">
+          <h2 class="page-redesign__article-title  main-header-pseudo">Другие услуги</h2>
+          <ul class="service-list">
+            <li class="service-list__item">
+              <a class="service-list__name" href="">
+                <span class="service-list__name-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 470" width="32" height="32">
+                    <path d="M432.5 115.005c4.142 0 7.5-3.357 7.5-7.5V75h22.5c4.142 0 7.5-3.357 7.5-7.5v-60c0-4.143-3.358-7.5-7.5-7.5h-60c-4.142 0-7.5 3.357-7.5 7.5V30H75V7.5C75 3.357 71.642 0 67.5 0h-60C3.358 0 0 3.357 0 7.5v60C0 71.643 3.358 75 7.5 75H30v320H7.5c-4.142 0-7.5 3.357-7.5 7.5v60c0 4.143 3.358 7.5 7.5 7.5h60c4.142 0 7.5-3.357 7.5-7.5V440h320v22.5c0 4.143 3.358 7.5 7.5 7.5h60c4.142 0 7.5-3.357 7.5-7.5v-60c0-4.143-3.358-7.5-7.5-7.5H440V137.505c0-4.143-3.358-7.5-7.5-7.5s-7.5 3.357-7.5 7.5V395h-22.5c-4.142 0-7.5 3.357-7.5 7.5V425H75v-22.5c0-4.143-3.358-7.5-7.5-7.5H45V75h22.5c4.142 0 7.5-3.357 7.5-7.5V45h320v22.5c0 4.143 3.358 7.5 7.5 7.5H425v32.505c0 4.142 3.358 7.5 7.5 7.5zM410 410h45v45h-45v-45zM60 455H15v-45h45v45zm0-395H15V15h45v45zm350-45h45v45h-45V15z" fill="#262626"></path>
+                    <path d="M370 107.505c0-4.143-3.358-7.5-7.5-7.5h-255c-4.142 0-7.5 3.357-7.5 7.5V235c0 4.142 3.358 7.5 7.5 7.5h255c4.142 0 7.5-3.358 7.5-7.5V107.504zM115 119.64l103.23 51.612L115 222.864V119.64zm24.27-4.635h191.46L235 162.867l-95.73-47.862zM235 179.637l95.73 47.862H139.27L235 179.634zm16.77-8.385L355 119.64v103.225l-103.23-51.613zM220 355H107.5c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5H220c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5zm142.5 0H250c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h112.5c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5zM220 323.125H107.5c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5H220c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5zm142.5 0H250c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h112.5c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5zM220 291.25H107.5c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5H220c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5zm142.5 0H250c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h112.5c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5zm0-31.876h-255c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h255c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5z" fill="#262626"></path>
+                  </svg>
+                </span>
+                <span class="service-list__name-text">Контекстная реклама</span>
+              </a>
+            </li>
+            <li class="service-list__item">
+              <a class="service-list__name" href="">
+                <span class="service-list__name-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 470" width="32" height="32">
+                    <path d="M462.5 22.5H330c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h125v45H307.5V30c0-4.143-3.358-7.5-7.5-7.5H170c-4.142 0-7.5 3.357-7.5 7.5v52.5H15v-45h125c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5H7.5C3.358 22.5 0 25.857 0 30v410c0 4.143 3.358 7.5 7.5 7.5h455c4.142 0 7.5-3.357 7.5-7.5v-80c0-4.143-3.358-7.5-7.5-7.5s-7.5 3.357-7.5 7.5v72.5H15v-335h147.5V330c0 2.883 1.653 5.51 4.25 6.76 2.6 1.25 5.684.9 7.935-.903L235 287.604l60.315 48.252c1.356 1.085 3.014 1.644 4.686 1.644 1.11 0 2.22-.243 3.25-.74 2.6-1.25 4.25-3.877 4.25-6.76V97.5H455V330c0 4.143 3.358 7.5 7.5 7.5s7.5-3.357 7.5-7.5V30c0-4.143-3.358-7.5-7.5-7.5zm-170 291.896l-52.815-42.252c-1.37-1.096-3.027-1.644-4.685-1.644s-3.315.548-4.685 1.644L177.5 314.396V37.5h50V248c0 4.143 3.358 7.5 7.5 7.5s7.5-3.357 7.5-7.5V37.5h50v276.896z" fill="#262626"></path>
+                    <path d="M389.5 60c0-4.41-3.59-8-8-8s-8 3.59-8 8 3.59 8 8 8 8-3.59 8-8zm-41 0c0-4.41-3.59-8-8-8s-8 3.59-8 8 3.59 8 8 8 8-3.59 8-8zm82 0c0-4.41-3.59-8-8-8s-8 3.59-8 8 3.59 8 8 8 8-3.59 8-8z" fill="#262626"></path>
+                  </svg>
+                </span>
+                <span class="service-list__name-text">Таргетированная реклама</span>
+              </a>
+            </li>
+            <li class="service-list__item">
+              <a class="service-list__name" href="">
+                <span class="service-list__name-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 470" width="32" height="32">
+                    <path d="M116.48 194.5h6.745v55.43c0 16.707 13.592 30.298 30.298 30.298h26.798c4.15 0 7.5-3.358 7.5-7.5V217c0-4.142-3.35-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v48.228h-19.29c-8.433 0-15.296-6.863-15.296-15.298V194.5h71.106l157.946 45.066c.677.193 1.37.288 2.057.288 1.61 0 3.2-.52 4.517-1.513 1.877-1.41 2.98-3.63 2.98-5.98V63.87c0-2.358-1.106-4.57-2.984-5.99-1.88-1.42-4.313-1.875-6.575-1.227l-157.95 45.07h-92.85c-12.854 0-23.313 10.46-23.313 23.317v46.153c0 12.856 10.46 23.315 23.315 23.315zm245.356 27.914L217.88 181.34v-66.464l143.956-41.074v148.612zm-253.672-97.382c0-4.585 3.73-8.315 8.315-8.315h86.4V179.5h-86.4c-4.59 0-8.32-3.73-8.32-8.315v-46.153z" fill="#262626"></path>
+                    <path d="M452.16 16.364H17.84C8.004 16.364 0 24.367 0 34.204V363.41c0 9.837 8.003 17.84 17.84 17.84h163.81v57.387h-70.74c-4.14 0-7.5 3.358-7.5 7.5s3.36 7.5 7.5 7.5h248.183c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-70.738V381.25H452.16c9.836 0 17.84-8.003 17.84-17.84V34.204c0-9.838-8.003-17.84-17.84-17.84zM273.35 438.636h-76.704V381.25h76.704v57.386zM455 363.41c0 1.54-1.3 2.84-2.84 2.84H17.84c-1.54 0-2.84-1.3-2.84-2.84V34.204c0-1.54 1.3-2.84 2.84-2.84h434.32c1.54 0 2.84 1.3 2.84 2.84V363.41z" fill="#262626"></path>
+                    <path d="M431.477 305.227H38.523c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h392.954c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5z" fill="#262626"></path>
+                  </svg>
+                </span>
+                <span class="service-list__name-text">Медийная реклама</span>
+              </a>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="decor-lines  decor-lines--dark">
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+        <div class="decor-lines__item"></div>
+      </div>
+
+    </div>
+
+    <a href="" class="connect-with-us  btn  btn--bg-dark-blue">Связаться с нами</a>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>
