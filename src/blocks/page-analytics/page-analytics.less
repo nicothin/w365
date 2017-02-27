@@ -1,0 +1,19 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/page-analytics/page-analytics.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.page-analytics {
+
+  &__item {
+
+    @media (max-width: (@screen-xl - 1)) {}
+
+    @media (min-width: @screen-xxl) {
+
+      .main-header {
+        margin-bottom: 123px;
+      }
+    }
+  }
+}

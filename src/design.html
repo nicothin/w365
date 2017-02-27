@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>w365</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <span id="square-loader" class="square-loader">
+    <span class="square-loader__load"></span>
+  </span>
+
+  <span class="bg-name" data-bg-text="Дизайн"></span>
+
+  <noscript>Эта страница требует JavaScript для полноценной работы. Вы выключили Javascript. Вы нас пугаете.</noscript>
+
+  <div id="articles-page" class="full-page  full-page--content-page  page-design">
+
+    <script>
+      $(document).ready(function() {
+        // получим общее кол-во слайдов для использования в пагинаторе полностраничного плагина
+        var slidesLenght = $('.full-page__section').length;
+
+        // полноэкранный показ: инициация плагина для статей
+        $('#articles-page').fullpage({
+          menu: '#main-nav',
+          anchors:['design-page-1', 'design-page-2', 'design-page-3', 'design-page-4'],
+          dragAndMove: true,
+          sectionSelector: '.full-page__section',
+          navigation: true,
+          navigationPosition: 'left',
+          responsiveWidth: 1200,
+          afterRender: function(){
+            // добавим к пагинатору плагина счетчик и дизайнерский изыск
+            $('#fp-nav').prepend('<span id="slide-counter" class="full-page__counter">1/'+slidesLenght+'</span>').append('<span class="full-page__scroll-me-baby">Скролльте</span>');
+          },
+          onLeave: function(index, nextIndex, direction){
+            // при уходе со слайда сменим счетчик в пагинаторе
+            $('#slide-counter').text(nextIndex+'/'+slidesLenght);
+          }
+        });
+      });
+
+    </script>
+
+    <div class="main-nav  main-nav--content" id="main-nav">
+      @@include('_include/page_nav-inner.html')
+      <a href="" class="btn  btn--red-arrow-border  discuss-project-btn">Обсудить проект</a>
+      <div class="main-nav__js-backdrop  js-main-menu-toggler"></div>
+    </div>
+
+    <div class="full-page__section  page-design__item">
+
+      <a href="/" class="full-page__section-logo">
+        <img src="img/w365-logo.svg" width="122" height="60" alt="W365 logo">
+      </a>
+
+      <div class="main-header">
+        <h1 class="main-header__title">
+          <span class="main-header__icon">
+            <img src="img/page-web-dev__icon-design.svg" width="34" height="34" alt="">
+          </span>
+          <span class="main-header__text">Дизайн</span>
+        </h1>
+      </div>
+
+      <div class="full-page__section-inner  two-items">
+
+        <article class="article  article--simple">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Погружение в проект</h2>
+            </header>
+            <div class="article__lead">
+              <p>Мы рассматриваем дизайн не просто как украшение сайта, но и как инструмент решения ваших задач. Делаем его не для вас и не для себя, а прежде всего, для ваших клиентов. Основываемся на данные по аналитике, целевую аудиторию вашего сайта, а так же позиционирование компании. </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="article  article--simple  article--to-right">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Mood Board</h2>
+            </header>
+            <div class="article__lead">
+              <p>На данном этапе определяем три основных состовляющих дизайна вашего сайта: типографика, цветовая палитра, стилистика. Это позволит нам с вами синхронизироваться в ожиданиях, а так же точнее попасть в конечную цель решения задачи.</p>
+            </div>
+          </div>
+        </article>
+
+        <img src="img/design-bg-1.jpg" class="two-items__img  two-items__img--to-top" alt="">
+
+      </div>
+
+    </div>
+
+    <div class="full-page__section  page-design__item">
+
+      <div class="full-page__section-inner  two-items">
+
+        <article class="article  article--simple">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Визуальная концепция</h2>
+            </header>
+            <div class="article__lead">
+              <p>Разрабатываем ключевую страницу проекта. Это страница, на которой находится наибольшее количество разноплановых элементов и блоков. Вы видите будующий визуальный стиль вашего сайта, вносите свои корректировки и предложения, после чего мы переходим к следующему этапу.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="article  article--simple  article--to-right">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Дизайн-макеты</h2>
+            </header>
+            <div class="article__lead">
+              <p>По согласованной концепции отрисовываем внутренние страницы сайта. Каждый этап согласовывается и заканчивается после утверждения.</p>
+            </div>
+          </div>
+        </article>
+
+        <img src="img/design-bg-2.jpg" class="two-items__img" alt="">
+
+      </div>
+
+    </div>
+
+    <div class="full-page__section  page-design__item">
+
+      <div class="full-page__section-inner  two-items">
+
+        <article class="article  article--simple">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Подбор визуальных эффектов</h2>
+            </header>
+            <div class="article__lead">
+              <p>Конечный продукт должен вызывать эмоции у ваших клиентов, и "закрадываться" в памяти даже после закрытия сайта на этапе раздумий. Так же визуальные эффекты выгодно выделят вас на фоне конкурентов.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="article  article--simple  article--to-right">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Подготовка макетов к верстке</h2>
+            </header>
+            <div class="article__lead">
+              <p>После окончательных согласований...</p>
+            </div>
+          </div>
+        </article>
+
+        <img src="img/design-bg-2.jpg" class="two-items__img" alt="">
+
+      </div>
+
+    </div>
+
+    <div class="full-page__section  page-design__item">
+
+      <div class="full-page__section-inner  two-items">
+
+        <article class="article  article--simple">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Гайдлайн</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="article  article--simple  article--to-right">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Фирменный стиль</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="two-items__btns">
+          <a href="" class="btn  btn--main  btn--svg-border">
+            @@include('_include/btn-border.svg')
+            Задать вопрос
+          </a>
+          <a href="" class="btn  btn--gray  btn--svg-border">
+            @@include('_include/btn-border.svg')
+            Другие этапы
+          </a>
+        </div>
+
+        <img src="img/design-bg-2.jpg" class="two-items__img" alt="">
+
+      </div>
+
+    </div>
+
+    <a href="" class="connect-with-us  btn  btn--bg-dark-blue">Связаться с нами</a>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

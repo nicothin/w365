@@ -44,6 +44,18 @@
     }
   }
 
+  &__icon {
+
+    @media (min-width: @screen-xl) {
+      display: inline-block;
+      transform: translateX(-50vw);
+
+      .js-loaded & {
+        animation: translate-none 0.3s 0.3s forwards;
+      }
+    }
+  }
+
   &__text {
     position: relative;
     display: inline-block;

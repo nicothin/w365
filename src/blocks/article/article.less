@@ -341,4 +341,27 @@
       .article__title {}
     }
   }
+
+  &--simple {
+
+    @media (max-width: (@screen-xl - 1)) {
+      margin-bottom: 20px;
+
+      .article__header {
+        min-height: 0;
+      }
+    }
+
+    @media (min-width: @screen-xl) {
+      min-height: 0;
+    }
+
+    @media (min-width: @screen-xxl) {
+      min-height: 0;
+
+      &.article--to-right {
+        transform: translateX(438px);
+      }
+    }
+  }
 }

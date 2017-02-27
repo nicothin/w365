@@ -1,0 +1,76 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/two-items/two-items.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.two-items {
+  position: relative;
+
+  @media (min-width: @screen-xl) {
+    width: 100%;
+    margin-bottom: 0 !important;
+
+    .article + .article {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: @screen-xxl) {
+
+    .article {
+      width: 755px;
+    }
+
+    .article__title,
+    .article__lead {
+      margin-right: 0;
+    }
+
+    .article + .article {
+      margin-top: 0;
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @media (min-width: @screen-xl) {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: 72px;
+      right: 0;
+      width: 600px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      top: 88px;
+      width: auto;
+    }
+
+    &--to-top {
+
+      @media (min-width: @screen-xxl) {
+        right: 130px;
+        top: -83px;
+      }
+    }
+  }
+
+  &__btns {
+    text-align: center;
+
+    .btn + .btn {
+      margin-left: 25px;
+    }
+
+    @media (max-width: (@screen-xl - 1)) {
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      width: 1196px;
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>w365</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <span id="square-loader" class="square-loader">
+    <span class="square-loader__load"></span>
+  </span>
+
+  <span class="bg-name" data-bg-text="Аналитика"></span>
+
+  <noscript>Эта страница требует JavaScript для полноценной работы. Вы выключили Javascript. Вы нас пугаете.</noscript>
+
+  <div id="articles-page" class="full-page  full-page--content-page  page-analytics">
+
+    <script>
+      $(document).ready(function() {
+        // получим общее кол-во слайдов для использования в пагинаторе полностраничного плагина
+        var slidesLenght = $('.full-page__section').length;
+
+        // полноэкранный показ: инициация плагина для статей
+        $('#articles-page').fullpage({
+          menu: '#main-nav',
+          anchors:['analytics-page-1', 'analytics-page-2', 'analytics-page-3', 'analytics-page-4'],
+          dragAndMove: true,
+          sectionSelector: '.full-page__section',
+          navigation: true,
+          navigationPosition: 'left',
+          responsiveWidth: 1200,
+          afterRender: function(){
+            // добавим к пагинатору плагина счетчик и дизайнерский изыск
+            $('#fp-nav').prepend('<span id="slide-counter" class="full-page__counter">1/'+slidesLenght+'</span>').append('<span class="full-page__scroll-me-baby">Скролльте</span>');
+          },
+          onLeave: function(index, nextIndex, direction){
+            // при уходе со слайда сменим счетчик в пагинаторе
+            $('#slide-counter').text(nextIndex+'/'+slidesLenght);
+          }
+        });
+      });
+
+    </script>
+
+    <div class="main-nav  main-nav--content" id="main-nav">
+      @@include('_include/page_nav-inner.html')
+      <a href="" class="btn  btn--red-arrow-border  discuss-project-btn">Обсудить проект</a>
+      <div class="main-nav__js-backdrop  js-main-menu-toggler"></div>
+    </div>
+
+    <div class="full-page__section  page-analytics__item">
+
+      <a href="/" class="full-page__section-logo">
+        <img src="img/w365-logo.svg" width="122" height="60" alt="W365 logo">
+      </a>
+
+      <div class="main-header">
+        <h1 class="main-header__title">
+          <span class="main-header__icon">
+            <img src="img/page-web-dev__icon-analytic.svg" width="34" height="34" alt="">
+          </span>
+          <span class="main-header__text">Аналитика</span>
+        </h1>
+      </div>
+
+      <div class="full-page__section-inner  two-items">
+
+        <article class="article  article--simple">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Заполнение брифа</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="article  article--simple  article--to-right">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Детализация требований</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <img src="img/design-bg-1.jpg" class="two-items__img  two-items__img--to-top" alt="">
+
+      </div>
+
+    </div>
+
+    <div class="full-page__section  page-analytics__item">
+
+      <div class="full-page__section-inner  two-items">
+
+        <article class="article  article--simple">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Персонажи</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="article  article--simple  article--to-right">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Пользовательские сценнарии</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <img src="img/design-bg-2.jpg" class="two-items__img" alt="">
+
+      </div>
+
+    </div>
+
+    <div class="full-page__section  page-analytics__item">
+
+      <div class="full-page__section-inner  two-items">
+
+        <article class="article  article--simple">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Анализ конкурентов</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="article  article--simple  article--to-right">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Структура сайта</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <img src="img/design-bg-2.jpg" class="two-items__img" alt="">
+
+      </div>
+
+    </div>
+
+    <div class="full-page__section  page-analytics__item">
+
+      <div class="full-page__section-inner  two-items">
+
+        <article class="article  article--simple">
+          <div class="article__link-wrapper">
+            <header class="article__header">
+              <h2 class="article__title">Информационная архитектура</h2>
+            </header>
+            <div class="article__lead">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="two-items__btns">
+          <a href="" class="btn  btn--main  btn--svg-border">
+            @@include('_include/btn-border.svg')
+            Задать вопрос
+          </a>
+          <a href="" class="btn  btn--gray  btn--svg-border">
+            @@include('_include/btn-border.svg')
+            Другие этапы
+          </a>
+        </div>
+
+        <img src="img/design-bg-2.jpg" class="two-items__img" alt="">
+
+      </div>
+
+    </div>
+
+    <a href="" class="connect-with-us  btn  btn--bg-dark-blue">Связаться с нами</a>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>
