@@ -1,0 +1,53 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/page-adv-target/page-adv-target.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.page-adv-target {
+
+  .fp-tableCell {
+    overflow: hidden;
+  }
+
+  @media (min-width: @screen-xl) {
+
+    .main-header {
+      margin-bottom: 8vh;
+    }
+  }
+
+  @media (min-width: @screen-xxl) {
+
+    .main-header {
+      margin-bottom: 10vh;
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 2;
+
+    @media (min-width: @screen-xl) {
+      margin-bottom: 20px !important;
+      width: 886px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      font-size: 18px;
+      width: 1195px;
+    }
+  }
+
+  &__item-descr {}
+
+  &__item-btn {
+
+    @media (min-width: @screen-xl) {
+      margin-top: 30px;
+    }
+  }
+
+  &__article {
+    position: relative;
+  }
+}
