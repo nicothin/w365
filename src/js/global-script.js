@@ -78,6 +78,7 @@ $(document).ready(function() {
     dots: false,
     nav: true,
     center: true,
+    smartSpeed: 200,
   };
   var casesCarouselPaginatorHtml = '';
   // добавим вторую карусель, служащую пагинатором
@@ -88,14 +89,20 @@ $(document).ready(function() {
   casesCarousel.before('<div class="page-cases__carousel-paginator-wrap"><div id="cases-carousel-paginator" class="owl-carousel page-cases__carousel-paginator page-cases__carousel-paginator--has-line">'+casesCarouselPaginatorHtml+'</div></div>');
   // активируем карусель, служащую пагинатором
   var casesCarouselPaginator = $('#cases-carousel-paginator');
+  // отследим инициацию карусели-пагинатора и расставим классы
+  // casesCarouselPaginator.on('initialized.owl.carousel', function(event){
+  //   addCasesCarouselClasses(event.item.index);
+  // });
+  // включим карусель-пагинатор
   casesCarouselPaginator.owlCarousel(casesCarouselPaginatorOptions);
-  // следим за изменением в карусели-пагинаторе и меняем карусель с картинками
+  // следим за изменением в карусели-пагинаторе, меняем карусель с картинками
   casesCarouselPaginator.on('translated.owl.carousel', function(event) {
     casesCarousel.trigger("to.owl.carousel", event.item.index + 1);
     casesCarouselPaginator.addClass('page-cases__carousel-paginator--has-line');
   })
   .on('translate.owl.carousel', function(event) {
     casesCarouselPaginator.removeClass('page-cases__carousel-paginator--has-line');
+    // addCasesCarouselClasses(event.item.index);
   });
   // активируем главную карусель только если 1200+
   if ( window.innerWidth >= 1200 ) {
@@ -126,5 +133,14 @@ $(document).ready(function() {
     }
     e.preventDefault();
   });
+  // функция, расставляющая в карусели-пагинаторе классы для подсветки
+  // function addCasesCarouselClasses(activeIndex) {
+  //   console.log(activeIndex);
+  //   var carouselItems = $('#cases-carousel-paginator').find('.owl-item');
+  //   carouselItems.removeClass('owl-item--active owl-item--active-1');
+  //   carouselItems.eq(activeIndex).addClass('owl-item--active');
+  //   carouselItems.eq(activeIndex + 1).addClass('owl-item--active-1');
+  //   carouselItems.eq(activeIndex - 1).addClass('owl-item--active-1');
+  // }
 
 });

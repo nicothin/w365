@@ -21,7 +21,7 @@
 
     .full-page__section-inner {
       margin-bottom: 0 !important;
-      margin-top: 5.19vh;
+      margin-top: 35px;
     }
 
     .discuss-project-btn {
@@ -90,6 +90,29 @@
         transform: rotate(-90deg);
         overflow: hidden;
         backface-visibility: hidden;
+        cursor: default;
+
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 113px;
+          background: linear-gradient(to right,  rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.85) 48%, rgba(255,255,255,0.6) 53%, rgba(255,255,255,0.6) 95%, rgba(255,255,255,0.2) 100%);
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 113px;
+          background: linear-gradient(to left,  rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.85) 48%, rgba(255,255,255,0.6) 53%, rgba(255,255,255,0.6) 95%, rgba(255,255,255,0.2) 100%);
+        }
       }
 
       .owl-stage {
@@ -99,6 +122,14 @@
       .owl-item {
         height: 100%;
       }
+
+      // .owl-item--active {
+      //   color: @text-color;
+      // }
+      //
+      // .owl-item--active-1 {
+      //   color: @gray-light;
+      // }
 
       .owl-prev,
       .owl-next {
@@ -177,7 +208,7 @@
       .active.center & {
         width: 95px;
         opacity: 1;
-        transition: opacity 0.6s;
+        transition: opacity 0.6s 0.2s;
       }
     }
   }
@@ -283,6 +314,11 @@
       position: relative;
       z-index: 2;
       margin-top: 16px;
+      backface-visibility: hidden;
+
+      .btn + .btn {
+        margin-left: 20px;
+      }
     }
   }
 
@@ -395,10 +431,9 @@
 
   &__item-text {
     position: absolute;
-    top: 60.7%;
-    bottom: 30px;
+    top: e('calc(50% + 70px)');
     left: 100px;
-    width: 470px;
+    width: 39.16vw;
     color: #fff;
 
     a:not(.btn) {
