@@ -378,11 +378,6 @@ function getComponentsFiles() {
   // Добавим глобальныe LESS-файлы в массив с обрабатываемыми LESS-файлами
   сomponentsFilesList.less.push(dirs.source + '/less/**/*.less');
 
-  // Добавим глобальный JS-файл в начало массива с обрабатываемыми JS-файлами
-  if(fileExistAndHasContent(dirs.source + '/js/global-script.js')) {
-    сomponentsFilesList.js.unshift(dirs.source + '/js/global-script.js');
-  }
-
   // Если хочется иметь jQuery в конкатенируемом JS, раскомментируйте эти строки
   // if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
   //   сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.js'); // добавляем в начало
@@ -390,9 +385,19 @@ function getComponentsFiles() {
 
   // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
   if(fileExistAndHasContent(dirs.source + '/js/object-fit-polyfill.js')) {
-    сomponentsFilesList.js.unshift(dirs.source + '/js/object-fit-polyfill.js'); // добавляем в начало
+    // сomponentsFilesList.js.unshift(dirs.source + '/js/object-fit-polyfill.js'); // добавляем в начало
     // или
-    // сomponentsFilesList.js.push(dirs.source + '/js/object-fit-polyfill.js'); // добавляем в конец
+    сomponentsFilesList.js.push(dirs.source + '/js/object-fit-polyfill.js'); // добавляем в конец
+  }
+
+  // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
+  if(fileExistAndHasContent(dirs.source + '/js/jquery.mousewheel.js')) {
+    сomponentsFilesList.js.push(dirs.source + '/js/jquery.mousewheel.js');
+  }
+
+  // Добавим глобальный JS-файл в конец массива с обрабатываемыми JS-файлами
+  if(fileExistAndHasContent(dirs.source + '/js/global-script.js')) {
+    сomponentsFilesList.js.push(dirs.source + '/js/global-script.js');
   }
 
   // Добавим глобальный CSS-файл в начало массива с обрабатываемыми CSS-файлами

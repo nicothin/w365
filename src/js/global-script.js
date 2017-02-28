@@ -61,4 +61,45 @@ $(document).ready(function() {
   // разработка сайтов, этапы: видео
   $('[data-video-link]').magnificPopup({type:'iframe'});
 
+  // кейсы: карусель
+  var casesCarousel = $('#cases-carousel');
+  var casesCarouselOptions = {
+    loop: true,
+    items: 1,
+    mouseDrag: false,
+    touchDrag: false,
+    dots: false,
+    nav: true,
+  };
+  // активируем только если 1200+
+  if ( $(window).width() >= 1200 ) {
+    var owlActive = casesCarousel.owlCarousel(casesCarouselOptions);
+  } else {
+    casesCarousel.addClass('owl-carousel--off');
+  }
+  // следим за изменением размера вьюпорта
+  $(window).resize(function() {
+    if ( window.innerWidth >= 1200 ) {
+      // if ( casesCarousel.hasClass('owl-carousel--off') ) {
+        casesCarousel.removeClass('owl-carousel--off');
+        var owlActive = casesCarousel.owlCarousel(casesCarouselOptions);
+      // }
+    } else {
+      // if ( !casesCarousel.hasClass('owl-carousel--off') ) {
+        casesCarousel.addClass('owl-carousel--off').trigger('destroy.owl.carousel');
+        casesCarousel.find('.owl-stage-outer').children(':eq(0)').unwrap();
+      // }
+    }
+  });
+  // следим за колесом мыши
+  casesCarousel.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY > 0) {
+      casesCarousel.trigger('next.owl');
+    } else {
+      casesCarousel.trigger('prev.owl');
+    }
+    e.preventDefault();
+  });
+
+
 });

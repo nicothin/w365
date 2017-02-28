@@ -1,0 +1,114 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/page-cases/page-cases.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.page-cases {
+
+  @media (max-width: (@screen-xl - 1)) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: @screen-xl) {}
+
+  @media (min-width: @screen-xxl) {}
+
+  &__item {
+    position: relative;
+
+    @media (max-width: (@screen-xl - 1)) {
+      padding-top: 200px;
+      margin-bottom: 43px;
+      color: @gray;
+    }
+  }
+
+  &__item-btns {
+
+    @media (max-width: (@screen-xl - 1)) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 171px;
+      width: 300px;
+      background-color: @color-main;
+
+      .btn {
+        position: relative;
+        z-index: 2;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        bottom: -30px;
+        left: 40px;
+        width: 1px;
+        height: 45px;
+        background-color: @color-second;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: @color-main;
+        opacity: 0.2;
+      }
+    }
+  }
+
+  &__item-img-thumb {
+
+    @media (max-width: (@screen-xl - 1)) {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      font-family: 'object-fit: cover;';
+    }
+  }
+
+  &__item-name {
+    color: @text-color;
+
+    @media (max-width: (@screen-xl - 1)) {
+      font-size: 25px;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__item-name-logo {
+
+    @media (max-width: (@screen-xl - 1)) {
+      display: none;
+    }
+  }
+
+  &__item-img {
+
+    @media (max-width: (@screen-xl - 1)) {
+      display: none;
+    }
+  }
+
+  &__btn-presentation {}
+
+  &__btn-more {
+
+    @media (max-width: (@screen-xl - 1)) {
+      display: none;
+    }
+  }
+}
