@@ -69,10 +69,36 @@ $(document).ready(function() {
     mouseDrag: false,
     touchDrag: false,
     dots: false,
-    nav: true,
   };
-  // активируем только если 1200+
-  if ( $(window).width() >= 1200 ) {
+  var casesCarouselPaginatorOptions = {
+    loop: true,
+    items: 5,
+    mouseDrag: false,
+    touchDrag: false,
+    dots: false,
+    nav: true,
+    center: true,
+  };
+  var casesCarouselPaginatorHtml = '';
+  // добавим вторую карусель, служащую пагинатором
+  casesCarousel.find('.page-cases__item').each(function(){
+    var slide = $(this).find('.page-cases__item-name');
+    casesCarouselPaginatorHtml += '<div class="page-cases__carousel-paginator-item">'+slide.html()+'</div>';
+  });
+  casesCarousel.before('<div class="page-cases__carousel-paginator-wrap"><div id="cases-carousel-paginator" class="owl-carousel page-cases__carousel-paginator page-cases__carousel-paginator--has-line">'+casesCarouselPaginatorHtml+'</div></div>');
+  // активируем карусель, служащую пагинатором
+  var casesCarouselPaginator = $('#cases-carousel-paginator');
+  casesCarouselPaginator.owlCarousel(casesCarouselPaginatorOptions);
+  // следим за изменением в карусели-пагинаторе и меняем карусель с картинками
+  casesCarouselPaginator.on('translated.owl.carousel', function(event) {
+    casesCarousel.trigger("to.owl.carousel", event.item.index + 1);
+    casesCarouselPaginator.addClass('page-cases__carousel-paginator--has-line');
+  })
+  .on('translate.owl.carousel', function(event) {
+    casesCarouselPaginator.removeClass('page-cases__carousel-paginator--has-line');
+  });
+  // активируем главную карусель только если 1200+
+  if ( window.innerWidth >= 1200 ) {
     var owlActive = casesCarousel.owlCarousel(casesCarouselOptions);
   } else {
     casesCarousel.addClass('owl-carousel--off');
@@ -81,25 +107,24 @@ $(document).ready(function() {
   $(window).resize(function() {
     if ( window.innerWidth >= 1200 ) {
       // if ( casesCarousel.hasClass('owl-carousel--off') ) {
-        casesCarousel.removeClass('owl-carousel--off');
-        var owlActive = casesCarousel.owlCarousel(casesCarouselOptions);
+      casesCarousel.removeClass('owl-carousel--off');
+      var owlActive = casesCarousel.owlCarousel(casesCarouselOptions);
       // }
     } else {
       // if ( !casesCarousel.hasClass('owl-carousel--off') ) {
-        casesCarousel.addClass('owl-carousel--off').trigger('destroy.owl.carousel');
-        casesCarousel.find('.owl-stage-outer').children(':eq(0)').unwrap();
+      casesCarousel.addClass('owl-carousel--off').trigger('destroy.owl.carousel');
+      casesCarousel.find('.owl-stage-outer').children(':eq(0)').unwrap();
       // }
     }
   });
-  // следим за колесом мыши
-  casesCarousel.on('mousewheel', '.owl-stage', function (e) {
+  // следим за колесом мыши на пагинаторе
+  casesCarouselPaginator.on('mousewheel', function (e) {
     if (e.deltaY > 0) {
-      casesCarousel.trigger('next.owl');
+      casesCarouselPaginator.trigger('next.owl');
     } else {
-      casesCarousel.trigger('prev.owl');
+      casesCarouselPaginator.trigger('prev.owl');
     }
     e.preventDefault();
   });
-
 
 });
