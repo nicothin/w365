@@ -165,7 +165,7 @@
         <div class="main-nav__arrow  js-main-menu-toggler"><span class="main-nav__arrow-inner"><span class="main-nav__arrow-icon"></span></span></div>
       </nav>
 
-      <a href="" class="btn  btn--red-arrow-border  discuss-project-btn">Обсудить проект</a>
+      <a href="#discuss-project-form" class="btn  btn--red-arrow-border  discuss-project-btn  js-discuss-project-toggler">Обсудить проект</a>
       <div class="main-nav__js-backdrop  js-main-menu-toggler"></div>
     </div>
 
@@ -413,6 +413,87 @@
     <a href="" class="connect-with-us  btn  btn--bg-dark-blue">Связаться с нами</a>
 
   </div>
+
+  <form id="discuss-project-form" class="discuss-project-form  form">
+    <div class="discuss-project-form__inner">
+      <div class="discuss-project-form__close  js-discuss-project-toggler"></div>
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Какие услуги вас интересуют?</legend>
+        <div class="form__checkboxes">
+          <div class="form__checkboxes-col-1">
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox">
+                <span class="field-checkbox__name-text">Разработка сайта</span>
+              </label>
+            </div>
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" checked>
+                <span class="field-checkbox__name-text">Редизайн сайта</span>
+              </label>
+            </div>
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox">
+                <span class="field-checkbox__name-text">Адаптация под моб. устройства</span>
+              </label>
+            </div>
+          </div>
+          <div class="form__checkboxes-col-2">
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox">
+                <span class="field-checkbox__name-text">Продвижение и&nbsp;реклама</span>
+              </label>
+            </div>
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox">
+                <span class="field-checkbox__name-text">Поддержка и&nbsp;развитие</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="form__fieldset  form__fieldset--maxw410">
+        <legend class="form__legend">Как с вами связаться?</legend>
+        <label class="field-text  field-text--xl-mb10">
+          <span class="field-text__input-wrap">
+            <input class="field-text__input  field-text__input--icon-user" type="text" placeholder="Введите ваше имя">
+          </span>
+        </label>
+        <label class="field-text  field-text--xl-mb10">
+          <span class="field-text__input-wrap">
+            <input class="field-text__input  field-text__input--icon-phone" type="tel" placeholder="Введите ваш телефон">
+          </span>
+        </label>
+        <label class="field-text  field-text--xl-mb0">
+          <span class="field-text__input-wrap">
+            <input class="field-text__input  field-text__input--icon-pencil" type="text" placeholder="Введите ваш email или slype">
+          </span>
+        </label>
+        <label class="field-text  field-text--mb0">
+          <span class="field-text__input-wrap">
+            <textarea class="field-text__input" placeholder="Дополнительные сведения"></textarea>
+          </span>
+        </label>
+        <div class="form__file-send-line">
+          <div class="field-file">
+            <label class="field-file__input-wrap">
+              <input class="field-file__input" type="file" data-multiple-caption="Файлов выбрано: {count}" multiple>
+              <span class="field-file__name-text-wrap">
+                <span class="field-file__name-text">Прикрепить файл(ы)</span>
+              </span>
+            </label>
+          </div>
+          <button class="btn  btn--send">Отправить</button>
+        </div>
+        <p class="form__descr">Предоставленная информация является конфиденциальной</p>
+      </fieldset>
+    </div>
+    <div class="discuss-project-form__backdrop  js-discuss-project-toggler"></div>
+  </form>
 
   <div class="temp">
     <style>
