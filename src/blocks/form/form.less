@@ -1,0 +1,112 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/form/form.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.form {
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @screen-xxl) {
+    font-size: 18px;
+  }
+
+  &__fieldset {
+    position: relative;
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    &:not(:last-child) {
+      margin: 0 0 28px;
+      padding: 0 0 18px;
+
+      @media (min-width: @screen-xxl) {
+        margin: 0 0 53px;
+        padding: 0 0 42px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: @gray-lighter;
+      }
+    }
+
+    &--maxw410 {
+      max-width: 410px;
+    }
+  }
+
+  &__legend {
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
+    color: @text-color;
+    margin-bottom: 15px;
+
+    @media (min-width: @screen-xxl) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__file-send-line {
+    margin-bottom: 20px;
+    width: 100%;
+
+    @media (min-width: @screen-xl) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      .field-file {
+        max-width: 200px;
+        overflow: hidden;
+      }
+    }
+
+    @media (min-width: @screen-xxl) {
+      display: block;
+      margin-bottom: 50px;
+
+      .field-file {
+        max-width: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &__descr {
+    font-size: 12px;
+    color: @gray;
+    margin: 0;
+  }
+
+  &__checkboxes {
+
+    @media (min-width: @screen-xl) {
+      display: flex;
+    }
+
+    @media (min-width: @screen-xxl) {
+      display: block;
+    }
+  }
+
+  &__checkboxes-col-1 {
+
+    @media (min-width: @screen-xl) {
+      width: 290px;
+      margin-right: 17px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}

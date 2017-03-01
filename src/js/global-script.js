@@ -10,6 +10,12 @@ $(document).ready(function() {
     $('html').toggleClass('js-main-nav-open');
   });
 
+  // боковая форма: показ/сокрытие
+  $('.js-discuss-project-toggler').on('click', function(){
+    $('#discuss-project-form').toggleClass('discuss-project-form--open');
+    // $('html').toggleClass('js-discuss-project-form-open');
+  });
+
   // контакты: показ/сокрытие псевдомодальных окон
   $('.js-activate-contacts-item').on('click', function(e){
     e.preventDefault();

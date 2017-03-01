@@ -1,0 +1,92 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/discuss-project-form/discuss-project-form.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.discuss-project-form {
+  position: relative;
+  z-index: 100;
+
+  &__inner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-y: auto;
+    padding: 80px 15px 10px;
+    transition: transform 0.3s;
+    transform: translateX(100vw);
+
+    .discuss-project-form--open & {
+      transform: translateX(0);
+    }
+
+    @media (min-width: @screen-xl) {
+      left: auto;
+      z-index: 2;
+      width: 50%;
+      padding-left: 30px;
+      padding-right: 30px;
+      transform: translateX(50vw);
+    }
+
+    @media (min-width: @screen-xxl) {
+      padding-top: 138px;
+      padding-left: 88px;
+      padding-right: 88px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 62px;
+    height: 62px;
+    background-color: @color-main;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 17px;
+      width: 18px;
+      height: 18px;
+      border-right: 2px solid @color-second;
+      border-bottom: 2px solid @color-second;
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 17px;
+      height: 2px;
+      width: 30px;
+      background-color: @color-second;
+    }
+  }
+
+  &__backdrop {
+
+    @media (min-width: @screen-xl) {
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      background-color: @color-main;
+      opacity: 0;
+      transition: opacity 0.3s;
+
+      .discuss-project-form--open & {
+        bottom: 0;
+        left: 0;
+        opacity: 0.8;
+      }
+    }
+  }
+}

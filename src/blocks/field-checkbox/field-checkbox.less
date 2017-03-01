@@ -5,25 +5,67 @@
 
 .field-checkbox {
   display: block;
-  margin-bottom: (@line-height / 2);
+  margin-bottom: 2px;
 
   &__title {
     font-weight: 700;
-    line-height: @line-height;
     display: block;
-    margin-bottom: round(@line-height / 4, 2);
     min-height: 1px;
   }
 
-  &__input-wrap {}
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
 
   &__name {
-    position: relative;
-    padding-left: 2rem;
-    font-weight: 400;
     display: inline-block;
-    margin-right: 0.6em;
-    line-height: @line-height;
+  }
+
+  &__name-text {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    font-weight: 300;
+    font-size: inherit;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0.2em;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-color: @gray-lighter;
+
+      @media (min-width: @screen-xxl) {
+        top: 0.4em;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 5px;
+      width: 16px;
+      height: 11px;
+      border-left: 2px solid @color-second;
+      border-bottom: 2px solid @color-second;
+      transform: rotate(-42deg);
+      opacity: 0;
+      transition: opacity 0.3s;
+
+      @media (min-width: @screen-xxl) {
+        top: 0.2em;
+      }
+    }
+
+    input:checked ~ &:after {
+      opacity: 1;
+    }
   }
 
   &__input {
@@ -33,10 +75,5 @@
     margin: 0;
     transform: translateY(-50%);
     left: 0;
-  }
-
-  &__help-text {
-    .help-text();
-    padding-left: 2rem;
   }
 }

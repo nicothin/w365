@@ -101,6 +101,42 @@
     }
   }
 
+  &--send {
+    border: 0;
+    border-left: 1px solid @color-second;
+    overflow: hidden;
+    background-image: data-uri('image/svg+xml;charset=UTF-8', './src/blocks/btn/bg/btn-border.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    color: @text-color;
+    min-width: 181px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: data-uri('image/svg+xml;charset=UTF-8', './src/blocks/btn/bg/btn-fill.svg');
+      background-repeat: no-repeat;
+      background-position: center right;
+      transform: translateX(-100%);
+      transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    &:hover,
+    &:focus {
+      border-color: @color-second;
+      color: #fff;
+
+      &:before {
+        transform: translateX(0);
+      }
+    }
+  }
+
   // &--red-arrow-fill-white {
   //   background-image: data-uri('image/svg+xml;charset=UTF-8', './src/blocks/btn/bg/btn-border--bg-white.svg');
   // }

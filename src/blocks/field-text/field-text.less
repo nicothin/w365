@@ -41,5 +41,46 @@
       border: 1px solid @color-main;
       resize: none;
     }
+
+    &--icon-user {
+      background: data-uri('image/svg+xml;charset=UTF-8', './src/blocks/field-text/icons/user.svg') 100% 50% no-repeat;
+      background-size: 14px 14px;
+    }
+
+    &--icon-phone {
+      background: data-uri('image/svg+xml;charset=UTF-8', './src/blocks/field-text/icons/voice.svg') 100% 50% no-repeat;
+      background-size: 14px 14px;
+    }
+
+    &--icon-pencil {
+      background: data-uri('image/svg+xml;charset=UTF-8', './src/blocks/field-text/icons/pencil.svg') 100% 50% no-repeat;
+      background-size: 14px 14px;
+    }
+  }
+
+  &--mb0 {
+    margin-bottom: 0;
+  }
+
+  &--xl-mb0 {
+
+    @media (min-width: @screen-xl) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: @screen-xxl) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &--xl-mb10 {
+
+    @media (min-width: @screen-xl) {
+      margin-bottom: 10px;
+    }
+
+    @media (min-width: @screen-xxl) {
+      margin-bottom: 28px;
+    }
   }
 }
