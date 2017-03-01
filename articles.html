@@ -18,7 +18,7 @@
 
   <link href="css/style.min.css" rel="stylesheet" media="screen">
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
   <script src="js/script.min.js"></script>
   <script>
@@ -411,6 +411,7 @@
             $('.alerts__item').addClass('alerts__item--shown');
           });
         });
+        // / УДАЛИТЬ при интеграции
       </script>
       <div class="alerts__item">Сообщение отправлено<br>Спасибо. Мы свяжемся с вами в самое ближайшее время.</div>
       <div class="alerts__item  alerts__item--danger">Сообщение не отправлено.<br> Что-то пошло не так и всё накрылось медным тазом. Мы тоже под ним.</div>
@@ -420,7 +421,7 @@
   <div class="temp">
     <style>
       .temp {
-        position: fixed;z-index: 999;bottom: 0;right: 0;padding: 0.5em;background: #fff;max-width: 50%;border: 1px solid #ddd;opacity: 0;transition: opacity 0.2s;
+        position: fixed;z-index: 999;bottom: 0;right: 0;padding: 0.5em;background: #fff;max-width: 50%;border: 1px solid #ddd;opacity: 0;transition: opacity 0.2s;max-height: 80vh;overflow-y: auto;
       }
       .temp:hover {
         opacity: 1;
