@@ -78,21 +78,22 @@
           </label>
         </div>
         <button class="btn  btn--send">Отправить</button>
-        <script>
-          // УДАЛИТЬ при интеграции
-          $(document).ready(function() {
-            $('#discuss-project-form').on('submit', function(e){
-              e.preventDefault();
-              $('.alerts__item').addClass('alerts__item--shown');
-            });
-          });
-        </script>
       </div>
       <p class="form__descr">Предоставленная информация является конфиденциальной</p>
     </fieldset>
   </div>
   <div class="discuss-project-form__backdrop  js-discuss-project-toggler"></div>
   <div class="alerts">
+    <script>
+      // УДАЛИТЬ при интеграции
+      $(document).ready(function() {
+        $('#discuss-project-form').on('submit', function(e){
+          e.preventDefault();
+          $('.alerts__item').addClass('alerts__item--shown');
+        });
+      });
+      // / УДАЛИТЬ при интеграции
+    </script>
     <div class="alerts__item">Сообщение отправлено<br>Спасибо. Мы свяжемся с вами в самое ближайшее время.</div>
     <div class="alerts__item  alerts__item--danger">Сообщение не отправлено.<br> Что-то пошло не так и всё накрылось медным тазом. Мы тоже под ним.</div>
   </div>
