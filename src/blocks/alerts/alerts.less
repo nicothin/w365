@@ -1,0 +1,41 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/alerts/alerts.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.alerts {
+  position: fixed;
+  z-index: 100;
+  right: 10px;
+  bottom: 10px;
+  width: e('calc(100vw - 20px)');
+
+  @media (min-width: @screen-xl) {
+    width: e('calc(50vw - 20px)');
+  }
+
+  &__item {
+    color: #fff;
+    background-color: #5CB85C;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s;
+
+    &--shown {
+      padding: 10px 15px;
+      width: auto;
+      height: auto;
+      opacity: 1;
+    }
+
+    & + & {
+      margin-top: 5px;
+    }
+
+    &--danger {
+      background: @color-second;
+    }
+  }
+}
