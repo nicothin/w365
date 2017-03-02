@@ -5790,6 +5790,9 @@ img.mfp-img {
   .page-web-studio__icon svg {
     display: block;
   }
+  .page-web-dev__article-cta-btn {
+    display: none;
+  }
   .collapsing-list {
     border-top: 1px solid #d9d9d9;
     margin-left: -10px;
@@ -5863,6 +5866,12 @@ img.mfp-img {
     cursor: pointer;
     padding-right: 48px;
   }
+  .page-adaptive__article-cta-btn {
+    display: none;
+  }
+  .page-support__article-cta-btn {
+    display: none;
+  }
   .team {
     border-top: 1px solid #d9d9d9;
     margin-left: -10px;
@@ -5873,8 +5882,17 @@ img.mfp-img {
     border-bottom: 1px solid #d9d9d9;
     padding: 10px 10px;
   }
+  .page-design__item-cta-btn {
+    display: none;
+  }
   .two-items__btns {
     margin-bottom: 60px;
+  }
+  .page-analytics__item-cta-btn {
+    display: none;
+  }
+  .page-redesign__article-btn {
+    display: none;
   }
   .page-marketing .full-page__section {
     margin-bottom: 44px;
@@ -5897,6 +5915,15 @@ img.mfp-img {
   }
   .page-marketing__icon svg {
     display: block;
+  }
+  .page-seo__item-btn {
+    display: none;
+  }
+  .page-adv-target__item-btn {
+    display: none;
+  }
+  .page-adv-media__item-btn {
+    display: none;
   }
   .page-cases {
     margin-bottom: 50px;
