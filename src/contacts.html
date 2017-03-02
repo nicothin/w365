@@ -60,17 +60,17 @@
               <p class="page-contacts__modal-msg">Есть вопросы? Пишите, мы всегда онлайн</p>
               <label class="field-text">
                 <span class="field-text__input-wrap">
-                  <input class="field-text__input" type="text" placeholder="Введите ваше имя">
+                  <input class="field-text__input" type="text" placeholder="Введите ваше имя" minlength="2" required>
                 </span>
               </label>
               <label class="field-text">
                 <span class="field-text__input-wrap">
-                  <input class="field-text__input" type="tel" placeholder="Введите ваш телефон">
+                  <input class="field-text__input" type="email" placeholder="Введите ваш email" required>
                 </span>
               </label>
               <label class="field-text">
                 <span class="field-text__input-wrap">
-                  <textarea class="field-text__input" placeholder="Введите ваше сообщение"></textarea>
+                  <textarea class="field-text__input" placeholder="Введите ваше сообщение" required></textarea>
                 </span>
               </label>
               <div class="field-actions">
@@ -100,12 +100,12 @@
               <p class="page-contacts__modal-msg">Введите данные и&nbsp;наш специалист свяжется с&nbsp;вами в&nbsp;течение 10&nbsp;минут</p>
               <label class="field-text">
                 <span class="field-text__input-wrap">
-                  <input class="field-text__input" type="text" placeholder="Введите ваше имя">
+                  <input class="field-text__input" type="text" placeholder="Введите ваше имя" minlength="2" required>
                 </span>
               </label>
               <label class="field-text">
                 <span class="field-text__input-wrap">
-                  <input class="field-text__input" type="tel" placeholder="Введите ваш телефон">
+                  <input class="field-text__input" type="tel" placeholder="Введите ваш телефон" pattern="(\+?\d[- .()]*){7,13}" oninvalid="setCustomValidity('Заполните это поле. Допустимы цифры, тире, пробелы, скобки.')" required>
                 </span>
               </label>
               <div class="field-actions  field-actions--mt68">
@@ -135,12 +135,12 @@
               <p class="page-contacts__modal-msg">Будем рады видеть вас в&nbsp;нашем офисе по&nbsp;адресу г.&nbsp;<nobr>Санкт-Петербург</nobr>, Приморский <nobr>р-н</nobr>, ул.&nbsp;Беговая, д.3. Обсудим ваш проект в&nbsp;непренужденной обстановке за&nbsp;чашкой кофе или чая в&nbsp;рабочие дни пн.-пт. с&nbsp;10 до&nbsp;19ти.</p>
               <label class="field-text">
                 <span class="field-text__input-wrap">
-                  <input class="field-text__input" type="text" placeholder="Введите ваше имя">
+                  <input class="field-text__input" type="text" placeholder="Введите ваше имя" required>
                 </span>
               </label>
               <label class="field-text">
                 <span class="field-text__input-wrap">
-                  <input class="field-text__input" type="tel" placeholder="Введите ваш телефон">
+                  <input class="field-text__input" type="tel" placeholder="Введите ваш телефон" pattern="(\+?\d[- .()]*){7,13}" oninvalid="setCustomValidity('Заполните это поле. Допустимы цифры, тире, пробелы, скобки.')" required>
                 </span>
               </label>
               <div class="page-contacts__calendar-wrapper">
