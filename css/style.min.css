@@ -5447,9 +5447,13 @@ img.mfp-img {
     font-size: 18px;
   }
   .discuss-project-form__inner {
-    padding-top: 138px;
-    padding-left: 88px;
-    padding-right: 88px;
+    padding: 20px 88px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .form {
     font-size: 18px;
