@@ -251,7 +251,7 @@
         </label>
         <label class="field-text  field-text--xl-mb10">
           <span class="field-text__input-wrap">
-            <input class="field-text__input" type="tel" placeholder="Введите ваш телефон" pattern="(\+?\d[- .()]*){7,13}" oninvalid="setCustomValidity('Заполните это поле. Допустимы цифры, тире, пробелы, скобки.')">
+            <input class="field-text__input" type="tel" placeholder="Введите ваш телефон" pattern="\+?(\d[- .]*){7,13}" title="Цифры, точки, пробелы, дефис" required>
           </span>
         </label>
         <label class="field-text  field-text--xl-mb0">
@@ -306,7 +306,7 @@
       </label>
       <label class="field-text">
         <span class="field-text__input-wrap">
-          <input class="field-text__input" type="tel" placeholder="Введите ваш телефон" pattern="(\+?\d[- .()]*){7,13}" oninvalid="setCustomValidity('Заполните это поле. Допустимы цифры, тире, пробелы, скобки.')" required>
+          <input class="field-text__input" type="tel" placeholder="Введите ваш телефон" pattern="\+?(\d[- .]*){7,13}" title="Цифры, точки, пробелы, дефис" required>
         </span>
       </label>
       <div class="field-actions  field-actions--mt68">
