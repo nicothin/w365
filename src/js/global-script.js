@@ -28,6 +28,9 @@ $(document).ready(function() {
     $('#fast-contact').toggleClass('fast-contacts--js-active');
   });
 
+  //
+  $('.field-text__input[type="tel"]').mask("+7 (999) 999-9999");
+
   // полноэкранный показ: инициация плагина для одноблочных страниц
   $('#one-screen-page').fullpage({
     menu: '#main-nav',

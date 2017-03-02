@@ -395,6 +395,11 @@ function getComponentsFiles() {
     сomponentsFilesList.js.push(dirs.source + '/js/jquery.mousewheel.js');
   }
 
+  // Если хочется иметь в конкатенируемом JS ещё какие-то файлы, пишите это здесь
+  if(fileExistAndHasContent(dirs.source + '/js/jquery.maskedinput.js')) {
+    сomponentsFilesList.js.push(dirs.source + '/js/jquery.maskedinput.js');
+  }
+
   // Добавим глобальный JS-файл в конец массива с обрабатываемыми JS-файлами
   if(fileExistAndHasContent(dirs.source + '/js/global-script.js')) {
     сomponentsFilesList.js.push(dirs.source + '/js/global-script.js');
