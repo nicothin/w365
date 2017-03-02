@@ -259,17 +259,17 @@
         <legend class="form__legend">Как с вами связаться?</legend>
         <label class="field-text  field-text--xl-mb10">
           <span class="field-text__input-wrap">
-            <input class="field-text__input  field-text__input--icon-user" type="text" placeholder="Введите ваше имя">
+            <input class="field-text__input  field-text__input--icon-user" type="text" placeholder="Введите ваше имя" required>
           </span>
         </label>
         <label class="field-text  field-text--xl-mb10">
           <span class="field-text__input-wrap">
-            <input class="field-text__input  field-text__input--icon-phone" type="tel" placeholder="Введите ваш телефон">
+            <input class="field-text__input" type="tel" placeholder="Введите ваш телефон" pattern="(\+?\d[- .()]*){7,13}" oninvalid="setCustomValidity('Заполните это поле. Допустимы цифры, тире, пробелы, скобки.')">
           </span>
         </label>
         <label class="field-text  field-text--xl-mb0">
           <span class="field-text__input-wrap">
-            <input class="field-text__input  field-text__input--icon-pencil" type="text" placeholder="Введите ваш email или slype">
+            <input class="field-text__input  field-text__input--icon-pencil" type="text" placeholder="Введите ваш email или slype" required>
           </span>
         </label>
         <label class="field-text  field-text--mb0">
@@ -314,12 +314,12 @@
       <p class="fast-contacts__msg">Введите данные и&nbsp;наш специалист свяжется с&nbsp;вами в&nbsp;течение 10&nbsp;минут</p>
       <label class="field-text">
         <span class="field-text__input-wrap">
-          <input class="field-text__input" type="text" placeholder="Введите ваше имя">
+          <input class="field-text__input" type="text" placeholder="Введите ваше имя" required>
         </span>
       </label>
       <label class="field-text">
         <span class="field-text__input-wrap">
-          <input class="field-text__input" type="tel" placeholder="Введите ваш телефон">
+          <input class="field-text__input" type="tel" placeholder="Введите ваш телефон" pattern="(\+?\d[- .()]*){7,13}" oninvalid="setCustomValidity('Заполните это поле. Допустимы цифры, тире, пробелы, скобки.')" required>
         </span>
       </label>
       <div class="field-actions  field-actions--mt68">
