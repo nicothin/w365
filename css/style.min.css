@@ -3569,6 +3569,9 @@ img.mfp-img {
     height: 235px;
     width: 848px;
   }
+  .page-home__name-break {
+    display: none;
+  }
   .page-home__name {
     position: absolute;
     z-index: 2;
@@ -5561,13 +5564,13 @@ img.mfp-img {
   .page-home__content {
     text-align: center;
     margin: auto;
-    padding: 100px 10px;
+    padding: 15vh 10px 20.8vh;
   }
   .page-home__inner {
     position: relative;
   }
   .page-home__name-dash {
-    color: transparent;
+    display: none;
   }
   .page-home__name {
     font-size: 35px;
@@ -5596,7 +5599,7 @@ img.mfp-img {
   }
   .page-home__connect-btn {
     position: absolute;
-    bottom: 34px;
+    bottom: 7vh;
     left: 50%;
     transform: translateX(-50%);
   }
