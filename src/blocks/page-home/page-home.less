@@ -16,7 +16,7 @@
     @media (max-width: (@screen-xl - 1)) {
       text-align: center;
       margin: auto;
-      padding: 100px 10px;
+      padding: 15vh 10px 20.8vh;
     }
 
     @media (min-width: @screen-xl) {
@@ -46,7 +46,14 @@
   &__name-dash {
 
     @media (max-width: (@screen-xl - 1)) {
-      color: transparent;
+      display: none;
+    }
+  }
+
+  &__name-break {
+
+    @media (min-width: @screen-xl) {
+      display: none;
     }
   }
 
@@ -219,7 +226,7 @@
 
     @media (max-width: (@screen-xl - 1)) {
       position: absolute;
-      bottom: 34px;
+      bottom: 7vh;
       left: 50%;
       transform: translateX(-50%);
     }
