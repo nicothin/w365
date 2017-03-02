@@ -324,10 +324,11 @@
     background-color: @gray-lighter;
     background-image: url(../img/map-bg.jpg);
     background-position: center;
+    backface-visibility: hidden;
 
     @media (min-width: @screen-xl) {
       display: block;
-      height: 100%;
+      height: 100vh;
       width: 50%;
       position: absolute !important; // привет гугл-картам!
       z-index: 1;
