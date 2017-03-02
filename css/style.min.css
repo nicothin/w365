@@ -1725,6 +1725,8 @@ a.article__img-wrapper:focus .article__image {
   background-color: #d9d9d9;
   background-image: url(../img/map-bg.jpg);
   background-position: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 .page-contacts--moscow {
   background-image: url(../img/contacts-bg--moskow.jpg);
@@ -4013,7 +4015,7 @@ img.mfp-img {
   }
   .page-contacts__map {
     display: block;
-    height: 100%;
+    height: 100vh;
     width: 50%;
     position: absolute !important;
     z-index: 1;
