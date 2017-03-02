@@ -1,0 +1,69 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/fast-contacts/fast-contacts.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.fast-contacts {
+  opacity: 0;
+  position: fixed;
+  z-index: 100;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  color: @text-color;
+  transition: opacity 0.3s;
+
+  &--js-active {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: @screen-xl) {
+      width: 600px;
+      padding: 58px;
+      bottom: auto;
+      right: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid @gray-lighter;
+    }
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  @media (min-width: @screen-xl) {
+    font-size: 16px;
+  }
+
+  @media (min-width: @screen-xxl) {
+    font-size: 18px;
+  }
+
+  &__inner {
+    max-width: 484px;
+  }
+
+  &__msg {
+    margin-bottom: 30px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
