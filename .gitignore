@@ -16,6 +16,7 @@ node_modules/
 *.sublime-*
 *.rar
 *.zip
+!build.zip
 .idea
 TEMP*
 old*
