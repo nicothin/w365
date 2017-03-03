@@ -4002,7 +4002,7 @@ img.mfp-img {
     width: auto;
   }
   .page-contacts__item {
-    padding-top: 3.7vh;
+    padding-bottom: 3.7vh;
   }
   .page-contacts__item .btn {
     display: -ms-inline-flexbox;
@@ -4011,22 +4011,50 @@ img.mfp-img {
   .page-contacts__item-icon {
     display: block;
     margin-right: 40px;
+    z-index: 2;
+  }
+  .page-contacts__item-icon:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 82px;
+    height: 1px;
+    width: 43px;
+    background-color: #ff4f00;
+    transform: scale3d(0, 1, 1);
+    transform-origin: center left;
+    transition: transform 0.4s 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
   .page-contacts__text {
     font-size: 18px;
     padding-left: 0;
+    min-height: calc(100vh - 170px);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .page-contacts__list {
     padding-top: 20px;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .page-contacts__call-me-baby {
     display: none;
   }
   .page-contacts__modal {
     font-size: 16px;
+    left: 100px;
   }
   .page-contacts__footer {
     display: block;
+    margin-bottom: 10px;
   }
   .page-contacts__footer .social-links {
     margin-bottom: 0;
@@ -5057,38 +5085,16 @@ img.mfp-img {
   }
   .page-contacts__item-icon {
     margin-right: 60px;
-    z-index: 2;
   }
   .page-contacts__item-icon:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 82px;
-    height: 1px;
     width: 63px;
-    background-color: #ff4f00;
-    transform: scale3d(0, 1, 1);
-    transform-origin: center left;
-    transition: transform 0.4s 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
   .page-contacts__text {
     font-size: 24px;
     min-height: calc(100vh - 184px);
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
   }
   .page-contacts__list {
     padding: 0 0 20px 175px;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: center;
-    justify-content: center;
   }
   .page-contacts__modal {
     font-size: 18px;
