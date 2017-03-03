@@ -3212,6 +3212,7 @@ img.mfp-img {
   font-weight: 300;
   color: #262626;
   margin-bottom: 15px;
+  padding: 0;
 }
 .form__file-send-line {
   margin-bottom: 20px;
