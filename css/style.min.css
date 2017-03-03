@@ -5762,6 +5762,9 @@ img.mfp-img {
     text-align: center;
     margin: auto;
   }
+  .page-contacts .main-header__title {
+    padding-bottom: 8.28vh;
+  }
   .page-contacts__item {
     padding-bottom: 3.45vh;
   }
@@ -5994,6 +5997,11 @@ img.mfp-img {
   }
   .page-cases__btn-more {
     display: none;
+  }
+}
+@media (max-height: 480px) {
+  .page-contacts__call-me-baby {
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {/**
