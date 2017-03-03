@@ -4878,6 +4878,7 @@ img.mfp-img {
   .main-nav__wrapper {
     font-size: 20px;
     width: 1192px;
+    transform: translateX(-50%);
   }
   .main-nav__item-inner:hover .main-nav__sublist {
     min-width: 336px;
@@ -4933,7 +4934,6 @@ img.mfp-img {
     width: 494px;
     height: 315px;
     left: 0;
-    transform: translateX(-75vw);
   }
   .page-home__logo-365 svg {
     top: 125px;
