@@ -63,6 +63,7 @@
     font-weight: 300;
     margin: 0 0 25px;
     padding: 0;
+    backface-visibility: hidden;
 
     @media (max-width: (@screen-xl - 1)) {
       font-size: 35px;
@@ -81,9 +82,10 @@
       line-height: 1;
       letter-spacing: 0.05em;
       transform: translateX(100vw);
+      opacity: 0;
 
       .js-loaded & {
-        animation: translate-none 0.3s 1.0s forwards;
+        animation: translate-opacity-none 1s 1.0s forwards cubic-bezier(0.22, 0.61, 0.36, 1);
       }
     }
 
@@ -120,7 +122,7 @@
       opacity: 0;
 
       .js-loaded & {
-        animation: opacity-none 0.3s 1.6s forwards;
+        animation: opacity-none 0.6s 2s forwards cubic-bezier(0.22, 0.61, 0.36, 1);
       }
 
       &:before {
@@ -135,7 +137,7 @@
         transform-origin: center right;
 
         .js-loaded & {
-          animation: scale3d-normal 0.3s 1.9s forwards;
+          animation: scale3d-normal 0.6s 2.6s forwards cubic-bezier(0.22, 0.61, 0.36, 1);
         }
       }
     }
@@ -154,6 +156,16 @@
 	}
 
 	&__logo-w {
+    backface-visibility: hidden;
+
+    @media (min-width: @screen-xl) {
+      transform: translateX(-50vw);
+      opacity: 0;
+
+      .js-loaded & {
+        animation: translate-opacity-none 0.7s 1.0s forwards cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+    }
 
     svg {
       display: block;
@@ -172,11 +184,6 @@
         z-index: 1;
         width: 363px;
         height: 235px;
-        transform: translateX(-50vw);
-
-        .js-loaded & {
-          animation: translate-none 0.3s 1.0s forwards;
-        }
       }
 
       @media (min-width: @screen-xxl) {
@@ -210,7 +217,7 @@
         opacity: 0;
 
         .js-loaded & {
-          animation: opacity-none 0.3s 1.3s forwards;
+          animation: opacity-none 0.5s 2s forwards cubic-bezier(0.22, 0.61, 0.36, 1);
         }
       }
 
