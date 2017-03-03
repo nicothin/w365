@@ -504,13 +504,14 @@
     @media (min-width: @screen-xl) {
 
       .discuss-project-btn {
+        backface-visibility: hidden;
 
         .js & {
-          transform: translateX(40vw);
+          transform: translateX(30vw);
         }
 
         .js-loaded & {
-          animation: translate-none 0.3s 0s forwards;
+          animation: translate-opacity-none 0.6s 0s forwards cubic-bezier(0.22, 0.61, 0.36, 1);
         }
       }
 
@@ -520,13 +521,14 @@
         width: 128px;
         height: 56px;
         text-align: right;
+        backface-visibility: hidden;
 
         .js & {
           transform: translateX(-100%);
         }
 
         .js-loaded & {
-          animation: translate-none 0.3s 0s forwards;
+          animation: translate-opacity-none 0.6s 0s forwards cubic-bezier(0.22, 0.61, 0.36, 1);
         }
 
         &:hover,
@@ -613,7 +615,7 @@
         height: 125px;
         transform: translate(0, 0);
         background-color: @gray-lightest;
-        transition: transform 0.2s;
+        transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
 
         .js-loaded &--user-is-not-stupid {
           transform: translate(0, -125px);
