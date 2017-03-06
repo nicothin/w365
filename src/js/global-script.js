@@ -11,7 +11,8 @@ $(document).ready(function() {
   });
 
   // боковая форма: показ/сокрытие
-  $('.js-discuss-project-toggler').on('click', function(){
+  $('.js-discuss-project-toggler').on('click', function(e){
+    e.preventDefault();
     $('#discuss-project-form').toggleClass('discuss-project-form--open');
     // $('html').toggleClass('js-discuss-project-form-open');
   });
