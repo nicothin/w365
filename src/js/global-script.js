@@ -113,7 +113,8 @@ $(document).ready(function() {
   casesCarouselPaginator.owlCarousel(casesCarouselPaginatorOptions);
   // следим за изменением в карусели-пагинаторе, меняем карусель с картинками
   casesCarouselPaginator.on('translated.owl.carousel', function(event) {
-    casesCarousel.trigger("to.owl.carousel", event.item.index + 1);
+    console.log(event);
+    casesCarousel.trigger("to.owl.carousel", event.item.index + (event.item.count - 5));
     casesCarouselPaginator.addClass('page-cases__carousel-paginator--has-line');
   })
   .on('translate.owl.carousel', function(event) {
