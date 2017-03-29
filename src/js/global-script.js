@@ -96,9 +96,10 @@ $(document).ready(function() {
     center: true,
     smartSpeed: 200,
   };
+
+  // сформируем разметку для карусели-пагинатора
   var casesCarouselPaginatorHtml = '';
   var pageCasesItems = casesCarousel.find('.page-cases__item');
-  // добавим вторую карусель, служащую пагинатором
   pageCasesItems.each(function(){
     var slide = $(this).find('.page-cases__item-name');
     casesCarouselPaginatorHtml += '<div class="page-cases__carousel-paginator-item" data-id="'+$(this).data('unique-id')+'">'+slide.html()+'</div>';
@@ -112,11 +113,12 @@ $(document).ready(function() {
   //   }
   // }
 
+  // вставим карусель-пагинатор
   casesCarousel.before('<div class="page-cases__carousel-paginator-wrap"><div id="cases-carousel-paginator" class="owl-carousel page-cases__carousel-paginator page-cases__carousel-paginator--has-line">'+casesCarouselPaginatorHtml+'</div></div>');
   // активируем карусель, служащую пагинатором
   var casesCarouselPaginator = $('#cases-carousel-paginator');
-  // включим карусель-пагинатор
   casesCarouselPaginator.owlCarousel(casesCarouselPaginatorOptions);
+
   // следим за изменением в карусели-пагинаторе, меняем карусель с картинками
   casesCarouselPaginator
     .on('translated.owl.carousel', function(event) {
