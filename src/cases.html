@@ -3,9 +3,39 @@
 
 <head>
   <meta charset="utf-8">
-  <title>w365</title>
-  <meta name="description" content="">
-  @@include('_include/page_head.html')
+  <title>Кейсы</title>
+  <meta name="description" content="Успешные проекты">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/style.min.css?201703151743" rel="stylesheet" media="screen">
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+  <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
+  <script src="js/script.min.js?201703151743"></script>
+  <script>
+
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+    // Ожидаем события загрузки и добавляем класс. Более 5 сек. не ждем
+    window.addEventListener('load', showContent);
+    var loadTimer = setTimeout(function(){
+      showContent();
+      window.removeEventListener('load', showContent);
+    }, 5000);
+    function showContent(){
+      clearTimeout(loadTimer);
+      $('#square-loader').fadeOut(300, function(){
+        document.documentElement.classList.add('js-loaded');
+        setTimeout(function() { $('.main-nav--content .main-nav__wrapper').addClass('main-nav__wrapper--user-is-not-stupid'); }, 900);
+      });
+    }
+
+  </script>
+
+  <link href="img/favicon.png" rel="icon" sizes="30x30">
+
 </head>
 
 <body>
@@ -21,12 +51,109 @@
   <div id="column-page" class="full-page  full-page--content-page  page-cases">
 
     <div class="main-nav  main-nav--content" id="main-nav">
-      @@include('_include/page_nav-inner.html')
-      <a href="#discuss-project-form" class="btn  btn--red-arrow-border  discuss-project-btn  js-discuss-project-toggler">Обсудить проект</a>
+      <a href="/" class="main-nav__logo  main-nav__logo--supnav">
+        <img src="img/w365-logo.svg" width="122" height="60" alt="">
+      </a>
+      <div class="main-nav__burger  js-main-menu-toggler" data-text="Menu"><span class="main-nav__burger-icon"></span></div>
+       <nav class="main-nav__wrapper">
+        <div class="main-nav__inner">
+          <a href="/" class="main-nav__logo">
+            <img src="img/w365-logo.svg" width="122" height="60" alt="">
+          </a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner"><a href="/" class="main-nav__link">Главная</a></span>
+            </li>
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner">
+                <a href="/web-studio/" class="main-nav__link">Веб-студия</a>
+                <ul class="main-nav__sublist">
+                  <li class="main-nav__sublist-item">
+                    <a href="/razrabotka-sajtov/" class="main-nav__sublist-link">Разработка сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="/redizajn-sajta/" class="main-nav__sublist-link">Редизайн сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="/adaptaciya-sajta/" class="main-nav__sublist-link">Адаптация под мобильные</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="/podderzhka-sajta/" class="main-nav__sublist-link">Поддержка сайтов</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="/usability-audit/" class="main-nav__sublist-link">Юзабилити аудит</a>
+                  </li>
+                </ul>
+              </span>
+            </li>
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner">
+                <a href="/internet-marketing/" class="main-nav__link">Интернет-маркетинг</a>
+                <ul class="main-nav__sublist">
+                  <li class="main-nav__sublist-item">
+                    <a href="/seo/" class="main-nav__sublist-link">Поисковая оптимизация</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="/poiskovoe-prodvizhenie/" class="main-nav__sublist-link">Поисковое продвижение</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="/seo-laboratory/" class="main-nav__sublist-link">SEO-лаборатория</a>
+                  </li>
+                  <li class="main-nav__sublist-item">
+                    <a href="/internet-reklama/" class="main-nav__sublist-link">Интернет-реклама</a>
+                  </li>
+                </ul>
+              </span>
+            </li>
+            <li class="main-nav__item  main-nav__item main-nav__item--active">
+              <span class="main-nav__item-inner">
+                <a href="/cases/" class="main-nav__link">Кейсы</a>
+              </span>
+            </li>
+            <li class="main-nav__item">
+              <span class="main-nav__item-inner"><a href="/contacts/" class="main-nav__link">Контакты</a></span>
+            </li>
+          </ul>
+        </div>
+        <div class="main-nav__close-icon  close-icon  js-main-menu-toggler"></div>
+        <div class="main-nav__arrow  js-main-menu-toggler"><span class="main-nav__arrow-inner"><span class="main-nav__arrow-icon"></span></span></div>
+      </nav>
+
+      <a href="#discuss-project-form" class="btn  btn--red-arrow-border  discuss-project-btn  js-discuss-project-toggler">Отправить заявку</a>
       <div class="main-nav__js-backdrop  js-main-menu-toggler"></div>
     </div>
 
-    <div class="full-page__section">
+    <div class="full-page__section" id="full-page__section">
+
+
+      <script>
+        $(document).ready(function() {
+          // получим общее кол-во слайдов для использования в пагинаторе полностраничного плагина
+          var slidesLenght = $('.full-page__section').length;
+
+          // полноэкранный показ: инициация плагина для статей
+          $('#full-page__section').fullpage({
+            menu: '#main-nav',
+            anchors:['adaptive', 'mobile', 'mobile-2', 'mobile-3', 'other'],
+            dragAndMove: true,
+            easingcss3: 'cubic-bezier(0.22, 0.61, 0.36, 1)',
+            sectionSelector: '.full-page__section',
+            navigation: true,
+            navigationPosition: 'left',
+            responsiveWidth: 1200,
+            afterRender: function(){
+              // добавим к пагинатору плагина счетчик и дизайнерский изыск
+              $('#fp-nav').append('<span class="full-page__scroll-me-baby">Скролльте</span>');
+            },
+            onLeave: function(index, nextIndex, direction){
+              // при уходе со слайда сменим счетчик в пагинаторе
+              $('#slide-counter').text(nextIndex+'/'+slidesLenght);
+            }
+          });
+        });
+
+      </script>
+
 
       <a href="/" class="full-page__section-logo">
         <img src="img/w365-logo.svg" width="122" height="60" alt="W365 logo">
@@ -38,13 +165,77 @@
         </h1>
       </div>
 
+      <p class="page-cases__filter" id="cases-filter">
+        <a class="page-cases__filter-item  page-cases__filter-item--active" data-show-item-type="1">Разработка</a>
+        <a class="page-cases__filter-item" data-show-item-type="2">Продвижение</a>
+        <a class="page-cases__filter-item" data-show-item-type="3">Реклама</a>
+      </p>
+
       <div class="full-page__section-inner">
 
-        <div id="cases-carousel" class="owl-carousel  page-cases__carousel">
+        <div id="cases-carousel" class="owl-carousel  page-cases__carousel" data-no-cases-text="Нет кейсов">
 
-          <article id="page-cases-slide-1" class="page-cases__item">
+          <article data-unique-id="page-cases-slide-4" class="page-cases__item">
             <h2 class="page-cases__item-name">
-              <span class="page-cases__name-text">0 Своя бурёнка</span>
+              <span class="page-cases__name-text">Fabio Cassel</span>
+              <span class="page-cases__item-name-logo">
+                <img src="img/cases_logo_04.jpg" alt="">
+              </span>
+            </h2>
+            <div class="page-cases__item-info">
+              <img src="img/cases_img_04.jpg" alt="" class="page-cases__item-img">
+              <div class="page-cases__item-text">
+                <div class="page-cases__item-descr">
+                  <p>Проектирование, разработка и первичная поисковая оптимизация (SEO Ready) монобрендового интернет-магазина мужской одежды на базе MODX Revolution.</p>
+                </div>
+                <div class="page-cases__item-btns">
+                  <img src="img/cases_img_04--thumb.jpg" alt="" class="page-cases__item-img-thumb">
+                  <a href="http://xn--80aacrnmju3aaz0i.xn--p1ai/" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+                    Смотреть сайт
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article data-unique-id="page-cases-slide-7" class="page-cases__item">
+            <h2 class="page-cases__item-name">
+              <span class="page-cases__name-text">Первая кабельная компания</span>
+              <span class="page-cases__item-name-logo">
+                <img src="img/cases_logo_07.jpg" alt="">
+              </span>
+            </h2>
+            <div class="page-cases__item-info">
+              <img src="img/cases_img_07.jpg" alt="" class="page-cases__item-img">
+              <div class="page-cases__item-text">
+                <div class="page-cases__item-descr">
+                  <p>Проектирование, разработка, наполнение и первичная поисковая оптимизация (SEO Ready) сайта кабельной компании на платформе MODX Revolution.</p>
+                </div>
+                <div class="page-cases__item-btns">
+                  <img src="img/cases_img_07--thumb.jpg" alt="" class="page-cases__item-img-thumb">
+                  <a href="http://cabcomp.ru" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+                    Смотреть сайт
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article data-unique-id="page-cases-slide-1" class="page-cases__item">
+            <h2 class="page-cases__item-name">
+              <span class="page-cases__name-text">Своя бурёнка</span>
               <span class="page-cases__item-name-logo">
                 <img src="img/cases_logo_01.jpg" alt="">
               </span>
@@ -53,16 +244,17 @@
               <img src="img/cases_img_01.jpg" alt="" class="page-cases__item-img">
               <div class="page-cases__item-text">
                 <div class="page-cases__item-descr">
-                  <p>0 Разработка интернет-магазина и фирменного стиля для бренда по продаже фермерских продуктов питания</p>
+                  <p>Создание фирменного стиля. Разработка и продвижение интернет-магазина по продаже фермерских продуктов питания на базе MODX Revolution.</p>
                 </div>
                 <div class="page-cases__item-btns">
                   <img src="img/cases_img_01--thumb.jpg" alt="" class="page-cases__item-img-thumb">
-                  <a href="" class="btn  btn--svg-border  page-cases__btn-presentation">
-                    @@include('_include/btn-border.svg')
-                    Смотреть презентацию
-                  </a>
-                  <a href="" class="btn  btn--gray  btn--svg-border  page-cases__btn-more">
-                    @@include('_include/btn-border.svg')
+                  <a href="http://mukorovka.ru" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
                     Смотреть сайт
                   </a>
                 </div>
@@ -70,37 +262,9 @@
             </div>
           </article>
 
-          <article id="page-cases-slide-1" class="page-cases__item">
+          <article data-unique-id="page-cases-slide-2" class="page-cases__item">
             <h2 class="page-cases__item-name">
-              <span class="page-cases__name-text">1 Своя бурёнка</span>
-              <span class="page-cases__item-name-logo">
-                <img src="img/cases_logo_01.jpg" alt="">
-              </span>
-            </h2>
-            <div class="page-cases__item-info">
-              <img src="img/cases_img_01.jpg" alt="" class="page-cases__item-img">
-              <div class="page-cases__item-text">
-                <div class="page-cases__item-descr">
-                  <p>1 Разработка интернет-магазина и фирменного стиля для бренда по продаже фермерских продуктов питания</p>
-                </div>
-                <div class="page-cases__item-btns">
-                  <img src="img/cases_img_01--thumb.jpg" alt="" class="page-cases__item-img-thumb">
-                  <a href="" class="btn  btn--svg-border  page-cases__btn-presentation">
-                    @@include('_include/btn-border.svg')
-                    Смотреть презентацию
-                  </a>
-                  <a href="" class="btn  btn--gray  btn--svg-border  page-cases__btn-more">
-                    @@include('_include/btn-border.svg')
-                    Смотреть сайт
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article id="page-cases-slide-2" class="page-cases__item">
-            <h2 class="page-cases__item-name">
-              <span class="page-cases__name-text">2 Чужая бурёнка</span>
+              <span class="page-cases__name-text">Frezoff</span>
               <span class="page-cases__item-name-logo">
                 <img src="img/cases_logo_02.jpg" alt="">
               </span>
@@ -109,16 +273,17 @@
               <img src="img/cases_img_02.jpg" alt="" class="page-cases__item-img">
               <div class="page-cases__item-text">
                 <div class="page-cases__item-descr">
-                  <p>2 Разработка интернет-магазина</p>
+                  <p>Создание логотипа. Проектирование, разработка и первичная поисковая оптимизация (SEO Ready) интернет-магазина по продаже деревообрабатывающего оборудования на платформе 1С-Битрикс.</p>
                 </div>
                 <div class="page-cases__item-btns">
                   <img src="img/cases_img_02--thumb.jpg" alt="" class="page-cases__item-img-thumb">
-                  <a href="" class="btn  btn--svg-border  page-cases__btn-presentation">
-                    @@include('_include/btn-border.svg')
-                    Смотреть презентацию
-                  </a>
-                  <a href="" class="btn  btn--gray  btn--svg-border  page-cases__btn-more">
-                    @@include('_include/btn-border.svg')
+                  <a href="http://frezoff.ru" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
                     Смотреть сайт
                   </a>
                 </div>
@@ -126,9 +291,9 @@
             </div>
           </article>
 
-          <article id="page-cases-slide-3" class="page-cases__item">
+          <article data-unique-id="page-cases-slide-3" class="page-cases__item">
             <h2 class="page-cases__item-name">
-              <span class="page-cases__name-text">3 Своя батарейка</span>
+              <span class="page-cases__name-text">Sartorius</span>
               <span class="page-cases__item-name-logo">
                 <img src="img/cases_logo_03.jpg" alt="">
               </span>
@@ -137,16 +302,18 @@
               <img src="img/cases_img_03.jpg" alt="" class="page-cases__item-img">
               <div class="page-cases__item-text">
                 <div class="page-cases__item-descr">
-                  <p>3 Разработка интернет-магазина и фирменного стиля для бренда по продаже фермерских продуктов питания</p>
+                  <p>Разработка посадочной страницы по продаже лабораторных гирь. Оптимизация и ведение контекстной рекламы.</p>
                 </div>
                 <div class="page-cases__item-btns">
                   <img src="img/cases_img_03--thumb.jpg" alt="" class="page-cases__item-img-thumb">
-                  <a href="" class="btn  btn--svg-border  page-cases__btn-presentation">
-                    @@include('_include/btn-border.svg')
-                    Смотреть презентацию
-                  </a>
-                  <a href="" class="btn  btn--gray  btn--svg-border  page-cases__btn-more">
-                    @@include('_include/btn-border.svg')
+                  <a href="http://giri.ru" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+
                     Смотреть сайт
                   </a>
                 </div>
@@ -154,27 +321,29 @@
             </div>
           </article>
 
-          <article id="page-cases-slide-4" class="page-cases__item">
+          <article data-unique-id="page-cases-slide-5" class="page-cases__item">
             <h2 class="page-cases__item-name">
-              <span class="page-cases__name-text">4 Саша Грей</span>
+              <span class="page-cases__name-text">Цефей</span>
               <span class="page-cases__item-name-logo">
-                <img src="img/cases_logo_02.jpg" alt="">
+                <img src="img/cases_logo_05.jpg" alt="">
               </span>
             </h2>
             <div class="page-cases__item-info">
-              <img src="img/cases_img_02.jpg" alt="" class="page-cases__item-img">
+              <img src="img/cases_img_05.jpg" alt="" class="page-cases__item-img">
               <div class="page-cases__item-text">
                 <div class="page-cases__item-descr">
-                  <p>4 Разработка интернет-магазина и фирменного стиля для бренда по продаже фермерских продуктов питания</p>
+                  <p>Разработка сайта по продаже спецтехники</p>
                 </div>
                 <div class="page-cases__item-btns">
-                  <img src="img/cases_img_02--thumb.jpg" alt="" class="page-cases__item-img-thumb">
-                  <a href="" class="btn  btn--svg-border  page-cases__btn-presentation">
-                    @@include('_include/btn-border.svg')
-                    Смотреть презентацию
-                  </a>
-                  <a href="" class="btn  btn--gray  btn--svg-border  page-cases__btn-more">
-                    @@include('_include/btn-border.svg')
+                  <img src="img/cases_img_05--thumb.jpg" alt="" class="page-cases__item-img-thumb">
+                  <a href="http://abctractor.ru" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+
                     Смотреть сайт
                   </a>
                 </div>
@@ -182,27 +351,29 @@
             </div>
           </article>
 
-          <article id="page-cases-slide-5" class="page-cases__item">
+          <article data-unique-id="page-cases-slide-6" class="page-cases__item">
             <h2 class="page-cases__item-name">
-              <span class="page-cases__name-text">5 Синяя бородатая тыква</span>
+              <span class="page-cases__name-text">Путь к здоровью</span>
               <span class="page-cases__item-name-logo">
-                <img src="img/cases_logo_01.jpg" alt="">
+                <img src="img/cases_logo_06.jpg" alt="">
               </span>
             </h2>
             <div class="page-cases__item-info">
-              <img src="img/cases_img_01.jpg" alt="" class="page-cases__item-img">
+              <img src="img/cases_img_06.jpg" alt="" class="page-cases__item-img">
               <div class="page-cases__item-text">
                 <div class="page-cases__item-descr">
-                  <p>5 Разработка интернет-магазина и фирменного стиля для бренда по продаже фермерских продуктов питания</p>
+                  <p>Проектирование, разработка и первичная поисковая оптимизация (SEO Ready) корпоративного сайта консультативно-образовательного центра на платформе MODX Revolution.</p>
                 </div>
                 <div class="page-cases__item-btns">
-                  <img src="img/cases_img_01--thumb.jpg" alt="" class="page-cases__item-img-thumb">
-                  <a href="" class="btn  btn--svg-border  page-cases__btn-presentation">
-                    @@include('_include/btn-border.svg')
-                    Смотреть презентацию
-                  </a>
-                  <a href="" class="btn  btn--gray  btn--svg-border  page-cases__btn-more">
-                    @@include('_include/btn-border.svg')
+                  <img src="img/cases_img_06--thumb.jpg" alt="" class="page-cases__item-img-thumb">
+                  <a href="http://vitaline.spb.ru" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+
                     Смотреть сайт
                   </a>
                 </div>
@@ -210,27 +381,29 @@
             </div>
           </article>
 
-          <article id="page-cases-slide-6" class="page-cases__item">
+          <article data-unique-id="page-cases-slide-8" class="page-cases__item">
             <h2 class="page-cases__item-name">
-              <span class="page-cases__name-text">6 Рубанок корова самолет девушка без запятых</span>
+              <span class="page-cases__name-text">Parkcity</span>
               <span class="page-cases__item-name-logo">
-                <img src="img/cases_logo_02.jpg" alt="">
+                <img src="img/cases_logo_08.jpg" alt="">
               </span>
             </h2>
             <div class="page-cases__item-info">
-              <img src="img/cases_img_02.jpg" alt="" class="page-cases__item-img">
+              <img src="img/cases_img_08.jpg" alt="" class="page-cases__item-img">
               <div class="page-cases__item-text">
                 <div class="page-cases__item-descr">
-                  <p>6 Разработка интернет-магазина и фирменного стиля для бренда по продаже фермерских продуктов питания</p>
+                  <p>Разработка посадочной страницы по продаже видеорегистраторов. Настройка и ведение комплексной рекламной кампании (Директ, Adwords, социальные сети).</p>
                 </div>
                 <div class="page-cases__item-btns">
-                  <img src="img/cases_img_02--thumb.jpg" alt="" class="page-cases__item-img-thumb">
-                  <a href="" class="btn  btn--svg-border  page-cases__btn-presentation">
-                    @@include('_include/btn-border.svg')
-                    Смотреть презентацию
-                  </a>
-                  <a href="" class="btn  btn--gray  btn--svg-border  page-cases__btn-more">
-                    @@include('_include/btn-border.svg')
+                  <img src="img/cases_img_08--thumb.jpg" alt="" class="page-cases__item-img-thumb">
+                  <a href="http://pro-zdorovie.ru" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+
                     Смотреть сайт
                   </a>
                 </div>
@@ -238,41 +411,251 @@
             </div>
           </article>
 
-          <article id="page-cases-slide-6" class="page-cases__item">
+          <article data-unique-id="page-cases-slide-9" class="page-cases__item">
             <h2 class="page-cases__item-name">
-              <span class="page-cases__name-text">7 Рубанок корова самолет девушка без запятых</span>
+              <span class="page-cases__name-text">Aibeile</span>
               <span class="page-cases__item-name-logo">
-                <img src="img/cases_logo_02.jpg" alt="">
+                <img src="img/cases_logo_09.jpg" alt="">
               </span>
             </h2>
             <div class="page-cases__item-info">
-              <img src="img/cases_img_02.jpg" alt="" class="page-cases__item-img">
+              <img src="img/cases_img_09.jpg" alt="" class="page-cases__item-img">
               <div class="page-cases__item-text">
                 <div class="page-cases__item-descr">
-                  <p>7 Разработка интернет-магазина и фирменного стиля для бренда по продаже фермерских продуктов питания</p>
+                  <p>Разработка посадочной страницы для продажи детских часов. Запуск и ведение контекстной рекламы.</p>
                 </div>
                 <div class="page-cases__item-btns">
-                  <img src="img/cases_img_02--thumb.jpg" alt="" class="page-cases__item-img-thumb">
-                  <a href="" class="btn  btn--svg-border  page-cases__btn-presentation">
-                    @@include('_include/btn-border.svg')
-                    Смотреть презентацию
-                  </a>
-                  <a href="" class="btn  btn--gray  btn--svg-border  page-cases__btn-more">
-                    @@include('_include/btn-border.svg')
+                  <img src="img/cases_img_09--thumb.jpg" alt="" class="page-cases__item-img-thumb">
+                  <a href="http://aibeile.ru/" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+
                     Смотреть сайт
                   </a>
                 </div>
               </div>
             </div>
           </article>
+
+          <article data-unique-id="page-cases-slide-11" class="page-cases__item">
+            <h2 class="page-cases__item-name">
+              <span class="page-cases__name-text">NEXT</span>
+              <span class="page-cases__item-name-logo">
+                <img src="img/cases_logo_11.jpg" alt="">
+              </span>
+            </h2>
+            <div class="page-cases__item-info">
+              <img src="img/cases_img_11.jpg" alt="" class="page-cases__item-img">
+              <div class="page-cases__item-text">
+                <div class="page-cases__item-descr">
+                  <p>Комплексный редизайн сайта официального представителя компании NEXT в России.</p>
+                </div>
+                <div class="page-cases__item-btns">
+                  <img src="img/cases_img_11--thumb.jpg" alt="" class="page-cases__item-img-thumb">
+                  <a href="#" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+
+                    Скоро
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article data-unique-id="page-cases-slide-12" class="page-cases__item">
+            <h2 class="page-cases__item-name">
+              <span class="page-cases__name-text">Trane</span>
+              <span class="page-cases__item-name-logo">
+                <img src="img/cases_logo_12.jpg" alt="">
+              </span>
+            </h2>
+            <div class="page-cases__item-info">
+              <img src="img/cases_img_12.jpg" alt="" class="page-cases__item-img">
+              <div class="page-cases__item-text">
+                <div class="page-cases__item-descr">
+                  <p>Адаптация под мобильные устройства сайта официального дистрибьютора компании Trane в России.</p>
+                </div>
+                <div class="page-cases__item-btns">
+                  <img src="img/cases_img_12--thumb.jpg" alt="" class="page-cases__item-img-thumb">
+                  <a href="http://trane-dnw.ru" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+                    Смотреть сайт
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article data-unique-id="page-cases-slide-10" class="page-cases__item">
+            <h2 class="page-cases__item-name">
+              <span class="page-cases__name-text">Telezon</span>
+              <span class="page-cases__item-name-logo">
+                <img src="img/cases_logo_10.jpg" alt="">
+              </span>
+            </h2>
+            <div class="page-cases__item-info">
+              <img src="img/cases_img_10.jpg" alt="" class="page-cases__item-img">
+              <div class="page-cases__item-text">
+                <div class="page-cases__item-descr">
+                  <p>Проектирование и разработка функционального личного кабинета B2B оператора фиксированной связи. Интеграция с системой записи разговоров и биллинговой системой.</p>
+                </div>
+                <div class="page-cases__item-btns">
+                  <img src="img/cases_img_09--thumb.jpg" alt="" class="page-cases__item-img-thumb">
+                  <a href="https://cabinet.telezon.ru" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+
+                    Смотреть сайт
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article data-unique-id="page-cases-slide-13" class="page-cases__item">
+            <h2 class="page-cases__item-name">
+              <span class="page-cases__name-text">Евро-ЛЭП</span>
+              <span class="page-cases__item-name-logo">
+                <img src="img/cases_logo_13.jpg" alt="">
+              </span>
+            </h2>
+            <div class="page-cases__item-info">
+              <img src="img/cases_img_13.jpg" alt="" class="page-cases__item-img">
+              <div class="page-cases__item-text">
+                <div class="page-cases__item-descr">
+                  <p>Комплексный редизайн сайта компании Евро-ЛЭП.</p>
+                </div>
+                <div class="page-cases__item-btns">
+                  <img src="img/cases_img_13--thumb.jpg" alt="" class="page-cases__item-img-thumb">
+                  <a href="#" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+
+                    Скоро
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article data-unique-id="page-cases-slide-14" class="page-cases__item">
+            <h2 class="page-cases__item-name">
+              <span class="page-cases__name-text">FBS</span>
+              <span class="page-cases__item-name-logo">
+                <img src="img/cases_logo_14.jpg" alt="">
+              </span>
+            </h2>
+            <div class="page-cases__item-info">
+              <img src="img/cases_img_14.jpg" alt="" class="page-cases__item-img">
+              <div class="page-cases__item-text">
+                <div class="page-cases__item-descr">
+                  <p>Разработка адаптивной мультиязычной посадочной страницы Rebate Service для брокера FBS</p>
+                </div>
+                <div class="page-cases__item-btns">
+                  <img src="img/cases_img_14--thumb.jpg" alt="" class="page-cases__item-img-thumb">
+                  <a href="http://fbs-rebate.com" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+
+                    Смотреть сайт
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article data-unique-id="page-cases-slide-15" class="page-cases__item">
+            <h2 class="page-cases__item-name">
+              <span class="page-cases__name-text">X-Keeper</span>
+              <span class="page-cases__item-name-logo">
+                <img src="img/cases_logo_15.jpg" alt="">
+              </span>
+            </h2>
+            <div class="page-cases__item-info">
+              <img src="img/cases_img_15.jpg" alt="" class="page-cases__item-img">
+              <div class="page-cases__item-text">
+                <div class="page-cases__item-descr">
+                  <p>Разработка адаптивной посадочной страницы для онлайн продаж интеллектуальной закладки-маяка X-Keeper</p>
+                </div>
+                <div class="page-cases__item-btns">
+                  <img src="img/cases_img_15--thumb.jpg" alt="" class="page-cases__item-img-thumb">
+                  <a href="http://x-keeper-invis.ru/" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+
+                    Смотреть сайт
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article data-unique-id="page-cases-slide-16" class="page-cases__item">
+            <h2 class="page-cases__item-name">
+              <span class="page-cases__name-text">Vprofite</span>
+              <span class="page-cases__item-name-logo">
+                <img src="img/cases_logo_16.jpg" alt="">
+              </span>
+            </h2>
+            <div class="page-cases__item-info">
+              <img src="img/cases_img_16.jpg" alt="" class="page-cases__item-img">
+              <div class="page-cases__item-text">
+                <div class="page-cases__item-descr">
+                  <p>Дизайн логотипа. Проектирование (UX-дизайн) и дизайн личного кабинета инвестиционного клуба VPROFITE.</p>
+                </div>
+                <div class="page-cases__item-btns">
+                  <img src="img/cases_img_16--thumb.jpg" alt="" class="page-cases__item-img-thumb">
+                  <a href="http://vprofite.club" class="btn  btn--gray  btn--svg-border  page-cases__btn-more" rel="nofollow" target="_blank">
+                    <svg class="btn__border" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewbox="0 0 220 44">
+                      <line class="btn__border-top" x1="1" y1="1" x2="219" y2="1"></line>
+                      <line class="btn__border-right" x1="219" y1="1" x2="219" y2="43"></line>
+                      <line class="btn__border-bottom" x1="219" y1="43" x2="1" y2="43"></line>
+                      <line class="btn__border-left" x1="1" y1="43" x2="1" y2="1"></line>
+                    </svg>
+
+                    Смотреть сайт
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
 
         </div>
-
       </div>
-
     </div>
 
-    <a href="" class="connect-with-us  btn  btn--bg-dark-blue">Связаться с нами</a>
+    <a href="/contacts/" class="connect-with-us  btn  btn--bg-dark-blue">Связаться с нами</a>
 
     <div class="decor-lines  decor-lines--dark">
       <div class="decor-lines__item"></div>
@@ -281,9 +664,93 @@
       <div class="decor-lines__item"></div>
       <div class="decor-lines__item"></div>
     </div>
-
   </div>
 
-  @@include('_include/page_bottom.html')
+
+  <form id="discuss-project-form" class="discuss-project-form  form" action="mail.php" method="post" enctype="multipart/form-data" onsubmit="yaCounter30973866.reachGoal('DISCUSS'); return true;">
+    <input type="hidden" name="form" value="Обсудить проект (кейсы)">
+  <div class="discuss-project-form__inner">
+      <div class="discuss-project-form__close  js-discuss-project-toggler"></div>
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Какие услуги вас интересуют?</legend>
+        <div class="form__checkboxes">
+          <div class="form__checkboxes-col-1">
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" name="service[]" value="Разработка сайта">
+                <span class="field-checkbox__name-text">Разработка сайта</span>
+              </label>
+            </div>
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" name="service[]" value="Редизайн сайта">
+                <span class="field-checkbox__name-text">Редизайн сайта</span>
+              </label>
+            </div>
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" name="service[]" value="Адаптация">
+                <span class="field-checkbox__name-text">Адаптация под моб. устройства</span>
+              </label>
+            </div>
+          </div>
+          <div class="form__checkboxes-col-2">
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" name="service[]" value="Продвижение">
+                <span class="field-checkbox__name-text">Продвижение и реклама</span>
+              </label>
+            </div>
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" name="service[]" value="Поддержка и развитие">
+                <span class="field-checkbox__name-text">Поддержка и развитие</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="form__fieldset  form__fieldset--maxw410">
+        <legend class="form__legend">Как с вами связаться?</legend>
+        <label class="field-text  field-text--xl-mb10">
+          <span class="field-text__input-wrap">
+            <input class="field-text__input  field-text__input--icon-user" type="text" placeholder="Введите ваше имя" name="name" required>
+          </span>
+        </label>
+        <label class="field-text  field-text--xl-mb10">
+          <span class="field-text__input-wrap">
+            <input class="field-text__input" type="tel" placeholder="Введите ваш телефон" name="phone" required>
+          </span>
+        </label>
+        <label class="field-text  field-text--xl-mb0">
+          <span class="field-text__input-wrap">
+            <input class="field-text__input  field-text__input--icon-pencil" type="text" placeholder="Введите ваш email или skype" name="contact" required>
+          </span>
+        </label>
+        <label class="field-text  field-text--mb0">
+          <span class="field-text__input-wrap">
+            <textarea class="field-text__input" placeholder="Дополнительные сведения" name="message"></textarea>
+          </span>
+        </label>
+        <div class="form__file-send-line">
+          <div class="field-file">
+            <label class="field-file__input-wrap">
+              <input class="field-file__input" type="file" name="file" data-multiple-caption="Файлов выбрано: {count}" multiple>
+              <span class="field-file__name-text-wrap">
+                <span class="field-file__name-text">Прикрепить файл(ы)</span>
+              </span>
+            </label>
+          </div>
+          <button class="btn  btn--send">Отправить</button>
+        </div>
+        <p class="form__descr">Предоставленная информация является конфиденциальной</p>
+      </fieldset>
+    </div>
+    <div class="discuss-project-form__backdrop  js-discuss-project-toggler"></div>
+
+  </form>
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter30973866 = new Ya.Metrika({ id:30973866, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/30973866" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
 </body>
 </html>

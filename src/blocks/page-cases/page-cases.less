@@ -21,7 +21,7 @@
 
     .full-page__section-inner {
       margin-bottom: 0 !important;
-      margin-top: 35px;
+      margin-top: 15px;
     }
 
     .discuss-project-btn {
@@ -256,10 +256,15 @@
       bottom: 0;
       left: 50%;
       width: 50vw;
+      background-color: @color-main;
 
       .owl-item {
         height: 100vh;
         background-color: @color-main;
+      }
+
+      .owl-stage-outer {
+        z-index: 1;
       }
 
       &:before {
@@ -272,6 +277,16 @@
         background-color: #fff;
         z-index: 1;
       }
+
+      &:after {
+        content: attr(data-no-cases-text);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        color: #fff;
+      }
     }
 
     @media (min-width: @screen-xxl) {
@@ -279,6 +294,38 @@
       &:before {
         width: 298px;
       }
+    }
+  }
+
+  &__filter {
+    display: none;
+
+    @media (min-width: @screen-xl) {
+      display: block;
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+  }
+
+  &__filter-item {
+    display: inline-block;
+    margin-right: 0.3em;
+    color: @gray;
+    border-bottom: 1px dotted currentColor;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      color: currentColor;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &--active {
+      color: @text-color;
+      border-bottom: 1px solid currentColor;
     }
   }
 

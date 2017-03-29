@@ -97,30 +97,46 @@ $(document).ready(function() {
     smartSpeed: 200,
   };
   var casesCarouselPaginatorHtml = '';
+  var pageCasesItems = casesCarousel.find('.page-cases__item');
   // добавим вторую карусель, служащую пагинатором
-  casesCarousel.find('.page-cases__item').each(function(){
+  pageCasesItems.each(function(){
     var slide = $(this).find('.page-cases__item-name');
-    casesCarouselPaginatorHtml += '<div class="page-cases__carousel-paginator-item">'+slide.html()+'</div>';
+    casesCarouselPaginatorHtml += '<div class="page-cases__carousel-paginator-item" data-id="'+$(this).data('unique-id')+'">'+slide.html()+'</div>';
   });
+
+  // console.log(pageCasesItems.length);
+  // var emptySlide = '<div class="page-cases__carousel-paginator-item"><span class="page-cases__name-text"></span></div>';
+  // if(pageCasesItems.length < 5) {
+  //   for (var i = 5; i > pageCasesItems.length; i--) {
+  //     casesCarouselPaginatorHtml += emptySlide;
+  //   }
+  // }
+
   casesCarousel.before('<div class="page-cases__carousel-paginator-wrap"><div id="cases-carousel-paginator" class="owl-carousel page-cases__carousel-paginator page-cases__carousel-paginator--has-line">'+casesCarouselPaginatorHtml+'</div></div>');
   // активируем карусель, служащую пагинатором
   var casesCarouselPaginator = $('#cases-carousel-paginator');
-  // отследим инициацию карусели-пагинатора и расставим классы
-  // casesCarouselPaginator.on('initialized.owl.carousel', function(event){
-  //   addCasesCarouselClasses(event.item.index);
-  // });
   // включим карусель-пагинатор
   casesCarouselPaginator.owlCarousel(casesCarouselPaginatorOptions);
   // следим за изменением в карусели-пагинаторе, меняем карусель с картинками
-  casesCarouselPaginator.on('translated.owl.carousel', function(event) {
-    console.log(event);
-    casesCarousel.trigger("to.owl.carousel", event.item.index + (event.item.count - 5));
-    casesCarouselPaginator.addClass('page-cases__carousel-paginator--has-line');
-  })
-  .on('translate.owl.carousel', function(event) {
-    casesCarouselPaginator.removeClass('page-cases__carousel-paginator--has-line');
-    // addCasesCarouselClasses(event.item.index);
-  });
+  casesCarouselPaginator
+    .on('translated.owl.carousel', function(event) {
+      // получим значение атрибута data-unique-id того слайда главной карусели, на который хотим попасть
+      var targetId = $('#cases-carousel-paginator .owl-item').eq(event.item.index).find('.page-cases__carousel-paginator-item').data('id');
+      var allNotClonedItems = casesCarousel.find('.owl-item:not(.cloned)');
+      var targetIndex = 0;
+      allNotClonedItems.each(function(i){
+        var target = $(allNotClonedItems[i]).find('[data-unique-id="'+targetId+'"]');
+        if (target.length) {
+          targetIndex = i;
+        }
+      });
+      // console.log(targetIndex);
+      casesCarousel.trigger("to.owl.carousel", targetIndex );
+      casesCarouselPaginator.addClass('page-cases__carousel-paginator--has-line');
+    })
+    .on('translate.owl.carousel', function(event) {
+      casesCarouselPaginator.removeClass('page-cases__carousel-paginator--has-line');
+    });
   // активируем главную карусель только если 1200+
   if ( window.innerWidth >= 1200 ) {
     var owlActive = casesCarousel.owlCarousel(casesCarouselOptions);
@@ -150,14 +166,5 @@ $(document).ready(function() {
     }
     e.preventDefault();
   });
-  // функция, расставляющая в карусели-пагинаторе классы для подсветки
-  // function addCasesCarouselClasses(activeIndex) {
-  //   console.log(activeIndex);
-  //   var carouselItems = $('#cases-carousel-paginator').find('.owl-item');
-  //   carouselItems.removeClass('owl-item--active owl-item--active-1');
-  //   carouselItems.eq(activeIndex).addClass('owl-item--active');
-  //   carouselItems.eq(activeIndex + 1).addClass('owl-item--active-1');
-  //   carouselItems.eq(activeIndex - 1).addClass('owl-item--active-1');
-  // }
 
 });
