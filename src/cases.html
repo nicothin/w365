@@ -165,18 +165,19 @@
         </h1>
       </div>
 
-      <p class="page-cases__filter" id="cases-filter">
-      <!-- data-show-item-type="1" — в значении атрибута указать ОДНУ цифру — тип показываемых слайдов -->
-        <a class="page-cases__filter-item  page-cases__filter-item--active" data-show-item-type="1">Разработка</a>
-        <a class="page-cases__filter-item" data-show-item-type="2">Продвижение</a>
-        <a class="page-cases__filter-item" data-show-item-type="3">Реклама</a>
-      </p>
-
       <div class="full-page__section-inner">
+
+        <p class="page-cases__filter" id="cases-filter">
+        <!-- data-show-item-type="1" — в значении атрибута указать ОДНУ цифру — тип показываемых слайдов -->
+          <a class="page-cases__filter-item  page-cases__filter-item--active" data-show-item-type="1">Разработка</a>
+          <a class="page-cases__filter-item" data-show-item-type="2">Продвижение</a>
+          <a class="page-cases__filter-item" data-show-item-type="3">Реклама</a>
+        </p>
 
         <div id="cases-carousel" class="owl-carousel  page-cases__carousel" data-no-cases-text="Нет кейсов">
 
           <!-- data-item-type="1" — в значении атрибута указать одну или несколько (через пробел) типов, которым соответствует этот слайд -->
+          <!-- ВНИМАНИЕ! Предполагается, что для каждого типа будет 6 или более элементов! -->
           <article data-unique-id="page-cases-slide-4" data-item-type="1" class="page-cases__item">
             <h2 class="page-cases__item-name">
               <span class="page-cases__name-text">Fabio Cassel</span>
@@ -293,7 +294,7 @@
             </div>
           </article>
 
-          <article data-unique-id="page-cases-slide-3" data-item-type="1" class="page-cases__item">
+          <article data-unique-id="page-cases-slide-3" data-item-type="1 3" class="page-cases__item">
             <h2 class="page-cases__item-name">
               <span class="page-cases__name-text">Sartorius</span>
               <span class="page-cases__item-name-logo">
@@ -323,7 +324,7 @@
             </div>
           </article>
 
-          <article data-unique-id="page-cases-slide-5" data-item-type="1" class="page-cases__item">
+          <article data-unique-id="page-cases-slide-5" data-item-type="1 3" class="page-cases__item">
             <h2 class="page-cases__item-name">
               <span class="page-cases__name-text">Цефей</span>
               <span class="page-cases__item-name-logo">
@@ -352,7 +353,7 @@
             </div>
           </article>
 
-          <article data-unique-id="page-cases-slide-6" data-item-type="2" class="page-cases__item">
+          <article data-unique-id="page-cases-slide-6" data-item-type="2 3" class="page-cases__item">
             <h2 class="page-cases__item-name">
               <span class="page-cases__name-text">Путь к здоровью</span>
               <span class="page-cases__item-name-logo">
@@ -382,7 +383,7 @@
             </div>
           </article>
 
-          <article data-unique-id="page-cases-slide-8" data-item-type="2" class="page-cases__item">
+          <article data-unique-id="page-cases-slide-8" data-item-type="2 3" class="page-cases__item">
             <h2 class="page-cases__item-name">
               <span class="page-cases__name-text">Parkcity</span>
               <span class="page-cases__item-name-logo">
@@ -412,7 +413,7 @@
             </div>
           </article>
 
-          <article data-unique-id="page-cases-slide-9" data-item-type="2" class="page-cases__item">
+          <article data-unique-id="page-cases-slide-9" data-item-type="2 3" class="page-cases__item">
             <h2 class="page-cases__item-name">
               <span class="page-cases__name-text">Aibeile</span>
               <span class="page-cases__item-name-logo">

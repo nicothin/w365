@@ -147,6 +147,7 @@ $(document).ready(function() {
       // сформируем разметку для карусели-пагинатора
       var casesCarouselPaginatorHtml = '';
       var pageCasesItems = casesCarousel.find('.page-cases__item');
+      console.log(pageCasesItems);
       pageCasesItems.each(function(){
         var slide = $(this).find('.page-cases__item-name');
         casesCarouselPaginatorHtml += '<div class="page-cases__carousel-paginator-item" data-id="'+$(this).data('unique-id')+'">'+slide.html()+'</div>';
