@@ -15,11 +15,8 @@
 
 // Make viewport responsive
 // see http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
-@at-root {
-
-  @-ms-viewport { /* stylelint-disable-line  at-rule-no-vendor-prefix */
-    width: device-width;
-  }
+@-ms-viewport { /* stylelint-disable-line  at-rule-no-vendor-prefix */
+  width: device-width;
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
@@ -168,7 +165,7 @@ h6 {
 h1,
 h2,
 h3 {
-  margin-top: @line-height;
+  // margin-top: @line-height;
   margin-bottom: (@line-height / 2);
 }
 
@@ -321,4 +318,16 @@ pre {
   border: 1px solid @gray-lighter;
   white-space: normal;
   tab-size: 2;
+}
+
+
+
+.page-nok {
+  display: none;
+}
+
+@media (max-width:1366px) {
+  .page-web-dev__article-cta-btn {
+    display: none
+  }
 }

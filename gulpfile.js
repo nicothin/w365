@@ -242,6 +242,12 @@ gulp.task('js', function (callback) {
   }
 });
 
+gulp.task('js:single', function (callback) {
+  return gulp.src('./temp/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./temp/process'));
+});
+
 // Копирование JS-библиотек (если есть)
 gulp.task('js:copy', function (callback) {
   let jsLibs = [];
